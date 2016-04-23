@@ -62,12 +62,8 @@ def topic_sentences(paragraphs):
 		""")
 		for para in paragraphs:
 			txt, sentence, entities = para[0]
-			#if '.' not in p:
-			#	continue
 			if is_full_sentence(txt, sentence, entities):
 				f.write("<li>" + txt.split('. ')[0] + '\n') 
-			else:
-				print 'not a full sentence:', sentence
 		f.close()
 
 def consistent_paragraph(paragraphs):
@@ -230,7 +226,7 @@ def tricky_words(paragraphs):
 		""")
 		nrules = 0
 		nused = 0
-		for rule in open(os.path.dirname(__file__) + '/tricky.txt'):
+		for rule in open(os.path.join(os.path.dirname(__file__), 'tricky.txt')):
 			rule = rule.strip()
 			if rule.startswith('###'):
 				f.write("<h2>%s</h2>\n" % rule.lstrip('# '))
@@ -240,12 +236,12 @@ def tricky_words(paragraphs):
 			if ' -> ' not in rule:
 				print 'bad rule in tricky.txt:', rule
 			a, b = rule.split('->')
-			a = a.strip()
+			a = a.strip().lower()
 			b = b.strip()
 			used = False
 			for para in paragraphs:
 				for txt, tags, entities in para:
-					if a in txt:
+					if a in txt.lower():
 						if not used:
 							f.write("<h3>%s</h3>\n" % rule)
 							f.write("<ul>\n")
@@ -268,6 +264,8 @@ with codecs.open(filename + '_index.html', 'w', 'latin1') as f:
 	All results should be seen as suggestions; think about the highlighted sentences.
 	
 	<ul>
+	<li>%(checkbox)s Do spell-checking (in your LaTeX editor, e.g. lyx)
+	<li>%(checkbox)s Do grammar-checking (in LanguageTool)
 	<li>%(checkbox)s <a href="%(prefix)s_topic.html">Each paragraph should open informatively.</a>
 	<li>%(checkbox)s <a href="%(prefix)s_tricky.html">Tricky words, Prepositions & Wordiness</a>
 	<li>%(checkbox)s <a href="%(prefix)s_wordy.html">Wordiness & long sentences</a>
@@ -337,7 +335,7 @@ with codecs.open(filename + '_index.html', 'w', 'latin1') as f:
 	</ul>
 	<p>
 	<ul>
-	""" % dict(prefix=filename, checkbox='<input type="checkbox" />'))
+	""" % dict(prefix=os.path.basename(filename), checkbox='<input type="checkbox" />'))
 
 
 doc = codecs.open(filename, encoding='latin1').read()
