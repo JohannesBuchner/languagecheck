@@ -1,68 +1,3 @@
-### Prepositions
-#not comprehensive, contribute your own examples
-at distance -> at a distance
-associate to -> associate with
-associated to -> associated with
-assumption of -> assumption about
-#consist of/in
-convert to -> convert into
-converted to -> convert into
-compare to -> compare with (unless plural follows / no differentiation)
-compared to -> compared with (unless plural follows / no differentiation)
-comparable with -> comparable to
-composed by -> composed of
-correct the -> correct for the
-correspond with -> correspond to
-divide to -> divide into
-evidence for -> evidence of 
-imprint onto -> imprint on 
-include into -> include in 
-included into -> included in 
-independent from -> independent of 
-indication for -> indication of
-influence in -> influence on
-inspired of -> inspired by
-within a figure -> in a figure 
-within a month -> in a month
-within a period -> in a period
-within a year -> in a year
-in a day -> on a day 
-in a map -> on a map
-in a scale -> on a scale
-representative for -> representative of
-same like -> same as
-separate in -> separate into
-separated in -> separated into
-similar of -> similar to
-study about -> study of
-combine together -> combine
-combined together -> combine
-comprise of -> comprise
-comprised of -> comprise
-contradict with -> contradict
-contradicts with -> contradicts
-decrease down -> decrease
-decreased down -> decreased
-decreases down -> decreases
-discuss on -> discuss
-discuss about -> discuss
-dominate over -> dominate
-dominates over -> dominates
-increase up -> increase
-increased up -> increased
-increases up -> increases
-match with -> match
-matched with -> matched
-matches with -> matches
-orbit around -> orbit
-orbits around -> orbits
-orbited around -> orbited
-overlap with -> overlap
-overlapped with -> overlapped
-overlaps with -> overlaps
-penetrate into -> penetrate (without "into", unless modified: "penetrate far into a cloud")
-sum up -> sum ("to add"; sum up is a phrasal verb that means "to summarize")
-
 ### wordiness
 despite the fact that -> although, even though
 regardless of the fact that -> although, even though
@@ -169,4 +104,256 @@ actually -> rephrase, colloquial
 #individual -> rephrase, colloquial
 #specific -> rephrase, colloquial
 #particular -> rephrase, colloquial
+
+
+### Common mistakes (A&A frequent changes)
+data is -> data are
+data was -> data were
+take into account -> take X into account (put object in the middle); consider
+the actual situation -> the present/current situation
+is in agreement with -> agrees with 
+was in agreement with -> agreed with 
+were in agreement with -> agreed with 
+are in agreement with -> agree with 
+aim to -> leave out; (not incorrect, but sometimes awkward; correct use: we aim to do X; aim at doing X)
+albeit -> although (Albeit means "although it be", so it cannot be used with another verb)
+allow to -> allow us to do X, allow X to be done, allow Xing
+allows to -> allows us to do X, allows X to be done, allows Xing
+allowed to -> allowed us to do X, allowed X to be done, allowed Xing
+#associate to -> associate with
+#associated to -> associated with
+a bad result -> a poor result; an incorrect result (bad implies moral)
+of high accuracy -> very accurate
+of importance -> important
+the best value -> the most precise value (best implies moral)
+Besides, -> Besides that, Along with that, In addition (besides is ambiguous)
+#both .* as well as -> both \1 and
+candidate to -> candidate for
+in case of -> in the case of, whenever, for
+center around -> center on, situated around/at
+centre around -> centre on, situated around/at
+is claimed to be -> It is said/claimed to be, Z claim that X is Y
+compare to -> compare with (unless plural follows / no differentiation)
+compared to -> compared with (unless plural follows / no differentiation)
+comparable with -> comparable to; similar to; compared with
+combined together -> combine
+combine together -> combine
+combine together -> combine
+combined together -> combine
+composed by -> composed of
+comprise of -> comprise
+comprised of -> comprise
+only concentrate on -> concentrate on
+to confront -> to compare X with (and) Y
+take into consideration -> take X into consideration
+took into consideration -> took X into consideration
+#contradict X with Y	X contradicts Y; compare X and Y
+contrary to -> in contrast to; instead,
+correct from -> correct for
+correlate to -> correlate with
+correspond with -> correspond to
+used 2 data -> used two datapoints
+decrease down -> decrease
+decreased down -> decreased
+decreases down -> decreases
+decrease of -> decrease in
+depend of -> depend with; dependent of	to depend on; be dependent on
+to detail -> to explain X in detail
+in details -> in detail
+discriminate -> distinguish; differentiate (See the dictionary for the differences. One legitimate use is in a phrase like "to discriminate spurious features from true absorption bands because of the quality of what needs to be distinguished)
+discuss on -> discuss
+discuss about -> discuss
+a study of -> X was/is studied
+an effect due to -> an effect of
+Due to -> Owing to, Because of, X causes, as a result of (Due to is ambiguous)
+effect due to -> effect of
+enable to -> enable us to do X, enable X to be done, enable Xing
+enables to -> enables us to do X, enables X to be done, enables Xing
+enabled to -> enabled us to do X, enabled X to be done, enabled Xing
+enhance the -> increase the
+evidenced by -> shown/illustrated/proven by
+evidence for -> evidence of
+evidences -> pieces of evidence, proof
+detect the existence of -> detect
+detected the existence of -> detected
+the fact that -> wordy; use for instance the possibility instead "of the fact that X can be"
+fit by a Gaussian -> fit with a Gaussian
+fit by a Normal -> fit with a Normal
+focus only on -> focus on
+in a following -> in the next/subsequent X, in the following way
+in the following -> in the next/subsequent X, in the following way
+a large fraction -> a high percentage, large portion/amount/number
+a significant fraction -> a high percentage, large portion/amount/number
+in the frame of -> in the framework of
+adds a further -> adds another/more
+went further -> went farther
+Further, -> Furthermore,
+Globally, -> In general,
+happened -> occured
+Hence, we -> As a result, We therefore, Thus
+ignore -> neglect, omit, exclude (false cognate)
+impact on -> to affect, to have an impact/effect on
+impacted on -> affected, had an impact/effect on
+important amount -> large amount
+impossibility to -> impossibility of doing X, it is impossible to do X
+increase of -> increase in
+independent on -> independent of
+independent from -> independent of 
+indication for -> indication of
+influence in -> influence on, have an influence on
+influence for -> influence on, have an influence on
+infra-red -> infrared
+infra-structure -> infrastructure
+issue -> problem, question, concern
+large intensity -> high intensity
+large list -> long list
+latter two -> the last two
+this latter -> the latter
+in the last years -> in recent years, in past years, in the last decade of the Xth century.
+for instance -> such as, similar to, the same as
+like -> such as, similar to, the same as
+is likely -> is very likely X, is very likely to be X, probably X, most likely X
+made up from -> made up of
+regions are marked -> regions are labeled
+matches with -> matches
+matched with -> matched
+method to -> method of -ing
+analysis motivates the conclusion -> leads to / justifies the conclusion
+neglect -> ignore/neglected to do/did not consider/disregarded X
+a number of -> several, in many cases
+null correction -> null hypothesis or similar rephrasing
+the result is null -> the result is zero/nil/nought
+obtain that -> find that; obtain X
+#On the -> The (Use only for short, limited papers or for very long treatises, but not for normal papers or section headings.)
+on the panel -> in the panel
+on the figure -> in the figure
+on the corner -> in the corner
+in order to do -> to do
+on the order of a few -> of a few, close to, on the order of N, comparable to
+of the order of -> close to, on the order of N, comparable to
+originate from -> originate in; come/stem from
+In this paper, we -> We / This paper
+penetrate in -> penetrate
+penetrate into -> penetrate
+a few percent  -> a few percentage points
+calibration was performed -> was calibrated
+permit to do -> permit us to do
+permitted to do -> permitted us to do
+permits to do -> permits us to do
+plotted by a line -> plotted as a line
+possibility to do -> possibility of doing; it is possible to do
+is preferentially found -> usually, preferably, mostly
+detect the presence of X -> detect X
+detected the presence of X -> detect X
+assume a priori -> assume
+assumed a priori -> assumed
+quite -> ambiguous, reword (rather is also ambiguous)
+rather -> ambiguous, reword (quite is also ambiguous)
+to reference -> to refer to, to supply references, to list
+unregular -> irregular, unregulated
+quite -> ambiguous, reword (rather is also ambiguous)
+is low relative to -> is lower than
+in the remainder of the paper -> in the rest of the paper
+is large with respect to -> is larger than
+is the result of a -> the result of; is an X effect
+over scale -> on scale; at scale; to scale
+with scale -> on scale; at scale; to scale
+the same than -> the same as
+the same that -> the same as
+shortly -> briefly, in a short while
+similar as -> similar to
+since a year -> for a year; a year ago
+Since -> Because, After which
+small mass -> low mass
+a small time -> a short time
+a small talk -> a short talk
+So, -> therefore
+this sort of -> (when plural follows) these sorts of Xs; this sort of X
+#the stars X -> the star's X; the stars' X; the stellar X
+small statistic -> low statistics, small sample, small number statistics
+large statistic -> high statistics, large sample, large statistical sample
+a study on -> a study of
+sub-sample -> subsample
+sub-structure -> substructure
+subzero -> sub-zero
+submm -> sub-mm, submillimeter
+#such X -> this X OR this sort of X; these Xs
+suggested to do -> suggested doing
+#suggest X to be -> suggest that X is; It was suggested that
+suited for -> suited to doing; suitable for
+sum up -> add up; sum
+supposed to orbit -> assumed to orbit
+in tension with -> in contrast to, in conflict with, contrasts with,
+a test to -> a test of
+than that reported -> than reported, [than those/the one/what X] reported
+together with -> and, with
+combined together with -> combined with
+a tool to determine -> tool for determining
+trend for -> tendency for X to have; trend toward X having
+turns out that -> It leads to; It results in
+turned out that -> It lead to; It results in
+this type of -> (when plural follows) this type of X; these types of Xs
+typical for -> typical of
+ultra-violet -> ultraviolet
+ultra-sound -> ultrasound
+on the usage of -> on the use of
+useful to determine -> useful for determining
+variation of -> variation in X (quantity that varies); a variation of this procedure (alternative way to do it)
+well observed -> observed fully, observed well; explained fully/clearly
+as well as -> Overused; don't you mean "and" in a specific instance?
+whether or not -> whether
+yet undetected -> an as yet undetected; a still undetected X
+yield a result -> give a result, illustrate, etc.
+yield the result -> give the result, illustrate, etc.
+
+### Prepositions
+#not comprehensive, contribute your own examples
+at distance -> at a distance
+associate to -> associate with
+associated to -> associated with
+assumption of -> assumption about
+#consist of/in
+convert to -> convert into
+converted to -> convert into
+correct the -> correct for the
+divide to -> divide into
+imprint onto -> imprint on 
+include into -> include in 
+included into -> included in 
+inspired of -> inspired by
+within a figure -> in a figure 
+within a month -> in a month
+within a period -> in a period
+within a year -> in a year
+in a day -> on a day 
+in a map -> on a map
+in a scale -> on a scale
+representative for -> representative of
+same like -> same as
+separate in -> separate into
+separated in -> separated into
+similar of -> similar to
+study about -> study of
+contradict with -> contradict
+contradicts with -> contradicts
+dominate over -> dominate
+dominates over -> dominates
+increase up -> increase
+increased up -> increased
+increases up -> increases
+match with -> match
+matched with -> matched
+matches with -> matches
+orbit around -> orbit
+orbits around -> orbits
+orbited around -> orbited
+overlap with -> overlap
+overlapped with -> overlapped
+overlaps with -> overlaps
+penetrate into -> penetrate (without "into", unless modified: "penetrate far into a cloud")
+sum up -> sum ("to add"; sum up is a phrasal verb that means "to summarize")
+
+
+### My favorite mistakes
+shades -> shading
 

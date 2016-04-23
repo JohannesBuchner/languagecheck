@@ -14,12 +14,21 @@ header = """<html>
 
 filename = sys.argv[1]
 pdf = sys.argv[2]
+lang = os.environ.get('LANG', 'en_UK')
+if 'US' in lang:
+	lang = 'en_US'
+elif 'UK' in lang:
+	lang = 'en_UK'
+else:
+	lang = 'en_UK'
+print 'Using language "%s". You can set LANG=en_UK or LANG=en_US.' % lang
+	     
 prefix = filename + '_vis-'
 def list_img():
 	return sorted(glob.glob(prefix + '*.png'))
 
 for i in list_img():
-	print 'deleting old image %s' % i
+	#print 'deleting old image %s' % i
 	os.remove(i)
 
 print 'creating visualisation ...'
@@ -94,13 +103,10 @@ def count_tenses(tags):
 	future_count = (' '.join([w for w, wt in tags])).count('going to')
 	for w, wt in tags:
 		if w in ['shall', 'will']:
-			print 'future:', w,
 			future_count += 1
 		elif wt in ['VB', 'VBP', 'VBZ']:
-			print 'present:', w,
 			present_count += 1
 		elif wt == 'VBD':
-			print 'past:', w,
 			past_count += 1
 	return past_count, present_count, future_count
 
@@ -226,7 +232,9 @@ def tricky_words(paragraphs):
 		""")
 		nrules = 0
 		nused = 0
-		for rule in open(os.path.join(os.path.dirname(__file__), 'tricky.txt')):
+		rules = open(os.path.join(os.path.dirname(__file__), 'tricky.txt')).readlines()
+		rules += open(os.path.join(os.path.dirname(__file__), 'tricky_%s.txt' % lang)).readlines()
+		for rule in rules:
 			rule = rule.strip()
 			if rule.startswith('###'):
 				f.write("<h2>%s</h2>\n" % rule.lstrip('# '))
@@ -236,24 +244,24 @@ def tricky_words(paragraphs):
 			if ' -> ' not in rule:
 				print 'bad rule in tricky.txt:', rule
 			a, b = rule.split('->')
-			a = a.strip().lower()
-			b = b.strip()
+			a = a
+			b = b
 			used = False
 			for para in paragraphs:
 				for txt, tags, entities in para:
-					if a in txt.lower():
+					if a in txt:
 						if not used:
-							f.write("<h3>%s</h3>\n" % rule)
+							f.write("<h5>%s</h5>\n" % rule)
 							f.write("<ul>\n")
 							used = True
-						f.write("<li>%s\n" % (txt.replace(a, '<b>' + a + '</b>' + ' -> <em>'+b+'</em>')))
+						f.write("<li>%s\n" % (txt.replace(a, '<b>' + a + '</b>' + ' -> <em>'+b+'</em> ')))
 			if used:
 				nused += 1
 				f.write("</ul>\n")
 			nrules += 1
 		
 		nrules 
-		f.write("<p>Only %d/%d rules applied to this text</p>\n" % (nused, nrules))
+		f.write("<p>Only %d/%d rules have applied to this text</p>\n" % (nused, nrules))
 		f.close()
 
 with codecs.open(filename + '_index.html', 'w', 'latin1') as f:
@@ -371,6 +379,7 @@ for i, chunk in enumerate(chunks):
 	if para:
 		paragraphs.append(para)
 
+print
 print 'analysis: tricky words'
 tricky_words(paragraphs)
 print 'analysis: wordiness'
@@ -383,8 +392,10 @@ print 'analysis: paragraph consistency'
 consistent_paragraph(paragraphs)
 
 
-
-print 'visualisation returned with', process.wait()
+print 'analysis: visualisation'
+r = process.wait()
+if r != 0:
+	print 'visualisation returned with', r
 with codecs.open(filename + '_vis.html', 'w', 'latin1') as f:
 	f.write(header % dict(title='Appearance'))
 	f.write("""<h1>Appearance</h1>
