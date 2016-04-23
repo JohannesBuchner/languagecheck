@@ -32,6 +32,31 @@ it is possible that -> may, might, could
 there is a chance that -> may, might, could
 it could happen that -> may, might, could
 the possibility exists for -> may, might, could
+the point of onset of -> the onset of
+the obtained results -> the results
+such as, e.g. -> for example, such as
+close proximity -> proximity
+circle around -> circle
+of fundamental importance -> is important, is fundamental
+coupled together -> coupled
+effect due to -> effect of
+
+data reduction was performed -> data were reduced
+has a tendency to -> tends to
+at the present time -> now, nowadays, currently
+in spite of the fact that -> although; even though
+due to the fact that -> because
+in the case of -> for X; about X
+perform an identification -> to identify
+#Concerning the explosion, its effect is -> The effect of the explosion is…
+The intersection of -> X intersects Y
+We aim at estimating -> We estimate
+make a comparison with -> to compare
+shows strong indications of -> indicate X strongly
+is in contradiction with -> contradicts
+is in agreement with -> agrees with
+Before proceeding further, it is worth commenting at this point that we have -> We have 
+it is worth -> (sign of a wordy sentence)
 
 
 ### tricky
@@ -65,6 +90,244 @@ can't -> cannot
 didn't -> did not
 shouldn't -> should not
 n't -> contractions should be avoided (did not for didn't, cannot for can't)
+
+### Wrong comparisons
+high speed -> fast
+low speed -> slow
+high velocity -> fast
+low velocity -> slow
+large abundance -> high abundance
+big abundance -> high abundance
+small abundance -> low abundance
+large absorption -> high absorption
+big absorption -> high absorption
+small absorption -> low absorption
+large accuracy -> high accuracy
+big accuracy -> high accuracy
+small accuracy -> low accuracy
+large adiabaticity -> high adiabaticity
+big adiabaticity -> high adiabaticity
+small adiabaticity -> low adiabaticity
+large background -> high background
+big background -> high background
+small background -> low background
+large brightness -> high brightness
+big brightness -> high brightness
+small brightness -> low brightness
+large contrast -> high contrast
+big contrast -> high contrast
+small contrast -> low contrast
+large degree -> high degree
+big degree -> high degree
+small degree -> low degree
+large density -> high density
+big density -> high density
+small density -> low density
+large energy -> high energy
+big energy -> high energy
+small energy -> low energy
+large extinction -> high extinction
+big extinction -> high extinction
+small extinction -> low extinction
+large fraction -> high fraction
+big fraction -> high fraction
+small fraction -> low fraction
+large frequency -> high frequency
+big frequency -> high frequency
+small frequency -> low frequency
+large latitude -> high latitude
+big latitude -> high latitude
+small latitude -> low latitude
+large level -> high level
+big level -> high level
+small level -> low level
+large luminosity -> high luminosity
+big luminosity -> high luminosity
+small luminosity -> low luminosity
+large mass -> high mass
+big mass -> high mass
+small mass -> low mass
+large metallicity -> high metallicity
+big metallicity -> high metallicity
+small metallicity -> low metallicity
+large number -> high number
+big number -> high number
+small number -> low number
+large obliquity -> high obliquity
+big obliquity -> high obliquity
+small obliquity -> low obliquity
+large percentage -> high percentage
+big percentage -> high percentage
+small percentage -> low percentage
+large precision -> high precision
+big precision -> high precision
+small precision -> low precision
+large pressure -> high pressure
+big pressure -> high pressure
+small pressure -> low pressure
+large probability -> high probability
+big probability -> high probability
+small probability -> low probability
+large proportion -> high proportion
+big proportion -> high proportion
+small proportion -> low proportion
+large quality -> high quality
+big quality -> high quality
+small quality -> low quality
+large rate -> high rate
+big rate -> high rate
+small rate -> low rate
+large redshift -> high redshift
+big redshift -> high redshift
+small redshift -> low redshift
+large resolution -> high resolution
+big resolution -> high resolution
+small resolution -> low resolution
+large shear -> high shear
+big shear -> high shear
+small shear -> low shear
+large speed -> high speed
+big speed -> high speed
+small speed -> low speed
+large temperature -> high temperature
+big temperature -> high temperature
+small temperature -> low temperature
+large value -> high value
+big value -> high value
+small value -> low value
+large velocity -> high velocity
+big velocity -> fast, high velocity
+small velocity -> slow, low velocity
+
+large range -> wide/broad range
+big range -> wide/broad range
+high range -> wide/broad range
+small range -> narrow range
+low range -> narrow range
+large spread -> wide/broad spread
+big spread -> wide/broad spread
+high spread -> wide/broad spread
+small spread -> narrow spread
+low spread -> narrow spread
+large variety -> wide/broad variety
+big variety -> wide/broad variety
+high variety -> wide/broad variety
+small variety -> narrow variety
+low variety -> narrow variety
+weak constraint -> loose constraint
+strong constraint -> tight constraint
+
+large acceleration -> strong acceleration
+big acceleration -> strong acceleration
+high acceleration -> strong acceleration
+small acceleration -> weak acceleration
+low acceleration -> weak acceleration
+large anisotropy -> strong anisotropy
+big anisotropy -> strong anisotropy
+high anisotropy -> strong anisotropy
+small anisotropy -> weak anisotropy
+low anisotropy -> weak anisotropy
+large argument -> strong argument
+big argument -> strong argument
+high argument -> strong argument
+small argument -> weak argument
+low argument -> weak argument
+large asymmetry -> strong asymmetry
+big asymmetry -> strong asymmetry
+high asymmetry -> strong asymmetry
+small asymmetry -> weak asymmetry
+low asymmetry -> weak asymmetry
+large constraint -> strong constraint
+big constraint -> strong constraint
+high constraint -> strong constraint
+small constraint -> weak constraint
+low constraint -> weak constraint
+large contrast -> strong contrast
+big contrast -> strong contrast
+high contrast -> strong contrast
+small contrast -> weak contrast
+low contrast -> weak contrast
+large current -> strong current
+big current -> strong current
+high current -> strong current
+small current -> weak current
+low current -> weak current
+large dependence -> strong dependence
+big dependence -> strong dependence
+high dependence -> strong dependence
+small dependence -> weak dependence
+low dependence -> weak dependence
+large effect -> strong effect
+big effect -> strong effect
+high effect -> strong effect
+small effect -> weak effect
+low effect -> weak effect
+large evidence -> strong evidence
+big evidence -> strong evidence
+high evidence -> strong evidence
+small evidence -> weak evidence
+low evidence -> weak evidence
+large magnetic -> strong magnetic
+big magnetic -> strong magnetic
+high magnetic -> strong magnetic
+small magnetic -> weak magnetic
+low magnetic -> weak magnetic
+large field -> strong field
+big field -> strong field
+high field -> strong field
+small field -> weak field
+low field -> weak field
+large flow -> strong flow
+big flow -> strong flow
+high flow -> strong flow
+small flow -> weak flow
+low flow -> weak flow
+large gradient -> strong gradient
+big gradient -> strong gradient
+high gradient -> strong gradient
+small gradient -> weak gradient
+low gradient -> weak gradient
+large instability -> strong instability
+big instability -> strong instability
+high instability -> strong instability
+small instability -> weak instability
+low instability -> weak instability
+large pulse -> strong pulse
+big pulse -> strong pulse
+high pulse -> strong pulse
+small pulse -> weak pulse
+low pulse -> weak pulse
+large relevance -> strong relevance
+big relevance -> strong relevance
+high relevance -> strong relevance
+small relevance -> weak relevance
+low relevance -> weak relevance
+large shear -> strong shear
+big shear -> strong shear
+high shear -> strong shear
+small shear -> weak shear
+low shear -> weak shear
+large turbulence -> strong turbulence
+big turbulence -> strong turbulence
+high turbulence -> strong turbulence
+small turbulence -> weak turbulence
+low turbulence -> weak turbulence
+large velocity -> strong velocity
+big velocity -> strong velocity
+high velocity -> strong velocity
+small velocity -> weak velocity
+low velocity -> weak velocity
+large field -> strong field
+big field -> strong field
+high field -> strong field
+small field -> weak field
+low field -> weak field
+
+partly true -> vague, ambiguous
+somewhat consistent -> vague, ambiguous
+the fact that -> check that what follows is a fact
+in any case -> in all cases, in either case
+
 
 ### Ambiguous
 #Due to -> Don't start like that
@@ -356,4 +619,7 @@ sum up -> sum ("to add"; sum up is a phrasal verb that means "to summarize")
 
 ### My favorite mistakes
 shades -> shading
+
+
+
 
