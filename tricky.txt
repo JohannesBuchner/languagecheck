@@ -1,0 +1,169 @@
+### Prepositions
+#not comprehensive, contribute your own examples
+at distance -> at a distance
+associate to -> associate with
+associated to -> associated with
+assumption of -> assumption about
+#consist of/in
+convert to -> convert into
+converted to -> convert into
+compare to -> compare with (unless plural follows / no differentiation)
+compared to -> compared with (unless plural follows / no differentiation)
+comparable with -> comparable to
+composed by -> composed of
+correct the -> correct for the
+correspond with -> correspond to
+divide to -> divide into
+evidence for -> evidence of 
+imprint onto -> imprint on 
+include into -> include in 
+included into -> included in 
+independent from -> independent of 
+indication for -> indication of
+influence in -> influence on
+inspired of -> inspired by
+within a figure -> in a figure 
+within a month -> in a month
+within a period -> in a period
+within a year -> in a year
+in a day -> on a day 
+in a map -> on a map
+in a scale -> on a scale
+representative for -> representative of
+same like -> same as
+separate in -> separate into
+separated in -> separated into
+similar of -> similar to
+study about -> study of
+combine together -> combine
+combined together -> combine
+comprise of -> comprise
+comprised of -> comprise
+contradict with -> contradict
+contradicts with -> contradicts
+decrease down -> decrease
+decreased down -> decreased
+decreases down -> decreases
+discuss on -> discuss
+discuss about -> discuss
+dominate over -> dominate
+dominates over -> dominates
+increase up -> increase
+increased up -> increased
+increases up -> increases
+match with -> match
+matched with -> matched
+matches with -> matches
+orbit around -> orbit
+orbits around -> orbits
+orbited around -> orbited
+overlap with -> overlap
+overlapped with -> overlapped
+overlaps with -> overlaps
+penetrate into -> penetrate (without "into", unless modified: "penetrate far into a cloud")
+sum up -> sum ("to add"; sum up is a phrasal verb that means "to summarize")
+
+### wordiness
+despite the fact that -> although, even though
+regardless of the fact that -> although, even though
+in the event that -> if
+under circumstances in which -> if
+the reason for -> because, since, why
+for the reason that -> because, since, why
+owing/due to the fact that -> because, since, why
+in light of the fact that -> because, since, why
+considering the fact that -> because, since, why
+on the grounds that -> because, since, why
+this is why -> because, since, why
+on the occasion of -> when
+in a situation in which -> when
+under circumstances in which -> when
+as regards -> about
+in reference to -> about
+with regard to -> about
+concerning the matter of -> about
+is concerned -> about (instead of "where X is concerned")
+it is crucial that -> must, should
+it is necessary that -> must, should
+there is a need for -> must, should
+there is a necessity for -> must, should
+it is important that -> must, should
+cannot be avoided -> must, should
+is able to -> can
+has the opportunity to -> can
+has the capacity for -> can
+has the ability to -> can
+it is possible that -> may, might, could
+there is a chance that -> may, might, could
+it could happen that -> may, might, could
+the possibility exists for -> may, might, could
+
+
+### tricky
+the existence of -> simplify (e.g. is present, exists)
+the presence of -> simplify (e.g. is present, exists)
+in agreement -> simplify (e.g. agrees with)
+in the present paper -> simplify (it is clear that you are writing; here)
+in the present work -> simplify (it is clear that you are writing; here)
+we think -> we think/believe: can you rephrase?
+we believe -> we think/believe: can you rephrase?
+there is -> rephrase
+there are -> rephrase
+respectively -> double-check that you are pairing lists here
+? -> question marks should rarely be used
+
+### double negatives
+not un -> use the positive expression (tricky for arabian first-language speakers)
+not different -> similar
+not many -> few
+not have -> lack
+not include -> omit
+not consider -> ignore
+not the same -> different
+not often -> rarely
+not admit -> deny
+not accept -> reject
+
+### Contractions
+can not -> cannot
+can't -> cannot
+didn't -> did not
+shouldn't -> should not
+n't -> contractions should be avoided (did not for didn't, cannot for can't)
+
+
+### Colloquial phrases and formal equivalents (not comprehensive, see above) 
+a couple of -> some 
+a little -> slightly 
+a lot of -> much/many
+back up -> confirm 
+was done -> was made (but "work done")
+get rid of -> eliminate
+goes along with -> is accompanied by
+going beyond -> exceeding
+goes down to -> decreases
+going from -> extending
+go on -> continue
+goes up to -> increases
+hopeless -> very poor
+luckily -> fortunately
+put constraints on -> place or set constraints on 
+specially -> especially
+when it comes to -> for (when it comes to measuring the emission flow)
+#already -> rephrase
+anyhow -> rephrase, colloquial
+really -> rephrase, colloquial
+basically -> rephrase, colloquial
+actually -> rephrase, colloquial
+generally -> rephrase, colloquial
+kind of -> rephrase, colloquial
+sort of -> rephrase, colloquial
+type of -> rephrase, colloquial
+really -> rephrase, colloquial
+for all intents and purposes -> rephrase, colloquial
+definitely -> rephrase, colloquial
+actually -> rephrase, colloquial
+#individual -> rephrase, colloquial
+#specific -> rephrase, colloquial
+#particular -> rephrase, colloquial
+
