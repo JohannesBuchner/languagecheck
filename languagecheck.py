@@ -418,3 +418,7 @@ with codecs.open(filename + '_vis.html', 'w', 'latin1') as f:
 		print 'WARNING: converting pdf to images seems to have failed.'
 
 
+print 'done'
+
+print
+print 'open %s in a web browser' % (filename + '_index.html')

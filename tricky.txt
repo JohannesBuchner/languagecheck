@@ -325,7 +325,7 @@ low field -> weak field
 
 partly true -> vague, ambiguous
 somewhat consistent -> vague, ambiguous
-the fact that -> check that what follows is a fact
+the fact that -> check that what follows is a fact, otherwise simplify
 in any case -> in all cases, in either case
 
 

@@ -27,10 +27,10 @@ Requirements
 How to use
 --------------
 
-* create PDF from your latex file
-* use detex to create pure text file.
+* create PDF from your latex file -> mypaper.pdf
+* use detex to create pure text file -> mypaper.txt
 * run $ python languagecheck.py mydir/mypaper.txt mydir/mypaper.pdf
-* open with a web browser example/mypaper_index.html
+* open with a web browser mypaper_index.html to see all reports
 
 
 
