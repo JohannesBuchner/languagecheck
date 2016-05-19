@@ -1,9 +1,10 @@
+#!/usr/bin/env python
 import sys, os
 import random
 import codecs
-import nltk
 import subprocess
 import glob
+import nltk # Install nltk: $ pip install nltk --user
 
 header = """<html>
 <head>
@@ -12,6 +13,24 @@ header = """<html>
 </head>
 """
 
+if len(sys.argv) != 3:
+	sys.stderr.write("""SYNOPSIS: %(cmd)s <txtfile> <pdffile>
+
+txtfile: Use detex to remove tex from a latex file.
+	Example: detex mn.tex > mn.txt
+pdffile: PDF of your paper
+
+Environment variables:
+LANG: [en_UK|en_US]
+	Choose language.
+
+Usage example:
+	LANG=UK %(cmd)s mn.txt mn.pdf
+
+Johannes Buchner (C) 2016
+http://github.com/JohannesBuchner/languagecheck/
+""" % dict(cmd=sys.argv[0]))
+	sys.exit(1)
 filename = sys.argv[1]
 pdf = sys.argv[2]
 lang = os.environ.get('LANG', 'en_UK')
@@ -276,7 +295,7 @@ with codecs.open(filename + '_index.html', 'w', 'latin1') as f:
 	<li>%(checkbox)s Do grammar-checking (in LanguageTool)
 	<li>%(checkbox)s <a href="%(prefix)s_topic.html">Each paragraph should open informatively.</a>
 	<li>%(checkbox)s <a href="%(prefix)s_tricky.html">Tricky words, Prepositions & Wordiness</a>
-	<li>%(checkbox)s <a href="%(prefix)s_wordy.html">Wordiness & long sentences</a>
+	<li>%(checkbox)s <a href="%(prefix)s_wordiness.html">Wordiness & long sentences</a>
 	<li>%(checkbox)s <a href="%(prefix)s_tense.html">Consistent use of tenses</a>
 	<li>%(checkbox)s <a href="%(prefix)s_para.html">Paragraph consistency</a>
 	<li>%(checkbox)s <a href="%(prefix)s_vis.html">Check the visual appeal</a>

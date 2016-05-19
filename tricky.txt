@@ -67,8 +67,8 @@ in the present paper -> simplify (it is clear that you are writing; here)
 in the present work -> simplify (it is clear that you are writing; here)
 we think -> we think/believe: can you rephrase?
 we believe -> we think/believe: can you rephrase?
-there is -> rephrase
-there are -> rephrase
+there is -> rephrase; make the following active, use a stronger verb
+there are -> rephrase; make the following active, use a stronger verb
 respectively -> double-check that you are pairing lists here
 ? -> question marks should rarely be used
 
@@ -90,6 +90,12 @@ can't -> cannot
 didn't -> did not
 shouldn't -> should not
 n't -> contractions should be avoided (did not for didn't, cannot for can't)
+
+### Repetitions and Repetitions
+and and -> and
+the the -> the
+from the from the -> from the
+of of -> of
 
 ### Wrong comparisons
 high speed -> fast
@@ -327,7 +333,7 @@ partly true -> vague, ambiguous
 somewhat consistent -> vague, ambiguous
 the fact that -> check that what follows is a fact, otherwise simplify
 in any case -> in all cases, in either case
-
+/ -> ambiguous. use either and, or (or formula for ratio)
 
 ### Ambiguous
 #Due to -> Don't start like that
@@ -349,7 +355,7 @@ goes up to -> increases
 hopeless -> very poor
 luckily -> fortunately
 put constraints on -> place or set constraints on 
-specially -> especially
+ specially -> especially
 when it comes to -> for (when it comes to measuring the emission flow)
 #already -> rephrase
 anyhow -> rephrase, colloquial
@@ -363,7 +369,6 @@ type of -> rephrase, colloquial
 really -> rephrase, colloquial
 for all intents and purposes -> rephrase, colloquial
 definitely -> rephrase, colloquial
-actually -> rephrase, colloquial
 #individual -> rephrase, colloquial
 #specific -> rephrase, colloquial
 #particular -> rephrase, colloquial
@@ -439,7 +444,7 @@ evidence for -> evidence of
 evidences -> pieces of evidence, proof
 detect the existence of -> detect
 detected the existence of -> detected
-the fact that -> wordy; use for instance the possibility instead "of the fact that X can be"
+the fact that -> wordy; use for instance "the possibility" instead "of the fact that X can be"
 fit by a Gaussian -> fit with a Gaussian
 fit by a Normal -> fit with a Normal
 focus only on -> focus on
@@ -514,7 +519,6 @@ quite -> ambiguous, reword (rather is also ambiguous)
 rather -> ambiguous, reword (quite is also ambiguous)
 to reference -> to refer to, to supply references, to list
 unregular -> irregular, unregulated
-quite -> ambiguous, reword (rather is also ambiguous)
 is low relative to -> is lower than
 in the remainder of the paper -> in the rest of the paper
 is large with respect to -> is larger than
@@ -621,5 +625,13 @@ sum up -> sum ("to add"; sum up is a phrasal verb that means "to summarize")
 shades -> shading
 
 
+### Very bad ones
+should of -> should have
+could of -> could have
+would of -> would have
+has the affect -> has the effect
+was effected -> was affected
+irregardless -> regardless, irrespective
+Irregardless -> Regardless, Irrespective
 
 
