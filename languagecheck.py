@@ -294,7 +294,7 @@ def syllable_stats(words):
 			# (and are not compound words, not checked here)
 			if any([w.endswith(ending) for ending in ('es', 'ed', 'ing')]):
 				complex_s = s - 1
-			if complex_s >= 3 and w[0].islower():
+			if complex_s >= 3 and w[0].islower() and w not in easy_word_set:
 				complexwords += 1
 	return totsyl, polysylcount, complexwords
 
