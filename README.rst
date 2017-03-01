@@ -33,6 +33,10 @@ How to use
 * open with a web browser mypaper_index.html to see all reports
 
 
+Demo output
+-------------
 
+Under the following link is an analysis using an early draft of this paper: http://adsabs.harvard.edu/abs/2017MNRAS.465.4348B
+Program output: https://johannesbuchner.github.io/languagecheck/demo/agnpaper.txt_index.html
 
 
