@@ -550,7 +550,7 @@ def tricky_words(paragraphs):
 with codecs.open(filename + '_index.html', 'w', 'latin1') as f:
 	f.write(header % dict(title='Language analysis'))
 	f.write("""<h1>Language analysis</h1>
-	This program attempts to assist you in improving your paper.
+	<a href="https://github.com/JohannesBuchner/languagecheck>This program</a> attempts to assist you in improving your paper.
 	Language is ambiguous and subjective, a computer can not understand it.
 	All results should be seen as suggestions; think about the highlighted sentences.
 	
