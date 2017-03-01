@@ -236,7 +236,271 @@ def wordiness(paragraphs):
 			if badness < 30: break
 			f.write("<hr/>%s <span class='evaluation'>(%d,%s)</span>\n" % (txt, badness, ','.join(reasons)))
 		f.close()
-	
+
+def not_punctuation(w):
+	return not (len(w)==1 and (not w.isalpha()))
+def get_word_count(text): 
+	return len(filter(not_punctuation, word_tokenize(text)))
+def get_sent_count(text):
+	return len(sent_tokenize(text))
+# from https://github.com/mmautner/readability/blob/master/utils.py, Apache2 licensed
+import syllables_en
+def count_syllables(words):
+	syllableCount = 0
+	for word in words:
+		syllableCount += syllables_en.count(word)
+	return syllableCount
+
+# from textstat/textstat.py, MIT licensed
+import string
+import re
+exclude = list(string.punctuation)
+easy_word_set = set([line.strip() for line in open(os.path.join(os.path.dirname(__file__), 'easy_words.txt')) 
+	if not line.startswith('#')])
+
+def count_words(words):
+	count = 0
+	for w in words:
+		if w in exclude:
+			continue
+		count += 1
+	return count
+
+def count_syllables(words):
+	for w in words:
+		if w in exclude:
+			continue
+		s = syllables_en.count(w)
+		if s > 7: # probably a latex thing and not a word
+			continue
+		yield s
+
+def syllable_stats(words):
+	totsyl = 0
+	polysylcount = 0
+	complexwords = 0
+	for w in words:
+		if w in exclude:
+			continue
+		s = syllables_en.count(w)
+		
+		if s > 7: # probably a latex thing and not a word
+			continue
+		totsyl += s
+		if s >= 3:
+			polysylcount += s
+			complex_s = s
+			# complex words are not nouns, have >= 3 syl, not counting common endings
+			# (and are not compound words, not checked here)
+			if any([w.endswith(ending) for ending in ('es', 'ed', 'ing')]):
+				complex_s = s - 1
+			if complex_s >= 3 and w[0].islower():
+				complexwords += 1
+	return totsyl, polysylcount, complexwords
+
+def readability(paragraphs):
+	with codecs.open(filename + '_readability.html', 'w', 'latin1') as f:
+		f.write(header % dict(title='Reading ease'))
+		colors = []
+		#for flesch_reading_ease in 95, 85, 75, 65, 55, 40, 20:
+		#	u = 1 - flesch_reading_ease / 100.
+		for fog_index in [17,16,15,14,13,12,11,10,9,8,7,6]:
+			u = (fog_index - 6) / (17 - 6.)
+			u = max(0, min(1, u))
+			
+			# add color here
+			g = max(0.1, 1 - u*1.3)
+			b = g
+			r = min(1, 1.7 - u*1.3)
+			colors += [r*255, g*255, b*255]
+		f.write("""<h1>Reading ease</h1>
+		<style type="text/css">
+		.readingeaseresults{
+			color: #444444; 
+			font-size: x-small;
+		}
+		.results {
+			font-weight: bold;
+			color: black;
+			margin: 0.5em;
+			padding: 0.5em;
+		}
+		.results p {
+			background-color: white;
+			margin: 0.5em;
+			font-weight: normal;
+		}
+		.info {
+			color: #444444;
+		}
+		.info table {
+			font-size: x-small;
+		}
+		</style>
+		
+		<p class="info">
+		Highlighting difficult passages by measure of the
+		 <a href="https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests">reading ease</a>
+		and <a href="https://en.wikipedia.org/wiki/Gunning_fog_index">fog index</a>, which measure
+		average sentence length, average syllables and frequency of complex words. 
+		These can point to passages which could be simplified to more direct language. 
+		<p class="info">
+		Warning: these should only be taken only as guides! Measuring language have severe limitations!
+		</p>
+		<div class="info">
+<table>
+<tr><th>Score	<th>Flesch radability ease
+<tr><td>100.00-90.00	<td>Very easy to read. Easily understood by an average 11-year-old student.
+<tr><td>90.0-80.0	<td>Easy to read. Conversational English for consumers.
+<tr><td>80.0-70.0	<td>Fairly easy to read.
+<tr><td>70.0-60.0	<td>Plain English. Easily understood by 13- to 15-year-old students.
+<tr><td>60.0-50.0	<td>Fairly difficult to read.
+<tr><td>50.0-30.0	<td>Difficult to read.
+<tr><td>30.0-0.0	<td>Very difficult to read. Best understood by university graduates.
+</table>
+
+""")
+
+		f.write("""
+<table>
+<tr><th>Fog Index<th>Reading level by grade
+<tr style='background-color: rgb(%d,%d,%d)'><td>17<td>	College graduate
+<tr style='background-color: rgb(%d,%d,%d)'><td>16<td>	College senior
+<tr style='background-color: rgb(%d,%d,%d)'><td>15<td>	College junior
+<tr style='background-color: rgb(%d,%d,%d)'><td>14<td>	College sophomore
+<tr style='background-color: rgb(%d,%d,%d)'><td>13<td>	College freshman
+<tr style='background-color: rgb(%d,%d,%d)'><td>12<td>	High school senior
+<tr style='background-color: rgb(%d,%d,%d)'><td>11<td>	High school junior
+<tr style='background-color: rgb(%d,%d,%d)'><td>10<td>	High school sophomore
+<tr style='background-color: rgb(%d,%d,%d)'><td>9<td>	High school freshman
+<tr style='background-color: rgb(%d,%d,%d)'><td>8<td>	Eighth grade
+<tr style='background-color: rgb(%d,%d,%d)'><td>7<td>	Seventh grade
+<tr style='background-color: rgb(%d,%d,%d)'><td>6<td>	Sixth grade
+</table>
+<hr/>
+""" % tuple(colors))
+
+
+#		f.write("""
+#<tr><th>Fog Index<th>Reading level by grade
+#<tr><td>17<td>	College graduate
+#<tr><td>16<td>	College senior
+#<tr><td>15<td>	College junior
+#<tr><td>14<td>	College sophomore
+#<tr><td>13<td>	College freshman
+#<tr><td>12<td>	High school senior
+#<tr><td>11<td>	High school junior
+#<tr><td>10<td>	High school sophomore
+#<tr><td>9<td>	High school freshman
+#<tr><td>8<td>	Eighth grade
+#<tr><td>7<td>	Seventh grade
+#<tr><td>6<td>	Sixth grade
+#</table>
+#
+#<table>
+#<tr><th>Score	<th>Flesch radability ease
+#<tr style='background-color: rgb(%d,%d,%d)'><td>100.00-90.00	<td>Very easy to read. Easily understood by an average 11-year-old student.
+#<tr style='background-color: rgb(%d,%d,%d)'><td>90.0-80.0	<td>Easy to read. Conversational English for consumers.
+#<tr style='background-color: rgb(%d,%d,%d)'><td>80.0-70.0	<td>Fairly easy to read.
+#<tr style='background-color: rgb(%d,%d,%d)'><td>70.0-60.0	<td>Plain English. Easily understood by 13- to 15-year-old students.
+#<tr style='background-color: rgb(%d,%d,%d)'><td>60.0-50.0	<td>Fairly difficult to read.
+#<tr style='background-color: rgb(%d,%d,%d)'><td>50.0-30.0	<td>Difficult to read.
+#<tr style='background-color: rgb(%d,%d,%d)'><td>30.0-0.0	<td>Very difficult to read. Best understood by university graduates.
+#</table>
+#		<hr/>
+#		""" % tuple(colors))
+		def reading_ease_name(v):
+			if v > 90: return 'very easy'
+			if v > 80: return 'easy'
+			if v > 70: return 'fairly easy'
+			if v > 60: return 'plain english'
+			if v > 50: return 'fairly difficult'
+			if v > 30: return 'difficult'
+			return 'very difficult'
+		#def time(txt, cls):
+		#	return '<span class="%s">%s</span>' % (cls, txt)
+		#f.write(time("Past: When describing your steps.", "past") + "<br/>")
+		#f.write(time("Present: When describing general truths.", "present") + "<br/>")
+		#f.write(time("Future: When describing future work.", "future") + "<br/>")
+		#f.write(time("Mixed tenses.", "mixed") + "<br/>")
+		#f.write("<br/>")
+		paragraphs = list(paragraphs)
+		
+		word_count = 0
+		sentence_count = 0
+		grouped_paragraphs = []
+		current_paragraphs = []
+		for para in paragraphs:
+			current_paragraphs.append(para)
+			for txt, tags, entities in para:
+				if is_full_sentence(txt, tags, entities):
+					word_count += len(tags)
+					sentence_count += 1
+			
+			#if word_count > 100:
+			if sentence_count > 30:
+				grouped_paragraphs.append(current_paragraphs)
+				current_paragraphs = []
+				word_count = 0
+				sentence_count = 0
+			
+		for group in grouped_paragraphs:
+			# compute statistics for this group
+			out = ""
+			sentence_count = 0
+			sentence_lengths = []
+			syllables = []
+			poly_syllable_count = 0
+			complex_word_count = 0
+			for para in group:
+				out += "<p>"
+				for txt, tags, entities in para:
+					sentence_count += 1
+					words = [word for (word, tag) in tags]
+					sentence_lengths.append(count_words(words))
+					totsyl, polysyl, complexwords = syllable_stats(words)
+					syllables.append(totsyl)
+					poly_syllable_count += polysyl
+					complex_word_count += complexwords
+					out += txt + '\n'
+				out += "\n</p>"
+				
+			# compute Flesch reading ease
+			# average sentence length
+			asl = sum(sentence_lengths) * 1. / sentence_count
+			# average syllables per word
+			asw = sum(syllables) * 1. / sum(sentence_lengths)
+			flesch_reading_ease = 206.835 - 1.015 * asl - 84.6 * asw
+			
+			# compute fog index
+			complex_word_fraction = complex_word_count * 100. / sum(sentence_lengths)
+			fog_index = 0.4 * (asl + complex_word_fraction)
+			smog_index = 1.0430 * (poly_syllable_count * 30. / sentence_count)**0.5 + 3.1291
+			
+			u = 1 - flesch_reading_ease / 100.
+			u = (fog_index - 6) / (17 - 6.)
+			u = max(0, min(1, u))
+			
+			# add color here
+			g = max(0.1, 1 - u*1.3)
+			b = g
+			r = min(1, 1.7 - u*1.3)
+			
+			#f.write("<div class='readingeaseresults'>Reading ease (Flesch): %.1f, Fog index (Gunning reading level): %d</div>" % 
+			#	(flesch_reading_ease, fog_index))
+			#f.write("\n<div style='background-color: rgb(%d,%d,%d)'>%s</div>\n" % (r*255,g*255,b*255, out))
+			
+			#f.write("<div class='readingeaseresults'  style='background-color: rgb(%d,%d,%d)'>Reading ease (Flesch): %.1f, Fog index (Gunning reading level): %d</div>\n" % 
+			#	(r*255,g*255,b*255, flesch_reading_ease, fog_index))
+			#f.write(out)
+			
+			f.write("<div class='results'  style='border: 1em solid rgb(%d,%d,%d)'>%s <span class='readingeaseresults'>- Reading ease (Flesch): %.1f, Fog index (Gunning reading level):</span>%d\n" % 
+				(r*255,g*255,b*255, reading_ease_name(flesch_reading_ease), flesch_reading_ease, fog_index))
+			f.write(out)
+			f.write("</div>")
+			
+			
+		f.close()
 
 def tricky_words(paragraphs):
 	with codecs.open(filename + '_tricky.html', 'w', 'latin1') as f:
@@ -296,6 +560,7 @@ with codecs.open(filename + '_index.html', 'w', 'latin1') as f:
 	<li>%(checkbox)s <a href="%(prefix)s_topic.html">Each paragraph should open informatively.</a>
 	<li>%(checkbox)s <a href="%(prefix)s_tricky.html">Tricky words, Prepositions & Wordiness</a>
 	<li>%(checkbox)s <a href="%(prefix)s_wordiness.html">Wordiness & long sentences</a>
+	<li>%(checkbox)s <a href="%(prefix)s_readability.html">Reading ease</a>
 	<li>%(checkbox)s <a href="%(prefix)s_tense.html">Consistent use of tenses</a>
 	<li>%(checkbox)s <a href="%(prefix)s_para.html">Paragraph consistency</a>
 	<li>%(checkbox)s <a href="%(prefix)s_vis.html">Check the visual appeal</a>
@@ -403,6 +668,8 @@ print 'analysis: tricky words'
 tricky_words(paragraphs)
 print 'analysis: wordiness'
 wordiness(paragraphs)
+print 'analysis: reading ease'
+readability(paragraphs)
 print 'analysis: tenses'
 tenses(paragraphs)
 print 'analysis: topic sentences'

@@ -40,6 +40,7 @@ circle around -> circle
 of fundamental importance -> is important, is fundamental
 coupled together -> coupled
 effect due to -> effect of
+is dependent on -> depends on
 
 data reduction was performed -> data were reduced
 has a tendency to -> tends to
@@ -96,6 +97,7 @@ and and -> and
 the the -> the
 from the from the -> from the
 of of -> of
+did did -> did
 
 ### Wrong comparisons
 high speed -> fast
@@ -623,7 +625,11 @@ sum up -> sum ("to add"; sum up is a phrasal verb that means "to summarize")
 
 ### My favorite mistakes
 shades -> shading
-
+in optical wavelengths -> at optical wavelengths
+starts at -> starts from
+start at -> start from
+started at -> started from
+in the onset -> at the onset
 
 ### Very bad ones
 should of -> should have
@@ -634,4 +640,11 @@ was effected -> was affected
 irregardless -> regardless, irrespective
 Irregardless -> Regardless, Irrespective
 
+### a->an
+
+a a -> an a
+a e -> an e
+a i -> an i
+a o -> an o
+a u -> an u
 
