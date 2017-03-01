@@ -39,4 +39,9 @@ Demo output
 Under the following link is an analysis using an early draft of this paper: http://adsabs.harvard.edu/abs/2017MNRAS.465.4348B
 Program output: https://johannesbuchner.github.io/languagecheck/demo/agnpaper.txt_index.html
 
+See also - Statistics checklist
+---------------------------------
+
+Check for common statistics mistakes with this checklist
+http://astrost.at/istics/minimal-statistics-checklist.html
 
