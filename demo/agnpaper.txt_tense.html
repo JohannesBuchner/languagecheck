@@ -1,0 +1,461 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> 
+<title>Tenses</title>
+</head>
+<h1>Tenses</h1>
+		<style type="text/css">
+		.past{color: blue}
+		.present{color: green}
+		.future{color: orange}
+		.mixed{color: red}
+		</style>
+		<span class="past">Past: When describing your steps.</span><br/><span class="present">Present: When describing general truths.</span><br/><span class="future">Future: When describing future work.</span><br/><span class="mixed">Mixed tenses.</span><br/><br/><p>
+</p><p> Galaxy-scale obscuration in Active Galactic Nuclei Galaxy gas as obscurer: II.
+Separating the galaxy-scale and nuclear obscurers of Active Galactic Nuclei Buchner et al.
+Johannes Buchner, E-mail: johannes.buchner.acad@gmx.com Franz Bauer, EAGLE collaborators 
+
+</p><p>
+</p><p>
+</p><p>
+</p><p>
+</p><p><span class="present">The ``torus'' obscurer of Active Galactic Nuclei, is poorly understood in terms of its density, substructure and physical mechanisms.</span>
+<span class="present">Large X-ray surveys provide model boundary constraints, for both Compton-thin and Compton-thick levels of obscuration, as obscured fractions are mean covering factors X.</span>
+<span class="present">However, a major remaining uncertainty is host galaxy obscuration.</span>
+<span class="past">In Paper I we discovered a relation of for the obscuration of galaxy-scale gas.</span>
+<span class="present">Here we apply this observational relation to the AGN population, and find that galaxy-scale gas is responsible for a luminosity-independent fraction of Compton-thin AGN, but does not produce Compton-thick columns.</span>
+<span class="present">With the host galaxy obscuration understood, we present a model of the remaining, nuclear obscurer which is consistent with a range of observations.</span>
+<span class="present">The PuffedTorus model consists of a Compton-thick component () and a Compton-thin component (), which is present depending on black hole mass and luminosity.</span>
+<span class="present">This is a useful summary of observational constraints for torus modellers who would like to reproduce this behaviour.</span>
+<span class="present">It can also be employed as a sub-grid recipe in cosmological simulations which do not resolve the torus.</span>
+<span class="present">We also investigate host-galaxy X-ray obscuration inside cosmological, hydro-dynamic simulations (EAGLE, Illustris).</span>
+<span class="present">The obscuration from ray-traced galaxy gas can be in agreement with observations, but is highly sensitive to the chosen feedback assumptions.</span>
+
+</p><p>
+</p><p><span class="present">The vast majority of Active Galactic Nuclei (AGN) are obscured by thick columns of gas and dust.</span>
+<span class="present">X-ray surveys over the last decade indicate that are hidden behind Compton-thick column densities () and of the remaining population, are obscured with e.g.</span>
+<span class="present">An open question is whether the same gas reservoir is responsible for fuelling the AGN by accretion onto Supermassive Black Holes (SMBHs), and whether it itself is affected by AGN activity.</span>
+<span class="present">To address this, the first step is to identify the scale at which the obscuring gas resides.</span>
+<span class="present">Traditionally, AGN obscuration is associated with the ``torus'', a nuclear () structure around the accretion disk.</span>
+<span class="present">Many basic questions about this gas reservoir remain to be answered, including its density, substructure and stability mechanism Elitzur2006a,Hoenig2013.</span>
+<span class="present">Assuming sampling from random viewing angles, the large fraction of obscured AGN implies large covering fractions.</span>
+<span class="present">Therefore turbulent structures such as winds from accretion disks have been invoked.</span>
+<span class="present">However, for the covering fractions to be useful constraints for torus models, the importance of galaxy-scale gas to the obscuration has to be estimated.</span>
+<span class="present">Separating the covering and column densities from nuclear and galaxy-scale obscurers is the goal of this work.</span>
+
+</p><p><span class="present">Local galaxies exemplify that several scales can contribute to the obscured columns.</span>
+<span class="present">The Milky Way gas distribution shows column densities of , but only in very low Galactic latitudes (, Dickey1990,Kalberla2005GalNHdist).</span>
+<span class="present">Towards the Galactic Center columns with can be found in the Central Molecular Zone Morris1996,Molinari2011, as well as in the equivalent central zones of nearby AGN host galaxies Prieto2014.</span>
+<span class="present">Also the obscuration in the AGN host galaxy NGC 1068 is clearly nuclear (in this work: or smaller), because its Compton-thick column is observed in a face-on galaxy Matt1997a.</span>
+<span class="present">On the other hand, many nearby, obscured AGN are hosted in edge-on galaxies Maiolino1995, which suggests that dust-lanes may also be important obscurers see also for galactic optical/infrared extinction Goulding2009.</span>
+<span class="mixed">Hence Matt2000 proposed a two-phase model for the obscuration of AGN: a central, nuclear obscurer which provides Compton-thick obscuration, and the host galaxy, which provides mildly obscured lines of sight.</span>
+
+</p><p><span class="present">However, the Milky Way and local galaxies are limited in their use as templates for the high-redshift universe, specifically at peak SMBH growth (; e.g., Aird2010).</span>
+<span class="past">At that time, the gas content in galaxies was probably higher, as indicated by molecular gas measurements e.g.</span>
+<span class="present">Tacconi2013 which perhaps lead to the peak of star formation see review by Madau2014 and the increase in the fraction of obscured AGN with redshift e.g.</span>
+<span class="present">The efficient growth of SMBHs at these early epochs has been attributed to galaxy mergers Ciotti_Ostriker2001.</span>
+<span class="present">This model was expanded by Hopkins2006OriginModel to reproduce local scaling relationships between galaxy components and SMBH masses, the luminosity function of AGN, the fraction of active galaxies, and the obscuration dichotomy of AGN.</span>
+<span class="present">The evolutionary model also explains why bright AGN are less frequently found to be mildly obscured than faint AGN Ueda2003,Silverman2008,Ebrero2009,Ueda2014,Buchner2015,Aird2015, albeit only qualitatively Hopkins2005,Hopkins2006OriginModel.</span>
+<span class="present">In this work we investigate the obscuring role of galaxy-scale gas in the transition from obscured AGN in gas-rich galaxies to unobscured AGN in gas-poor galaxies, as proposed in the evolutionary sequence of that model.</span>
+<span class="present">To effectively decouple the galaxy-scale and nuclear X-ray obscurer, we need to go beyond a single, central source.</span>
+
+</p><p><span class="mixed">This paper is organised as follows: In Section we present our computation of the galaxy-scale obscuration using observational results from Paper I of the obscuring column distribution of galaxies, applied to the AGN population.</span>
+<span class="present">Section presents our results, which we discuss in Section X.</span>
+<span class="mixed">With the galaxy-scale obscurer subtracted, we present a model for the remaining nuclear obscurer in Section X. </span>
+
+</p><p><span class="present">Independently, Section looks into simulated galaxies in hydro-dynamic cosmological simulations.</span>
+<span class="present">These provide predictions for the amount of gas inside galaxies, from which we derive obscured fractions using ray-tracing.</span>
+<span class="present">Various model uncertainties are discussed.</span>
+<span class="present">Finally we summarise our conclusions in Section X.</span>
+
+</p><p>
+</p><p><span class="present">Our goal is to predict the fraction of obscured AGN from the obscuration of host galaxy-scale gas alone, i.e.</span>
+<span class="present">without nuclear obscuration (the torus and central molecular zones).</span>
+<span class="future">In this fashion we will be able to separate the large-scale and small-scale obscurer.</span>
+<span class="past">In Paper I we established a relation between the distribution of X-ray absorbing column densities, , in galaxies and the stellar mass of the galaxy.</span>
+
+</p><p><span class="past">This relation was derived using an unbiased sample of long Gamma Ray Bursts (LGRBs).</span>
+<span class="present">Since the obscuration is host mass dependent, the obscurer is arguably the host galaxy itself.</span>
+<span class="present">In Paper I we show that modern cosmological hydro-dynamic simulations reproduce absorption by galaxy-scale metal gas and predict relations very similar to Equation X. </span>
+
+</p><p><span class="present">We apply this relation to the AGN host galaxy population to estimate host galaxy obscuration.</span>
+<span class="mixed">This relation was derived from actively star forming galaxies, therefore a caveat is that results may slightly over-represent the galaxy gas present in AGN host galaxies which have average Rosario2011,Rosario2013,Santini2012 or even below-average Mullaney2015 star formation rates.</span>
+<span class="present">The major benefit of using this relationship is that it is based on the same observable as AGN obscured fractions, namely the photo-electric absorption of X-rays.</span>
+<span class="past">Paper I also investigated the host galaxy metallicity bias of LGRB and concluded that it has a negligible effect on the obscurer.</span>
+<span class="present">Local galaxies are also shown there to follow the relation. </span>
+
+</p><p><span class="present">We start with the stellar mass function (SMF) of the galaxy population.</span>
+<span class="present">Its shape is approximately a Schechter function and was measured by e.g.</span>
+<span class="present">Then we populate the galaxies with AGN.</span>
+<span class="present">The occupation probability has been measured by Aird2012 and Bongiorno2012 primarily for the redshift interval X.</span>
+<span class="present">More accurately, these authors measure the specific accretion rate distribution (SARD), , where is the X-ray luminosity.</span>
+<span class="present">They find factorised powerlaw relationships of the form X.</span>
+<span class="present">At the highest luminosities, an Eddington limit is required to explain the steep decrease of the luminosity function Aird2013.</span>
+<span class="present">In this work, however, we focus on the luminosity range regime and thus use only the observed relation.</span>
+<span class="present">The final ingredient is the obscuring column density distribution (CDD) , which is given by Equation as a normal distribution in X.</span>
+<span class="present">We assume that the galaxy-scale gas is independent of nuclear activity for individual galaxies.</span>
+
+</p><p><span class="present">The obscured fraction can then be simply computed by Monte Carlo simulations.</span>
+
+</p><p><span class="present">After inserting the factorised powerlaw relationship of the SARD, the result has the form</span>
+
+</p><p><span class="present">While the absolute probability of finding an AGN is a function of luminosity, the mass distribution is independent of luminosity.</span>
+<span class="present">That is, at every luminosity (not considering the Eddington limit), the same mix of host stellar masses contribute.</span>
+<span class="present">Therefore, the implication is that the obscuration due to host galaxy-scale gas is the same at all AGN luminosities.</span>
+
+</p><p><span class="past">We adopt an AGN definition of X.</span>
+<span class="present">The frequency distribution of column densities for the AGN population is then computed by integrating over stellar mass and luminosity:</span>
+
+</p><p><span class="present">Finally the obscured AGN fraction is the cumulative distribution, i.e.</span>
+<span class="present">the frequency of AGN being covered by a certain column density threshold or higher: </span>
+
+</p><p><span class="present">Into the calculation of we propagate the uncertainties from the obscuration relation for Paper I.</span>
+<span class="present">We consider two SMF (Muzzin2013 and Ilbert2013) and two SARD measurements (Aird2012 and Bongiorno2012), to incorporate systematic uncertainties.</span>
+<span class="present">To summarise, we rely only on observational relations to predict the obscuration of the AGN population by galaxy-scale gas.</span>
+
+</p><p>
+</p><p>
+</p><p><span class="present">The obscured fraction of the AGN population from putting together the observed relationships are shown in Figure X.</span>
+<span class="present">Each panel represents a specific redshift.</span>
+<span class="present">Red lines show our fraction of obscured AGN (y-axis) for a given column density (x-axis), assuming various SMF and SARDs, with shades showing the uncertainties stemming from the obscuration relation.</span>
+
+</p><p><span class="present">Firstly, galaxy-scale gas does not provide Compton-thick column densities ().</span>
+<span class="present">This is because massive galaxies which reach those densities are rare and therefore represent a negligible fraction of the AGN population.</span>
+<span class="present">In contrast, the observed fraction of Compton-thick AGN is (see Buchner2015 and references therein).</span>
+<span class="present">We can conclude that Compton-thick obscuration is always associated with the nuclear region.</span>
+<span class="present">An alternative, theoretical argument based on the total metal gas mass present in galaxies is laid out in Appendix and arrives at the same conclusion.</span>
+
+</p><p><span class="present">We therefore focus on the Compton-thin obscurer and compare our obscuration results to the fraction of Compton-thin AGN with , a common definition of ``obscured'' AGN.</span>
+<span class="present">This step implicitly assumes that the Compton-thick nuclear obscurer is randomly oriented with respect to the galaxy, in accordance with chaotic accretion King2006.</span>
+
+</p><p><span class="present">We now compare to measurements of the obscured fraction of Compton-thin AGN from surveys.</span>
+<span class="present">When these fractions are treated as covering fractions, they contain both galaxy-scale obscuration and nuclear obscuration.</span>
+<span class="present">Therefore the data points should always be understood as upper limits to the galaxy-scale gas obscuration.</span>
+<span class="present">Figure shows results from surveys at the peak of the accretion history ( panels) from Ueda2014 and Buchner2015, as well as surveys which include the local Universe Burlon2011,Ueda2014,Aird2015,Ricci2016.</span>
+<span class="present">Two cases are important: (1) the fraction of obscured AGN at the bright end (), where the lowest obscured fractions are observed (, shown as triangles), and (2) at the faint end (), where the highest obscured fractions are observed (, shown as squares).</span>
+<span class="present">Our results are, as discussed in Section , luminosity-independent.</span>
+<span class="present">When comparing the triangle data points at in Figure representing the bright end to our results (red), we find broad agreement within two-sigma uncertainties (red shades).</span>
+<span class="present">However, due to the large uncertainties also the faint end may be in agreement.</span>
+<span class="present">Therefore we can not distinguish whether galaxy-scale obscuration decreases toward the bright end, or increases toward the faint end.</span>
+<span class="present">Nevertheless we can conclude that galaxy-scale obscuration is an important, if not dominant, AGN obscurer at X.</span>
+<span class="present">, the observed obscured fraction is clearly higher than our results from galaxy-scale gas.</span>
+<span class="present">Therefore a nuclear obscurer is necessary to explain the elevated data points.</span>
+<span class="present">The shape of the distribution is driven by the Gaussian distribution of the relation, a shape assumed in Paper I to fit the dispersion.</span>
+<span class="present">Adopting a different distribution, would flatten the tails and permit unobscured LOS.</span>
+
+</p><p><span class="present">Note that our results are meaningful for the AGN population -- the obscuration of individual host galaxies is stellar-mass dependent with substantial variations between individual galaxies (see Equation ).</span>
+
+</p><p>
+</p><p><span class="present">Our main result is that the host galaxy gas provides a luminosity-independent obscurer, for which we compute covering fractions.</span>
+<span class="present">This obscurer does not provide Compton-thick columns, but large covering fractions () at X.</span>
+<span class="present">These high covering fractions suggest that a substantial part of the type1/type2 dichotomy is due to galaxy-scale gas.</span>
+<span class="present">This is consistent with the finding of Maiolino1995 that nearby type2 AGN are often edge-on galaxies.</span>
+<span class="present">We note that our results tend to produce high covering fractions, which are only consistent with the measurements due to large uncertainties.</span>
+<span class="present">We speculate that the use of GRB host galaxies in Paper I may slightly bias our results when applied to AGN host galaxies.</span>
+<span class="past">GRB host galaxies are currently star forming and thus may have slightly more gas than the average AGN galaxy (see caveats discussed in Section ).</span>
+<span class="present">A correction in the column density by a factor of 2 would agree well with data points at all redshifts.</span>
+<span class="present">This is demonstrated by the dashed line in Figure , which shows a normal distribution around with width X.</span>
+<span class="present">Nevertheless, our results are consistent with the current AGN surveys.</span>
+
+</p><p><span class="present">Our results give, for the first time, constraints on the galaxy-scale obscurer alone.</span>
+<span class="present">We use this in the following sections to disentangle the AGN nuclear obscurer from the galaxy-scale obscurer (Section ), and to describe their behaviour as a function of accretion luminosity, host galaxy stellar mass and redshift (Section ).</span>
+<span class="present">Finally physical effects leading to this behaviour are discussed in Section X.</span>
+
+</p><p>
+</p><p><span class="present">We can now discuss the luminosity-dependence of the obscurer.</span>
+<span class="present">X-ray surveys consistently find a strong decline towards high luminosities Ueda2003,Hasinger2005,LaFranca2005,Ebrero2009,Ueda2014,Buchner2015,Aird2015 of the obscured fraction in the Compton-thin AGN (CTNAGN) population.</span>
+<span class="present">In Figure we have sketched this decline from to a persistent X.</span>
+<span class="present">According to our results, this can be interpreted as two scales contributing to the obscuration: a galaxy-scale obscurer, and a luminosity-dependent nuclear obscurer.</span>
+<span class="present">The former is constrained from GRB observations (Paper I), re-weighted to the mass distribution of AGN (results of this paper).</span>
+<span class="present">The latter is the remainder to fit the observations.</span>
+<span class="present">According to this picture, the nuclear obscurer completely disappears toward high luminosities at X.</span>
+<span class="present">This luminosity is however redshift-dependent, with higher redshifts having higher cut-off luminosities.</span>
+<span class="mixed">This has been found in many works Ueda2003,Ebrero2009,LaFranca2005,Ueda2014,Aird2015 by fitting a empirical, parametric model to the relative number density derived from AGN surveys.</span>
+<span class="mixed">Buchner2015 derived the same result using a non-parametric method, indicating that this is indeed a robust result.</span>
+<span class="past">In Buchner2015, the implications for obscurer models were discussed in their Section 5.3.</span>
+<span class="past">They concluded that an Eddington-limited blow-out of the obscurer could explain the luminosity dependence.</span>
+<span class="present">As the luminosity dependence is observed to evolve, a black hole mass dependence needed to be invoked.</span>
+<span class="present">Under the assumption of black hole mass downsizing, i.e., that the average accreting black hole is more massive at high redshift than at low redshift, the turn-over luminosity decreases over cosmic time.</span>
+<span class="present">Black hole mass downsizing has evidence from optical observations of the black hole mass function evolution Schulze2010,Kelly2013a,Schulze2015 and semi-analytic models which reproduce the evolution of the AGN luminosity function Fanidakis2012,Enoki2014,Hirschmann2014.</span>
+<span class="past">Recently, Oh2015 found evidence that the type-1 fraction in a SDSS selected sample is both luminosity and black hole mass dependent.</span>
+
+</p><p>
+</p><p><span class="present">Since neither semi-analytic nor hydro-dynamic cosmological simulations can resolve the nuclear obscurer of AGN, we present a sub-grid model for post-processing.</span>
+<span class="present">The PuffedTorus model has few parameters and is constructed so that it reproduces the fraction of obscured AGN as a function of redshift and luminosity as discussed above.</span>
+<span class="present">It can also serve as a summary of observational constraints when exploring physical models for the obscurer.</span>
+
+</p><p><span class="present">We assume that a nuclear Compton-thick obscurer covers a fraction of the SMBH, X.</span>
+<span class="present">Evidence for this number comes directly from AGN surveys Buchner2015, matching the soft and hard X-ray luminosity function Aird2015 and matching the Compton-thin X-ray luminosity function to the spectrum of the Cosmic X-ray background Ueda2014.</span>
+<span class="present">Similar fractions are now also found in local surveys, e.g.</span>
+
+</p><p>
+</p><p><span class="present">* We propose that the remaining Compton-thin sky is obscured by galaxy-scale gas as well as a nuclear Compton-thin obscurer according to the formula:</span>
+
+</p><p><span class="present">The luminosity-independent obscuration, is on average .</span>
+<span class="present">In hydro-dynamic simulations it can be derived for individual galaxies through ray-tracing (see Section ), or otherwise calculated from Equation X.</span>
+<span class="present">The obscuration of Equation reaches a average maximum of at luminosity (see Figure ), and we therefore suggest X.</span>
+<span class="present">We chose a Gaussian form which requires fewer parameters than a linear decline e.g.</span>
+<span class="past">The obscured fraction declines towards both bright and faint ends to with characteristic width of the transition defined by X.</span>
+<span class="past">Evidence for the low-luminosity decline was found in surveys of the local Universe Burlon2011,Brightman2011b as well as at high redshifts Buchner2015.</span>
+
+</p><p><span class="present">As motivated in the above Section , the peak luminosity is in turn a function of mass:</span>
+
+</p><p>
+</p><p><span class="present">Here, at the distribution peaks at , which is using the conversion of Marconi2004.</span>
+<span class="mixed">The mass-dependence is defined by the parameter: at , the PuffedTorus is mass-independent, corresponding to a strict luminosity-dependent unified model, while at it is only Eddington-rate dependent.</span>
+<span class="present">The parameters , and are not known apriori.</span>
+<span class="present">may be considered see also Hoenig2007.</span>
+<span class="present">We derive fiducial values for the other two parameters using the Swift/BAT survey of local AGN.</span>
+<span class="past">That survey reported a mean mass of with a standard deviation of and a skew towards low masses WinterBAT2009.</span>
+<span class="past">Adopting an appropriate skewed normal distribution with skew parameter (tail to low masses) around , we find that approximately reproduces the width of the obscured fraction function reported in Burlon2011, and peaks at X.</span>
+<span class="past">Table lists the parameters of the PuffedTorus model, with recommended typical values.</span>
+<span class="present">We emphasise that the observations pertaining the redshift evolution have not been used when constructing our model.</span>
+<span class="present">Cosmological simulations using the PuffedTorus model can thus compare against those e.g.</span>
+
+</p><p><span class="present">The ratio of dust re-radiated infrared luminosity to bolometric, illuminating luminosity has been used to measure the irradiated area (obscurer covering factor) of individual AGN.</span>
+<span class="present">Maiolino2007,Lusso2013 typically find, once corrected for anisotropic illumination and emission see their Figure 13 Stalevski2016, fractions between and (luminosity-dependent).</span>
+<span class="present">Those measurements would include emission from the Compton-thick obscurer and the nuclear, Compton-thin obscurer.</span>
+<span class="present">With our assumed fiducial values we obtain () to () and are therefore also in agreement with those observations.</span>
+<span class="present">Infrared studies remain however difficult to use as a constraint as the entire infrared SED has to be constrained for each object Netzer2016 and covering factors have to be corrected based on uncertain model geometries Stalevski2016. </span>
+
+</p><p><span class="present">Figure illustrates the behaviour of the PuffedTorus model.</span>
+<span class="present">The obscured fraction undergoes a luminosity and mass-dependent peak, where the Compton-thin medium is extended and occupies a substantial fraction of the sky.</span>
+<span class="present">Due to the host galaxy, a constant fraction is present at all luminosities and masses.</span>
+<span class="present">The Compton-thick fraction here has been assumed to be constant, albeit we note that Ricci2016 claims a luminosity-dependence of the Compton-thick fraction.</span>
+
+</p><p>
+</p><p><span class="present">Physical processes giving rise to the luminosity and mass-dependent behaviour can not be discussed rigorously within the scope of this paper.</span>
+<span class="present">However, we point out a few key results of recent theoretical works.</span>
+<span class="present">Otherwise we refer to the review of Hoenig2013 which discusses current torus modelling approaches. </span>
+
+</p><p>We take note of the analytic wind model formalism described in Elitzur2016 and of the radiation-driven fountain model by Wada2015.
+<span class="present">Both models produce a vertically extended obscurer structure as a function of luminosity and mass.</span>
+<span class="present">At low luminosities, radiation is not sufficient to puff up the obscurer.</span>
+<span class="present">In the hydro-dynamical simulations of Wada2012 very high accretion luminosities are associated with strong outflows, which suppress the vertical extent of the obscuring structure as they occupy larger angles.</span>
+<span class="present">The cartoon of Figure illustrates such a possible wind scenario for the three, distinct obscuring components, with approximately the correct opening angles.</span>
+<span class="present">For visualisation we have smooth gas distributions, while in reality the obscurer is thought to be clumpy see e.g., and references therein Markowitz2014.</span>
+<span class="present">To date, models of the nuclear obscurer largely lack observational constraints.</span>
+<span class="present">Our PuffedTorus model summarises observational boundary constraints of covering fractions and column densities for how a physical ``torus'' model should behave.</span>
+
+</p><p>A further, commonly overlooked aspect is the evolution of AGN.
+<span class="present">Faint AGN are much more common than luminous AGN e.g.</span>
+<span class="present">Barger2005,Ueda2003,Aird2010, a fact that has to be explained with the triggering and light-curve of accretion events.</span>
+<span class="present">Galaxy-galaxy mergers are today thought to be the main trigger of luminous AGN activity, because SMBH need to accrete substantial fractions of their host galaxy gas (as shown by scaling relations), within durations comparable to dynamical timescales of galaxy centres Somerville2008.</span>
+<span class="past">In the timeline proposed by Hopkins et al, the luminous phase occurs in relatively late merger phases.</span>
+<span class="present">Luminous AGN stop further infall by radiation pressure and quickly reduce their column densities Hopkins2006OriginModel.</span>
+<span class="present">In contrast, the faint AGN population is suggested to be dominated by periods before and after peak accretion Hopkins2005LFinterpretation.</span>
+<span class="present">Early merger phases may have enhanced obscuration, both galaxy-scale (Compton-thin) and nuclear (Compton-thin and Compton-thick) Hopkins2005,Hopkins2006OriginModel.</span>
+<span class="present">Additionally, a substantial part of the faint AGN population is probably associated to secular triggering mechanisms e.g.</span>
+<span class="present">One may therefore argue for a evolutionary AGN life illustrative lifetimes in brackets consisting of </span>
+
+</p><p>no accretion, and therefore no AGN detection 89 , nearby gas leading to obscuration and triggering of a faint AGN 10 , either in the onset of a merger or due to secular events, major merger triggering a bright AGN, which immediately clears the vertically extended obscurer but shines for a period of time 1 before fading.
+
+</p><p><span class="present">Such a duty cycle would give rise to the observed obscured fractions (Figure ) while also respecting the luminosity function of AGN.</span>
+<span class="present">To summarise, luminous AGN and faint AGN may live in different environments with different gas reservoirs feeding them; therefore unifying the obscuration properties of a luminosity-dependent torus may not be appropriate. </span>
+
+</p><p>
+</p><p><span class="present">We now assess the gas content in simulated galaxies.</span>
+<span class="present">Modern cosmological hydro-dynamic simulations self-consistently evolve galaxies and their processes (star formation, gas accretion, supernova and AGN feedback, etc.)</span>
+<span class="present">These simulations are constrained in their initial conditions to the baryon density available in the early Universe and are tuned to reproduce the local stellar mass functions.</span>
+<span class="present">We consider two state-of-the-art cosmological hydro-dynamic simulations which also produce realistic galaxy morphologies.</span>
+<span class="present">These simulations allow us to look at the spatial distribution of gas inside galaxies.</span>
+
+</p><p>
+</p><p><span class="present">The Evolution and Assembly of Galaxies and their Environment (EAGLE) simulation Schaye2015,Crain2015 reproduces many observed quantities; it reproduces very well the stellar mass function Furlong2015a and size distribution Furlong2015 of galaxies as a function of cosmic time, being tuned to reproduce these at X.</span>
+<span class="present">Further relevant for this work it also produces galaxies with realistic galaxy morphologies Schaye2015 and gas contents consistent with observations of CO and HI Bahe2015 as well as H Lagos2015.</span>
+<span class="present">This encourages us to look inside simulated galaxies and assess the obscuration provided by them.</span>
+<span class="present">EAGLE includes black hole particles, which are seeded into dark matter halos exceeding masses of X.</span>
+<span class="present">These black holes are kept near the galaxy centre and may accrete when gas is nearby, in turn activating a feedback mechanism by heating Schaye2015.</span>
+<span class="present">The strength of EAGLE lies in its minimalistic subgrid recipes and the systematic exploration of alterations: Besides the reference model (L0100N1504REFERENCE), a series of simulations with parameter variations have been run to explore the impact of various choices in the subgrid implementations, including the style and strength of supernova feedback, AGN heating and criteria for when stars are formed Crain2015. </span>
+
+</p><p><span class="present">We also consider Illustris Vogelsberger2014,Vogelsberger2014a, another hydro-dynamic cosmological simulation.</span>
+<span class="present">This simulation also reproduces many observed quantities; most relevant for this work is that it reproduces the morphology of galaxies, the gas content from CO observations Vogelsberger2014,Genel2014.</span>
+<span class="past">The Illustris sub-grid models were chosen in consideration of the stellar mass function, star formation history and mass-metallicity relation.</span>
+<span class="past">However, the weak tuning gave mediocre agreement with regards to the galaxy stellar mass function Schaye2015 and size distribution Furlong2015.</span>
+<span class="present">On the positive side, the Illustris simulation is based on the AREPO hydrodynamics code which has been shown to reproduce galaxy features well e.g.</span>
+<span class="present">The gas particle resolution in Illustris is adaptive, with some cells being as small as in the highest resolution simulation (Illustris-1) used here, indicating that modern cosmological simulation indeed resolve galaxies into small sub-structures.</span>
+<span class="present">Illustris also includes black holes, which are created and kept in the gravitational potential minimum of galaxies inside halos of mass Sijacki2015. </span>
+
+</p><p>
+</p><p><span class="present">We first investigate the gas distribution in the reference simulations.</span>
+<span class="present">We focus on the metal component of gas as O and Fe are, for the relevant obscuring columns and redshifts, the most important elements for photo-electric absorption of X-rays.</span>
+<span class="present">In galaxy evolution models, the massive end of the existing stellar population expels metals into the galaxy.</span>
+<span class="present">The metal gas produced per stellar mass is determined by the chosen IMF and the metal yield, with the latter tuned to reproduce the stellar mass function e.g.</span>
+<span class="present">The total metal gas mass residing in galaxies further depends on the chosen feedback models which can expel gas out of the galaxy.</span>
+<span class="present">Typically the metal gas mass inside galaxies follows a ratio of to relation in semi-analytic models at e.g.</span>
+<span class="present">Croton2006,Croton2016; Plots of these models can be found in Appendix X.</span>
+<span class="present">The crucial remaining question surrounds the arrangement of that gas inside galaxies, as the concentration of gas defines its column density.</span>
+
+</p><p>
+</p><p><span class="present">We apply ray tracing, starting from the most massive black hole particle of each simulated galaxy (subhalo).</span>
+<span class="present">From that position, we radiate in random sight-lines all metal gas bound to the subhalo.</span>
+<span class="present">Along the ray we assign each part the density from the nearest gas particle and finally sum to a total metal column density.</span>
+<span class="present">This Voronoi tessellation ray tracer can be found at https://github.com/JohannesBuchner/LightRayRiderhttps://github.com/JohannesBuchner/LightRayRider; Catalogues of the obscuration of all considered simulated galaxies are available from the first author on request.</span>
+<span class="present">We then compute an equivalent hydrogen column density distribution by adopting Wilms2000 local inter stellar medium (ISM) abundances.</span>
+<span class="present">This mimics how is derived in X-ray observations.</span>
+<span class="present">For completeness, Appendix investigates the hydrogen gas and the metallicity of LOS in the simulation.</span>
+<span class="past">We adopt and work in physical units at redshift slices and X.</span>
+<span class="present">We investigate all galaxy subhaloes with black holes.</span>
+<span class="present">For each we randomly assign a luminosity according to the SARD of Aird2012 and use only those with X.</span>
+<span class="present">The last step is repeated 400 times to increase the sample size.</span>
+<span class="present">We therefore do not rely on the instantaneous accretion rates provided by the simulations see for Illustris and EAGLE respectively Sijacki2015,Rosas-Guevara2016.</span>
+<span class="present">The effect of adopting these as the selection criterion is discussed later.</span>
+<span class="present">With the column density distribution for each AGN available, we compute the obscured fraction as a function of column density of the simulated population.</span>
+
+</p><p>
+</p><p><span class="past">We present the fraction of AGN showing column densities larger than a given value in Figure X.</span>
+<span class="present">The plot is made in the same fashion as the previous observational Figure and compares against the same observations.</span>
+<span class="present">In the upper right, panel of Figure , we find that both the EAGLE reference and Illustris simulations produce a negligible number of Compton-thick AGN.</span>
+<span class="present">This is consistent with the assumption that Compton-thick obscuration is associated with a nuclear obscuration in the vicinity of the accretion disk.</span>
+<span class="present">We then compare to observations.</span>
+<span class="present">Downwards-pointing triangles indicate constraints for the obscured fraction of luminous, Compton-thin AGN.</span>
+<span class="present">Arbitrary additional nuclear obscuration may be included in them, therefore they should be interpreted as upper limits to the galaxy-scale obscuration.</span>
+<span class="present">We find that the Illustris simulation fulfils these constraints, as it produces very low covering fractions at all obscuring columns.</span>
+<span class="present">In contrast, the EAGLE reference simulation produces an excess of obscured AGN at X.</span>
+<span class="present">This is in violation of observations even when the higher data point from low-luminosity AGN is considered.</span>
+<span class="present">At higher column densities, the large-scale galaxy gas of the EAGLE reference simulation produces covering fractions consistent with the observations, with no need for a nuclear obscurer up to X.</span>
+<span class="present">In contrast, Illustris galaxies do not provide column densities of and thus require a nuclear obscurer to explain the observations.</span>
+<span class="present">The same trends are seen at higher redshifts in the panels of Figure X.</span>
+<span class="present">At redshift , both EAGLE and Illustris are consistent with the data points.</span>
+
+</p><p>
+</p><p><span class="present">We discuss three aspects which affect the results: (1) different sub-grid physics, most notably stronger feedback mechanisms, (2) differences between active and passive galaxies, (3) unresolved substructure of the gas.</span>
+
+</p><p><span class="present">The strength of EAGLE is that we can explore how variations of the physics affect the results.</span>
+<span class="present">The diversity of those predictions is bounded by dotted lines in Figure X.</span>
+<span class="present">This indicates that at least some models reproduce fractions in agreement with observation.</span>
+<span class="present">However it also shows that the simulations are limited in their predictive power, as arbitrary fractions can be produced depending on the input physics.</span>
+<span class="present">However, we can use observed obscured AGN fractions to exclude simulations which overproduce them, as these observations are apparently quite sensitive to the assumed physics.</span>
+<span class="present">We focus on the fraction of AGN with at redshift , and compare to EAGLE physics variations in Figure X. Observations find a fraction around X.</span>
+<span class="present">We consider any simulation with fractions above (right dotted line) as ruled out by observations.</span>
+<span class="present">This nicely separates the EAGLE physics variations into two groups, one close to the observational constraints, and one significantly over-predicting the fraction of obscured AGN.</span>
+<span class="present">The EAGLE reference simulation in a large cosmological volume (L0100N1504REFERENCE) belongs to the latter group, as well as the simulation run in medium-size volumes (L0025N0752REFERENCE, L0025N0752RECALIBRATED).</span>
+<span class="present">We now investigate which changes make the simulation agree better.</span>
+
+</p><p><span class="past">Star formation-related feedback (supernovae, stellar winds, radiation pressure, cosmic rays) was altered in the WeakFB and StrongFB models.</span>
+<span class="past">The efficiency threshold was modified by factors of and respectively, relative to the reference model.</span>
+<span class="present">Here we find, surprisingly, that both models produce lower obscured fractions than the reference model.</span>
+<span class="present">Strong feedback leads to underproduction of massive galaxies at their Figure 10 Crain2015, thereby biasing the galaxy population to small gas masses.</span>
+<span class="present">It is less clear why the WeakFB produces a small obscured fraction.</span>
+<span class="present">Presumably the feedback is not sufficient to vertically puff up galaxies, thereby reducing covering fractions.</span>
+<span class="present">However, these variations can be excluded based on their mismatch with other observations, e.g.</span>
+
+</p><p><span class="present">Next we discuss the effects of feedback from accreting SMBHs.</span>
+<span class="present">In the EAGLE simulation, there are three parameters which affect the triggering, efficiency and impact of AGN feedback respectively.</span>
+<span class="present">The equation of state of the ISM can be modified from its reference value (4/3) to (eos1).</span>
+<span class="present">The increased sound speed then increases the accretion onto black holes in the simulation, which increases AGN feedback.</span>
+<span class="present">Once near the black hole, matter is placed into the black hole with a Bondi accretion formula modified by a viscosity parameter.</span>
+<span class="present">Increasing the viscosity (ViscHi) allows gas to loose angular momentum and accrete more efficiently.</span>
+<span class="mixed">Once accreted, the temperature of particles near AGN is increased by , stochastically, bringing the gas into the metal cooling regime.</span>
+<span class="present">Schaye2015 test the impact of increasing this temperature to (AGNdT9).</span>
+<span class="present">Each of these three modification (eos1, ViscHi, AGNdT9) leads to a reduction of the obscured fraction of AGN (see Figure ), while contrary modifications (eos5/3, ViscLo, AGNdT8) do the opposite.</span>
+<span class="present">It is worth noting that Schaye2015 preferred the AGNdT9 variation over the reference simulation because it better fits soft X-ray observations of cluster gas.</span>
+<span class="present">We also point out that Illustris uses relative strong feedback, as it implements three different AGN feedback schemes (thermal, kinetic and radiation), whereas EAGLE uses only stochastic heating. </span>
+
+</p><p><span class="present">AGN outflows or radiation pressure may decrease the covering fractions momentarily.</span>
+<span class="present">We have so far considered all simulated galaxies and found that they produce high covering fractions.</span>
+<span class="present">Arguably these fractions are consistent with the covering fraction of low-luminosity AGN.</span>
+<span class="present">Therefore, one could propose that AGN feedback at high luminosities modifies the galaxy in such way that covering fractions are reduced.</span>
+<span class="present">Apriori this proposal appears unlikely, because nuclear gas should be affected first.</span>
+<span class="present">Additionally, studies comparing the morphology of active and passive galaxies have found little evidence that these are different, by comparing appearances with asymmetry and concentration measures Grogin2003,Grogin2005,Pierce2007,Gabor2009,Kocevski2012 or visual classification Kocevski2012.</span>
+<span class="present">Indeed, our results remain unchanged if in the EAGLE reference simulation we only consider simulated galaxies with instantaneous black hole accretion rates corresponding to , assuming a radiative efficiency of 10 and bolometric corrections of Marconi2004.</span>
+<span class="present">In fact, since active galaxies are preferentially gas-rich, star-forming galaxies in that simulation, the average column density is higher by a factor of 2, which increases the discrepancy.</span>
+
+</p><p><span class="present">Clumpy ISM may decrease the covering fractions.</span>
+<span class="present">For instance the galactic ISM is structured into parsec-size clumps with filling factors of Cox2005.</span>
+<span class="present">Such clumps could not be resolved by simulations.</span>
+<span class="present">However, as a LOS passes through large distances of the ISM ( kiloparsecs), this clumpiness averages out.</span>
+<span class="present">Additionally, clumpiness would effectively only redistribute the obscured fraction to both lower and higher column densities, potentially violating the constraints of higher column densities.</span>
+<span class="present">There are also differences in the hydrodynamics code schemes and their accuracy.</span>
+<span class="present">However, these are less important than the chosen sub-grid models J. Shaye, priv.</span>
+<span class="present">comm., see Scannapieco2012,Schaller2015,Cui2016,Sembolini2016 in the present non-classical SPH simulations.</span>
+
+</p><p><span class="present">To summarise, our obscured fraction diagnostic is a highly sensitive test of feedback recipes.</span>
+<span class="present">It can easily rule out feedback models already at early times (e.g. )</span>
+<span class="present">in the simulations, if they produce very high fractions of obscured AGN.</span>
+
+</p><p>
+</p><p><span class="present">Using only observational relations, we predict the covering fractions of galaxy-scale gas as relevant for the AGN population.</span>
+
+</p><p><span class="present">Galaxy-scale gas does not provide Compton-thick lines of sight.</span>
+<span class="present">Galaxy-scale gas covers substantial fractions of the SMBH population at , sufficient to explain the observed luminosity-independent baseline obscuration. </span>
+
+</p><p><span class="present">We therefore conclude that heavily obscured AGN are associated with nuclear obscuration, and propose the value as a demarcation line singling out the nuclear obscurer. </span>
+
+</p><p><span class="past">We subtracted the galaxy-scale obscuration and concluded regarding the remaining nuclear obscurer, that</span>
+
+</p><p><span class="present">a nuclear Compton-thick obscurer with covering is necessary.</span>
+<span class="present">a nuclear Compton-thin obscurer is necessary for some combinations of luminosity/black hole mass. </span>
+
+</p><p><span class="present">The result is formalised into a semi-analytic model for cosmological simulations, called PuffedTorus (Section ).</span>
+<span class="present">The cartoon of Figure illustrates a possible physical scenario for these three, distinct obscuring components.</span>
+
+</p><p><span class="past">We also investigated the inside of simulated galaxies from state-of-the-art hydro-dynamic, cosmological simulations and apply ray-tracing from their black holes.</span>
+<span class="present">Some of these simulations produce obscured fractions from their metal gas which is consistent with observed populations.</span>
+<span class="present">However, the results are highly sensitive to the adopted feedback models and therefore lack predictive power.</span>
+<span class="present">We therefore suggest the Compton-thin obscured AGN fraction as a diagnostic to rule out feedback models.</span>
+<span class="present">This diagnostic which can be applied already at early cosmic times ().</span>
+
+</p><p>
+</p><p>JB thanks Antonis Georgakakis and Dave Alexander for insightful conversations.
+JB thanks Joop Schaye for detailed comments pertaining the hydrodynamic simulations work.
+JB thanks Klaus Dolag, Sergio Contreras and Torsten Naab for conversations about hydro-dynamic simulations.
+
+</p><p>
+</p><p>
+</p><p>
+</p><p><span class="present">Important constraints on how much gas resides in galaxies can be drawn from cosmological simulations.</span>
+<span class="present">Such simulations evolve the matter density available at the Big Bang into collapsing bound structures.</span>
+<span class="present">Semi-analytic models, relying on dark matter haloes from dark matter N-body simulations have been highly successful in reproducing many features of galaxies, including the stellar mass function of galaxies and their colour distribution Croton2006,Somerville2008,Hirschmann2012,Fanidakis2012.</span>
+<span class="present">As an illustrative case, we consider the model of Croton2016.</span>
+<span class="present">Figure plots the metal gas mass (the X-ray obscurer) present as a function of galaxy stellar mass.</span>
+<span class="past">The median (red curve) falls consistently in the 1:30 to 1:100 range for the ratio of metal gas mass to stellar mass.</span>
+<span class="present">With AGN host galaxies primarily drawn around the regime, the total gas available to obscure a central point source is about X.</span>
+<span class="present">The Illustris simulation shows very similar results at obeying the same gas ratios.</span>
+<span class="present">However at , the high-mass end is lacks gas due to the strong feedback implemented in that simulation.</span>
+
+</p><p>We present a simple calculation to show that Compton-thick column densities, i.e. )
+<span class="present">can not be achieved by accumulating the galaxy gas over several kpc.</span>
+<span class="present">In X-ray spectral analysis, the equivalent hydrogen column density is usually computed assuming solar abundances.</span>
+<span class="present">To mimic this, we convert the metal mass in particles to the number of hydrogen atoms assuming solar mass fractions of the nearby ISM from Wilms2000:</span>
+
+</p><p>
+</p><p>* For example, a 1kpc ray in a region of metal gas density results in a measured column density of X. 
+
+</p><p><span class="present">The gas inside a galaxy may be arranged in a multitude of ways to achieve a covering with column density X.</span>
+<span class="present">If we consider only gas outside a certain radius , the most effective obscurer, i.e.</span>
+<span class="present">the one with the least mass but complete covering, is an infinitely thin shell at that radius X.</span>
+
+</p><p><span class="present">Converting to metals using the factor and expressing in conventional units, this limit is</span>
+
+</p><p><span class="present">Therefore, a metal mass larger than is required to create a Compton-thick obscurer outside the central X.</span>
+<span class="present">Or equivalently, a metal mass of has to be brought to the central to act as a Compton-thick obscurer.</span>
+<span class="present">Note that this mass limit scales with the covering factor; for example obscuration of of the sky requires of the mass.</span>
+<span class="present">This simple limit is shown for several levels of obscuration in Figure X. Risaliti1999 already noted that such large masses at radii further than a few 10 pc are ruled out in NGC1068 and Circinus because they would gravitationally dominate the central region.</span>
+
+</p><p><span class="present">Combining this simple limit with the masses of Figure , we can now conclude that galaxies simply do not have the required gas to provide Compton-thick obscurers with substantial covering factors outside the central X.</span>
+<span class="present">Admittedly, this is a weak constraint.</span>
+<span class="present">However the result holds independently of the geometry of the gas, the type of galaxy and is also applicable to mergers.</span>
+<span class="present">As an example, lets consider that a merges into a galaxy (minor merger), and lets assume that all of its gas () is made available.</span>
+<span class="present">That entire amount of gas must land within of the AGN in order to completely enshroud in Compton-thick columns.</span>
+<span class="present">More quantitative conclusions depend on the geometrical distribution of the gas in the galaxy.</span>
+<span class="present">We analyse the galaxies produced by hydrodynamic simulations in Section X.</span>
+
+</p><p>
+</p><p><span class="past">This paper focused on metal column densities, not hydrogen column densities.</span>
+<span class="present">We now consider the hydrogen column densities in the reference EAGLE simulation.</span>
+<span class="present">Our goal is to investigate whether and how they are different from the usually assumed local ISM metallicities in X-ray observation of high-redshift sources.</span>
+<span class="present">Bahe2015 investigated already the hydrogen masses and surface densities of EAGLE galaxies and found good agreement with observations.</span>
+<span class="present">Here we investigate the abundance in random sightlines for AGN.</span>
+<span class="present">The top panel of Figure presents the metal abundance relative to local ISM abundances of Wilms2000 as a function of galaxy mass for AGN.</span>
+<span class="present">In general, approximately solar abundances are predicted as the LOS crosses the host galaxy.</span>
+<span class="present">The abundance increases over cosmic time as metals build up.</span>
+<span class="present">Also, there is the usual mass-dependent increase in metallicity.</span>
+<span class="present">This effect is less prominent in AGN sightlines (Figure ) which always end in the metal-rich centre of galaxies. </span>
+
+</p><p><span class="present">For completeness we also present the expected metallicities for GRB sightlines in Figure X.</span>
+<span class="present">For low stellar mass hosts at high redshift, they are expected to be sub-solar.</span>
+<span class="present">These hosts dominate the observed host distribution see e.g., Perley2015b, and therefore sub-solar metallicities are to be expected in LGRB afterglow spectroscopy.</span>
+<span class="present">For research on the optical absorption of GRBs by HI we refer to the simulations of Pontzen2010.</span>
+
+</p>

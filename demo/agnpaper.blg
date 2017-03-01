@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: agnpaper.aux
+The style file: mnras.bst
+Database file #1: /mnt/data/daten/PostDoc/literature/agn.bib
+Database file #2: /mnt/data/daten/PostDoc/literature/grb.bib
+Database file #3: /mnt/data/daten/PostDoc/literature/sim.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 84 entries,
+            2881 wiz_defined-function locations,
+            1462 strings with 37722 characters,
+and the built_in function-call counts, 37603 in all, are:
+= -- 3094
+> -- 2675
+< -- 130
++ -- 1244
+- -- 342
+* -- 5059
+:= -- 5774
+add.period$ -- 0
+call.type$ -- 84
+change.case$ -- 168
+chr.to.int$ -- 82
+cite$ -- 84
+duplicate$ -- 1841
+empty$ -- 1868
+format.name$ -- 634
+if$ -- 6344
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 84
+newline$ -- 265
+num.names$ -- 506
+pop$ -- 418
+preamble$ -- 1
+purify$ -- 336
+quote$ -- 0
+skip$ -- 1028
+stack$ -- 0
+substring$ -- 2103
+swap$ -- 908
+text.length$ -- 336
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 756
+warning$ -- 0
+while$ -- 574
+width$ -- 0
+write$ -- 862

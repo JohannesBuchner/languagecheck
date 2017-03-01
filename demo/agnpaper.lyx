@@ -1,0 +1,4619 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass mnras
+\begin_preamble
+\input{../allresults/sphereresults.all/stats.tex}
+\newcommand{\NH}{ {N_{\rm{H}}} }
+\newcommand{\LX}{ {L_{\rm{X}}} }
+\newcommand{\AP}{ {p} }
+\end_preamble
+\options a4paper,fleqn,usenatbib,unicode=true
+\use_default_options true
+\maintain_unincluded_children false
+\language british
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "unicode=true"
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\rightmargin 5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+title[Galaxy-scale obscuration in Active Galactic Nuclei]{
+\end_layout
+
+\end_inset
+
+Galaxy gas as obscurer: II.
+ Separating the galaxy-scale and nuclear obscurers of Active Galactic Nuclei
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+author[Buchner et al.]{
+\end_layout
+
+\begin_layout Plain Layout
+
+Johannes Buchner, $^{1,2}$
+\backslash
+thanks{E-mail: johannes.buchner.acad@gmx.com}
+\end_layout
+
+\begin_layout Plain Layout
+
+Franz Bauer$^{1,2}$, 
+\end_layout
+
+\begin_layout Plain Layout
+
+[EAGLE collaborators]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$^{1}$Millenium Institute of Astrophysics, Vicu
+\backslash
+~{n}a.
+ MacKenna 4860, 7820436 Macul, Santiago, Chile
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$^{2}$Pontificia Universidad Católica de Chile, Instituto de Astrofísica,
+ Casilla 306, Santiago 22, Chile
+\end_layout
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+Accepted XXX.
+ Received YYY; in original form ZZZ
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pubyear{2015}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{firstpage}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagerange{
+\backslash
+pageref{firstpage}--
+\backslash
+pageref{lastpage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{abstract}
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset Quotes eld
+\end_inset
+
+torus
+\begin_inset Quotes erd
+\end_inset
+
+ obscurer of Active Galactic Nuclei, is poorly understood in terms of its
+ density, substructure and physical mechanisms.
+ Large X-ray surveys provide model boundary constraints, for both Compton-thin
+ and Compton-thick levels of obscuration, as obscured fractions are mean
+ covering factors 
+\begin_inset Formula $f_{\text{cov}}$
+\end_inset
+
+.
+ However, a major remaining uncertainty is host galaxy obscuration.
+ In Paper I we discovered a relation of 
+\begin_inset Formula $\NH\propto M_{\star}^{1/3}$
+\end_inset
+
+ for the obscuration of galaxy-scale gas.
+ Here we apply this observational relation to the AGN population, and find
+ that galaxy-scale gas is responsible for a luminosity-independent fraction
+ of Compton-thin AGN, but does not produce Compton-thick columns.
+ With the host galaxy obscuration understood, we present a model of the
+ remaining, nuclear obscurer which is consistent with a range of observations.
+ The PuffedTorus model consists of a Compton-thick component (
+\begin_inset Formula $f_{\text{cov}}\sim35\%$
+\end_inset
+
+) and a Compton-thin component (
+\begin_inset Formula $f_{\text{cov}}\sim40\%$
+\end_inset
+
+), which is present depending on black hole mass and luminosity.
+ This is a useful summary of observational constraints for torus modellers
+ who would like to reproduce this behaviour.
+ It can also be employed as a sub-grid recipe in cosmological simulations
+ which do not resolve the torus.
+ We also investigate host-galaxy X-ray obscuration inside cosmological,
+ hydro-dynamic simulations (EAGLE, Illustris).
+ The obscuration from ray-traced galaxy gas can agree with observations,
+ but is highly sensitive to the chosen feedback assumptions.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{abstract}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{keywords}
+\end_layout
+
+\begin_layout Plain Layout
+
+%galaxies: active -- galaxies: statistics -- X-rays: galaxies -- galaxies:
+ structure -- galaxies: ISM
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{keywords}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+The vast majority of Active Galactic Nuclei (AGN) are obscured by thick
+ columns of gas and dust.
+ X-ray surveys over the last decade indicate that 
+\begin_inset Formula $20-40\%$
+\end_inset
+
+ are hidden behind Compton-thick column densities (
+\begin_inset Formula $\NH\apprge10^{24}\text{cm}^{-2}$
+\end_inset
+
+) and of the remaining population, 
+\begin_inset Formula $\sim75\%$
+\end_inset
+
+ are obscured with 
+\begin_inset Formula $\NH=10^{22}-10^{24}\text{cm}^{-2}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "e.g."
+key "Treister2004,Brightman2014,Ueda2014,Buchner2015,Aird2015"
+
+\end_inset
+
+ at the peak of AGN activity at redshift 
+\begin_inset Formula $z=0.5-3$
+\end_inset
+
+.
+ An open question is whether the same gas reservoir is responsible for fuelling
+ the AGN by accretion onto Supermassive Black Holes (SMBHs), and whether
+ it itself is affected by AGN activity.
+ To address this, the first step is to identify the scale at which the obscuring
+ gas resides.
+ Traditionally, AGN obscuration is associated with the 
+\begin_inset Quotes eld
+\end_inset
+
+torus
+\begin_inset Quotes erd
+\end_inset
+
+, a nuclear (
+\begin_inset Formula $\sim10\text{pc}$
+\end_inset
+
+) structure around the accretion disk.
+ Many basic questions about this gas reservoir remain to be answered, including
+ its density, substructure and stability mechanism 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Elitzur2006a,Hoenig2013"
+
+\end_inset
+
+.
+ Assuming sampling from random viewing angles, the high fraction of obscured
+ AGN implies large covering fractions.
+ Therefore turbulent structures such as winds from accretion disks have
+ been invoked.
+ However, for the covering fractions to be useful constraints for torus
+ models, the importance of galaxy-scale gas to the obscuration has to be
+ estimated.
+ Separating the covering and column densities from nuclear and galaxy-scale
+ obscurers is the goal of this work.
+\end_layout
+
+\begin_layout Standard
+Local galaxies exemplify that several scales can contribute to the obscured
+ columns.
+ The Milky Way gas distribution shows column densities of 
+\begin_inset Formula $\NH>10^{22}\text{cm}^{-2}$
+\end_inset
+
+, but only in very low Galactic latitudes (
+\begin_inset Formula $|b|\apprle2\text{°}$
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "Dickey1990,Kalberla2005GalNHdist"
+
+\end_inset
+
+).
+ Towards the Galactic Center columns with 
+\begin_inset Formula $\NH>10^{24}\text{cm}^{-2}$
+\end_inset
+
+ can be found in the Central Molecular Zone 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Morris1996,Molinari2011"
+
+\end_inset
+
+ and in the equivalent central zones of nearby AGN host galaxies 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Prieto2014"
+
+\end_inset
+
+.
+ Also the obscuration in the AGN host galaxy NGC
+\begin_inset space ~
+\end_inset
+
+1068 is clearly nuclear (in this work: 
+\begin_inset Formula $\sim100\text{pc}$
+\end_inset
+
+ or smaller), because its Compton-thick column is observed in a face-on
+ galaxy 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Matt1997a"
+
+\end_inset
+
+.
+ On the other hand, many nearby, obscured AGN are hosted in edge-on galaxies
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Maiolino1995"
+
+\end_inset
+
+, which suggests that dust-lanes may also be important obscurers 
+\begin_inset CommandInset citation
+LatexCommand citep
+after "for galactic optical/infrared extinction"
+before "see also"
+key "Goulding2009"
+
+\end_inset
+
+.
+ Hence 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Matt2000"
+
+\end_inset
+
+ proposed a two-phase model for the obscuration of AGN: a central, nuclear
+ obscurer which provides Compton-thick obscuration, and the host galaxy,
+ which provides mildly obscured lines of sight.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Some obscured AGN are clearly unobscured in other lines-of-sight.
+ The strongest evidence for this comes from cones of ionised gas which show
+ the Thomson-scattered spectra of unobscured AGN 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Antonucci1982"
+
+\end_inset
+
+.
+ The inner obscurer thus must leave some lines-of-sight (LOS) unobscured.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However, the Milky Way and local galaxies are limited in their use as templates
+ for the high-redshift universe, specifically at peak SMBH growth (
+\begin_inset Formula $z=0.5-3$
+\end_inset
+
+; e.g., 
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "Aird2010"
+
+\end_inset
+
+).
+ At that time, the gas content in galaxies was probably higher, as indicated
+ by molecular gas measurements 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "e.g."
+key "Tacconi2013"
+
+\end_inset
+
+ which perhaps lead to the peak of star formation 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "see review by"
+key "Madau2014"
+
+\end_inset
+
+ and the increase in the fraction of obscured AGN with redshift 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "e.g."
+key "Treister2004,Ueda2014,Buchner2015"
+
+\end_inset
+
+.
+ The efficient growth of SMBHs at these early epochs has been attributed
+ to galaxy mergers 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ciotti_Ostriker2001"
+
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Thus ultra-luminous infrared galaxies (ULIRGs) in the local Universe, which
+ show strong star formation and signs of strong distortions, may be better
+ analogues for high-redshift AGN host galaxies 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Sanders1988,Lonsdale2006"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+In the semi-empirical model of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Hopkins2006OriginModel"
+
+\end_inset
+
+, the merging of galaxies makes gas available for both star formation and
+ SMBH growth, leading to an initially long obscured phase followed by a
+ short, bright AGN feedback phase which removes the obscuring gas.
+ In the most extreme simulations, AGN feedback removes a high fraction of
+ the global galactic gas, leaving behind a red and dead elliptical without
+ subsequent star formation or SMBH growth 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DiMatteo2005,Springel2005"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+This model was expanded by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Hopkins2006OriginModel"
+
+\end_inset
+
+ to reproduce local scaling relationships between galaxy components and
+ SMBH masses, the luminosity function of AGN, the fraction of active galaxies,
+ and the obscuration dichotomy of AGN.
+ The evolutionary model also explains why bright AGN are less frequently
+ found to be mildly obscured than faint AGN 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ueda2003,Silverman2008,Ebrero2009,Ueda2014,Buchner2015,Aird2015"
+
+\end_inset
+
+, albeit only qualitatively 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Hopkins2005,Hopkins2006OriginModel"
+
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The evolutionary model of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Hopkins2006OriginModel"
+
+\end_inset
+
+ lead many researchers to investigate the fraction of obscured AGN in mergers
+ using a variety of techniques, with mixed success 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Grogin2003,Grogin2005,Pierce2007,Gabor2009,Grogin2011a,Kocevski2011,Kocevski2012,Treister2012,Glikman2015,Kocevski2015"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+In this work we investigate the obscuring role of galaxy-scale gas in the
+ transition from obscured AGN in gas-rich galaxies to unobscured AGN in
+ gas-poor galaxies, as proposed in the evolutionary sequence of that model.
+ To effectively decouple the galaxy-scale and nuclear X-ray obscurer, we
+ need to go beyond a single, central source.
+\end_layout
+
+\begin_layout Standard
+This paper is organised as follows: In Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Methodology"
+
+\end_inset
+
+ we present our computation of the galaxy-scale obscuration of AGN.
+ For this we employ observational results from Paper I of the obscuring
+ column distribution of galaxies.
+ Section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Results"
+
+\end_inset
+
+ presents our reconstruction of the galaxy-scale obscurer alone.
+ We discuss compatibility with AGN observations in Section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Discussion"
+
+\end_inset
+
+.
+ We then subtract the galaxy-scale obscurer and discuss in Section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Ldep"
+
+\end_inset
+
+ the luminosity-dependent behaviour of the remaining, nuclear obscurer,
+ for which create a model outlined in Section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:PuffedTorus"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Independently, Section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Cosmological-simulations"
+
+\end_inset
+
+ looks into simulated galaxies in hydro-dynamic cosmological simulations.
+ These provide predictions for the amount of gas inside galaxies, from which
+ we derive obscured fractions using ray-tracing.
+ Various model uncertainties are discussed.
+ Finally we summarise our conclusions in Section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Summary"
+
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /mnt/data/daten/PostDoc/research/grb/allresults/sphereresults.SHOALS/Mplot_Mline.pdf
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:MNH-rel"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Host mass - column density relation
+\end_layout
+
+\end_inset
+
+Host mass - column density relation.
+ Points are individual GRBs in the SHOALS survey.
+ Red squares indicate constraints in mass and column density, green downward
+ pointing triangles are upper limits in column density, grey triangles indicate
+ upper limits in both.
+ Columns thicker than 
+\begin_inset Formula $\NH=10^{22}\text{cm}^{-2}$
+\end_inset
+
+ are only observed for galaxies more massive than a billion suns.
+ A powerlaw fit is shown as a red dashed line.
+ Gray indicates the uncertainty around the slope, while the blue error bar
+ indicates the scattering around the powerlaw for individual objects.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Methodology
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Methodology"
+
+\end_inset
+
+Our goal is to predict the fraction of obscured AGN from the obscuration
+ of host galaxy-scale gas alone, i.e.
+ without nuclear obscuration (the torus and central molecular zones).
+ In this fashion we will be able to separate the large-scale and small-scale
+ obscurer.
+ In Paper I we established a relation between the distribution of X-ray
+ absorbing column densities, 
+\begin_inset Formula $\NH$
+\end_inset
+
+, in galaxies and the stellar mass of the galaxy.
+ It follows approximately a normal distribution around 
+\begin_inset Formula 
+\begin{equation}
+\NH=10^{21.7}\text{cm}^{-2}\times\left(M_{\star}/10^{9.5}M_{\odot}\right)^{1/3}\label{eq:NHM-rel}
+\end{equation}
+
+\end_inset
+
+with standard deviation 
+\begin_inset Formula $\sigma=0.5\,\text{dex}$
+\end_inset
+
+.
+ This 
+\begin_inset Formula $\NH-M_{\star}$
+\end_inset
+
+ relation was derived using an unbiased sample of long Gamma Ray Bursts
+ (LGRBs)
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+ and is depicted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MNH-rel"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Because the obscuration is host mass dependent, the obscurer is arguably
+ the host galaxy itself.
+ In Paper I we show that modern cosmological hydro-dynamic simulations reproduce
+ absorption by galaxy-scale metal gas and predict 
+\begin_inset Formula $\NH-M_{\star}$
+\end_inset
+
+ relations very similar to Equation
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:NHM-rel"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+We apply this relation to the AGN host galaxy population to estimate host
+ galaxy obscuration.
+ This relation was derived from actively star forming galaxies, therefore
+ a caveat is that results may slightly over-represent the galaxy gas present
+ in AGN host galaxies which have average 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Rosario2011,Rosario2013,Santini2012"
+
+\end_inset
+
+ or even below-average 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Mullaney2015"
+
+\end_inset
+
+ star formation rates.
+ The major benefit of using this relationship is that it is based on the
+ same observable as AGN obscured fractions, namely the photo-electric absorption
+ of X-rays.
+ Paper I also investigated the host galaxy metallicity bias of LGRB and
+ concluded that it has a negligible effect on the obscurer.
+ Local galaxies are also shown there to follow the 
+\begin_inset Formula $\NH-M_{\star}$
+\end_inset
+
+ relation.
+ 
+\end_layout
+
+\begin_layout Standard
+We start with the stellar mass function (SMF) of the galaxy population.
+ Its shape 
+\begin_inset Formula $P(M_{\star}|z)$
+\end_inset
+
+ is approximately a Schechter function and was measured by e.g.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Muzzin2013"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Ilbert2013"
+
+\end_inset
+
+ out to 
+\begin_inset Formula $z\sim4$
+\end_inset
+
+.
+ Then we populate the galaxies with AGN.
+ The occupation probability 
+\begin_inset Formula $P(\text{AGN}|M_{\star},z)$
+\end_inset
+
+ has been measured by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Aird2012"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Bongiorno2012"
+
+\end_inset
+
+ primarily for the redshift interval 
+\begin_inset Formula $z=0.5-2$
+\end_inset
+
+.
+ More accurately, these authors measure the specific accretion rate distribution
+ (SARD), 
+\begin_inset Formula $P(\LX|M_{\star},z)$
+\end_inset
+
+, where 
+\begin_inset Formula $\LX$
+\end_inset
+
+ is the 
+\begin_inset Formula $2-10\,\text{keV}$
+\end_inset
+
+ X-ray luminosity.
+ They find factorised powerlaw relationships of the form 
+\begin_inset Formula $P(\LX|M_{\star},z)=A\cdot L_{{\rm X}}^{\gamma_{L}}\cdot M_{\star}^{\gamma_{M}}\cdot(1+z)^{\gamma_{z}}$
+\end_inset
+
+.
+ At the highest luminosities, an Eddington limit is required to explain
+ the steep decrease in the luminosity function 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Aird2013"
+
+\end_inset
+
+.
+ In this work, however, we focus on the luminosity range 
+\begin_inset Formula $\LX=10^{42-45}\text{erg/s}$
+\end_inset
+
+ regime and thus use only the observed relation.
+ The final ingredient is the obscuring column density distribution (CDD)
+ 
+\begin_inset Formula $P(\NH|M_{\star})$
+\end_inset
+
+, which is given by Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:NHM-rel"
+
+\end_inset
+
+ as a normal distribution in 
+\begin_inset Formula $\log\NH$
+\end_inset
+
+.
+ We assume that the galaxy-scale gas is independent of nuclear activity
+ for individual galaxies.
+\end_layout
+
+\begin_layout Standard
+The obscured fraction can then be simply computed by Monte Carlo simulations.
+ Analytically we can put the three distributions together as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P(\NH,\LX,M_{\star}|z)=\underbrace{P(M_{\star}|z)}_{\text{SMF}}\times\underbrace{P(\LX|M_{\star},z)}_{\text{SARD}}\times\underbrace{P(\NH|M_{\star})}_{\text{Eq 1}}\label{eq:combination}
+\end{equation}
+
+\end_inset
+
+After inserting the factorised powerlaw relationship of the SARD, the result
+ has the form
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P(\NH,\LX,M_{\star}|z)=A\times L_{X}^{\gamma_{L}}\times f(M_{\star}|z)\times P(\NH|M_{\star}).
+\end{equation}
+
+\end_inset
+
+While the absolute probability of finding an AGN is a function of luminosity,
+ the mass distribution is independent of luminosity.
+ That is, at every luminosity (not considering the Eddington limit), the
+ same mix of host stellar masses contribute.
+ Therefore, the implication is that the galaxy-scale gas obscuration is
+ the same at all AGN luminosities.
+\end_layout
+
+\begin_layout Standard
+We adopt an AGN definition of 
+\begin_inset Formula $\LX>10^{42}\text{erg/s}$
+\end_inset
+
+.
+ The frequency distribution of column densities 
+\begin_inset Formula $\NH$
+\end_inset
+
+ for the AGN population is then computed by integrating over stellar mass
+ and luminosity:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P(\NH|z)=\int\int_{10^{42}\text{erg/s}}^{\infty}P(\NH,\LX,M_{\star}|z)\,d\LX\,dM_{\star}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally the obscured AGN fraction is the cumulative distribution, i.e.
+ the frequency of AGN being covered by a certain column density threshold
+ 
+\begin_inset Formula $\NH$
+\end_inset
+
+ or higher: 
+\begin_inset Formula 
+\begin{equation}
+f_{\text{cov}}(>\NH)=\int_{\NH}^{\infty}P(\NH'|z)d\NH'.\label{eq:fcov}
+\end{equation}
+
+\end_inset
+
+Into the calculation of 
+\begin_inset Formula $f_{\text{cov}}$
+\end_inset
+
+ we propagate the uncertainties from the obscuration relation for Paper
+\begin_inset space ~
+\end_inset
+
+I.
+ We consider two SMF (
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "Muzzin2013"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "Ilbert2013"
+
+\end_inset
+
+) and two SARD measurements (
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "Aird2012"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "Bongiorno2012"
+
+\end_inset
+
+), to incorporate systematic uncertainties.
+ To summarise, we rely only on observational relations to predict the obscuratio
+n of the AGN population by galaxy-scale gas.
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Results"
+
+\end_inset
+
+
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /mnt/data/daten/PostDoc/research/agn/sim/compiled/bh/gasobscprofilez_obs.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:gasobscprofilez_obs"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Galaxy-scale obscuration of AGN
+\end_layout
+
+\end_inset
+
+Galaxy-scale obscuration of AGN.
+ At various redshift intervals we show the fraction of AGN (y-axis) that
+ is covered by a given column density 
+\begin_inset Formula $\NH$
+\end_inset
+
+ (x-axis).
+ Red lines indicate our derivations with uncertainties shown in red shades.
+ Galaxy-scale obscuration is negligible for column densities of 
+\begin_inset Formula $10^{24}{\rm cm}^{-2}$
+\end_inset
+
+, but a important contributor to the AGN fraction at 
+\begin_inset Formula $\NH\approx10^{22-23}\,\text{cm}^{-2}$
+\end_inset
+
+.
+ Data points represent fractions from AGN surveys: Bright AGN (large triangles)
+ show lower obscurations than faint AGN (squares).
+ The data points are black, yellow, green small symbols 
+\begin_inset CommandInset citation
+LatexCommand citep
+after "respectively"
+key "Ueda2014,Aird2015,Ricci2016"
+
+\end_inset
+
+ and black and coloured large triangles 
+\begin_inset CommandInset citation
+LatexCommand citep
+after "respectively"
+key "Burlon2011,Buchner2015"
+
+\end_inset
+
+.
+ Because AGN also have a nuclear obscurer, these should be regarded as upper
+ limits for galaxy gas obscuration (red).
+ Arguable consistent with all data points is a normal distribution around
+ 
+\begin_inset Formula $10^{22}{\rm cm}^{-2}$
+\end_inset
+
+ (dashed grey curve), which is kept constant across panels.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The obscured fraction of the AGN population from putting together the observed
+ relationships are shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:gasobscprofilez_obs"
+
+\end_inset
+
+.
+ Each panel represents a specific redshift.
+ Red lines show our fraction of obscured AGN (y-axis) for a given column
+ density 
+\begin_inset Formula $\NH$
+\end_inset
+
+ (x-axis), assuming various SMF and SARDs, with shades showing the uncertainties
+ stemming from the obscuration relation.
+\end_layout
+
+\begin_layout Standard
+Firstly, galaxy-scale gas does not provide Compton-thick column densities
+ (
+\begin_inset Formula $\NH>\sigma_{T}^{-1}=1.5\times10^{24}{\rm cm}^{-2}$
+\end_inset
+
+).
+ This is because massive galaxies which reach those densities are rare and
+ therefore represent a negligible fraction of the AGN population.
+ In contrast, the observed fraction of Compton-thick AGN is 
+\begin_inset Formula $\sim38\%$
+\end_inset
+
+ (see 
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "Buchner2015"
+
+\end_inset
+
+ and references therein).
+ We can conclude that Compton-thick obscuration is always associated with
+ the nuclear region.
+ An alternative, theoretical argument based on the total metal gas mass
+ present in galaxies is laid out in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:semi-analytic"
+
+\end_inset
+
+ and arrives at the same conclusion.
+\end_layout
+
+\begin_layout Standard
+We therefore focus on the Compton-thin obscurer.
+ This step implicitly assumes that the Compton-thick nuclear obscurer is
+ randomly oriented with respect to the galaxy, in accordance with chaotic
+ accretion 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "King2006"
+
+\end_inset
+
+.
+ We now compare with measurements of the obscured fraction of Compton-thin
+ AGN from surveys.
+ When these fractions are treated as covering fractions, they contain both
+ galaxy-scale obscuration and nuclear obscuration.
+ Therefore the data points should always be understood as upper limits to
+ the galaxy-scale gas obscuration.
+ Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:gasobscprofilez_obs"
+
+\end_inset
+
+ shows results from surveys at the peak of the accretion history (
+\begin_inset Formula $z=1-3$
+\end_inset
+
+ panels) from 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Ueda2014"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Buchner2015"
+
+\end_inset
+
+, as well as surveys which include the local Universe 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Burlon2011,Ueda2014,Aird2015,Ricci2016"
+
+\end_inset
+
+.
+ We compare with the fraction of Compton-thin AGN with 
+\begin_inset Formula $\NH>10^{22}\text{cm}^{-2}$
+\end_inset
+
+, a common definition of 
+\begin_inset Quotes eld
+\end_inset
+
+obscured
+\begin_inset Quotes erd
+\end_inset
+
+ AGN.
+ Two cases are important: (1) the fraction of obscured AGN at the bright
+ end (
+\begin_inset Formula $\LX\geq10^{45}\text{erg/s}$
+\end_inset
+
+), where the lowest obscured fractions are observed (
+\begin_inset Formula $f_{\text{bright}}\sim40\%$
+\end_inset
+
+, shown as triangles), and (2) at the faint end (
+\begin_inset Formula $\LX\sim10^{43}\text{erg/s}$
+\end_inset
+
+), where the highest obscured fractions are observed (
+\begin_inset Formula $f_{\text{faint}}\sim75\%$
+\end_inset
+
+, shown as squares).
+ Our results are, as discussed in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Methodology"
+
+\end_inset
+
+, luminosity-independent.
+ When comparing the triangle data points at 
+\begin_inset Formula $\NH=10^{22}\text{cm}^{-2}$
+\end_inset
+
+ in Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:gasobscprofilez_obs"
+
+\end_inset
+
+ representing the bright end to our results (red), we find broad agreement
+ within two-sigma uncertainties (red shades).
+ However, due to the large uncertainties also the faint end may agree.
+ Therefore we cannot distinguish whether galaxy-scale obscuration decreases
+ toward the bright end, or increases toward the faint end.
+ Nevertheless we can conclude that galaxy-scale obscuration is an important,
+ if not dominant, AGN obscurer at 
+\begin_inset Formula $\NH=10^{22-23}\text{cm}^{-2}$
+\end_inset
+
+.
+ At higher column densities, e.g.
+ 
+\begin_inset Formula $\NH=10^{23.5}\text{cm}^{-2}$
+\end_inset
+
+, the observed obscured fraction is clearly higher than our results from
+ galaxy-scale gas.
+ Therefore a nuclear obscurer is necessary to explain the elevated data
+ points.
+ The shape of the distribution is driven by the Gaussian distribution of
+ the 
+\begin_inset Formula $\NH-M_{\star}$
+\end_inset
+
+ relation, a shape assumed in Paper I to fit the dispersion.
+ Adopting a different distribution, would flatten the tails and permit unobscure
+d LOS.
+\end_layout
+
+\begin_layout Standard
+Note that our results are meaningful for the AGN population -- the obscuration
+ of individual host galaxies is stellar-mass dependent with substantial
+ variations between individual galaxies (see Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:NHM-rel"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+One theory of this disappearing obscurer is that Eddington-limited feedback
+ by the AGN is removing nuclear or galaxy-scale gas
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+But see the discussion section 5.3 of 
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "Buchner2015"
+
+\end_inset
+
+ for constraints from redshift evolution.
+\end_layout
+
+\end_inset
+
+.
+ In that context a distant, galaxy-scale obscurer would provide a constant
+ source of obscuration also in luminous AGN.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Discussion
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Discussion"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Galaxy-scale-obscuration-for"
+
+\end_inset
+
+Our main result is that the host galaxy gas provides a luminosity-independent
+ obscurer, for which we compute covering fractions.
+ This obscurer does not provide Compton-thick columns, but large covering
+ fractions (
+\begin_inset Formula $40-90\%$
+\end_inset
+
+) at 
+\begin_inset Formula $\NH>10^{22}\,{\rm cm}^{-2}$
+\end_inset
+
+.
+ These high covering fractions suggest that a substantial part of the type1/type
+2 dichotomy is due to galaxy-scale gas.
+ This is consistent with the finding of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Maiolino1995"
+
+\end_inset
+
+ that nearby type2 AGN are often edge-on galaxies.
+ We note that our results tend to produce high covering fractions, which
+ are only consistent with the measurements due to large uncertainties.
+ We speculate that the use of GRB host galaxies in Paper
+\begin_inset space ~
+\end_inset
+
+I may slightly bias our results when applied to AGN host galaxies.
+ GRB host galaxies are currently star forming and thus may have slightly
+ more gas than the average AGN galaxy (see caveats discussed in Section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Methodology"
+
+\end_inset
+
+).
+ A correction in the column density by a factor of 2 would agree well with
+ data points at all redshifts.
+ This is demonstrated by the dashed line in Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:gasobscprofilez_obs"
+
+\end_inset
+
+, which shows a normal distribution around 
+\begin_inset Formula $\log\NH/{\rm cm}^{-2}=10^{22}$
+\end_inset
+
+ with width 
+\begin_inset Formula $\text{0.5}$
+\end_inset
+
+.
+ Nevertheless, our results are consistent with the current AGN surveys.
+\end_layout
+
+\begin_layout Standard
+Our results give, for the first time, constraints on the galaxy-scale obscurer
+ alone.
+ We use this in the subsequent sections to disentangle the AGN nuclear obscurer
+ from the galaxy-scale obscurer (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Ldep"
+
+\end_inset
+
+), and to describe their behaviour as a function of accretion luminosity,
+ host galaxy stellar mass and redshift (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:PuffedTorus"
+
+\end_inset
+
+).
+ Finally physical effects leading to this behaviour are discussed in Section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Physical-effects"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Luminosity-dependence of AGN obscuration
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Ldep"
+
+\end_inset
+
+We can now discuss the luminosity-dependence of the obscurer.
+ X-ray surveys consistently find a strong decline towards high luminosities
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ueda2003,Hasinger2005,LaFranca2005,Ebrero2009,Ueda2014,Buchner2015,Aird2015"
+
+\end_inset
+
+ of the obscured fraction 
+\begin_inset Formula $\NH>10^{22}\,{\rm cm}^{-2}$
+\end_inset
+
+ in the Compton-thin AGN (CTNAGN) population.
+ In Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:L-dep-sketch"
+
+\end_inset
+
+ we have sketched this decline from 
+\begin_inset Formula $\sim70\%$
+\end_inset
+
+ to a persistent 
+\begin_inset Formula $\sim40\%$
+\end_inset
+
+.
+ According to our results, this can be interpreted as two scales contributing
+ to the obscuration: a 
+\begin_inset Formula $40\%$
+\end_inset
+
+ galaxy-scale obscurer, and a luminosity-dependent nuclear obscurer.
+ The former is constrained from GRB observations (Paper
+\begin_inset space ~
+\end_inset
+
+I), re-weighted to the mass distribution of AGN (results of this paper).
+ The latter is the remainder to fit the observations.
+ According to this picture, the nuclear obscurer completely disappears toward
+ high luminosities at 
+\begin_inset Formula $L(2-10\,{\rm keV})\approx10^{44.5}{\rm erg/s}$
+\end_inset
+
+.
+ This luminosity is however redshift-dependent, with higher redshifts having
+ higher cut-off luminosities.
+ This has been found in many works 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ueda2003,Ebrero2009,LaFranca2005,Ueda2014,Aird2015"
+
+\end_inset
+
+ by fitting a empirical, parametric model to the relative number density
+ derived from AGN surveys.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Buchner2015"
+
+\end_inset
+
+ derived the same result using a non-parametric method, indicating that
+ this is indeed a robust result.
+ In 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Buchner2015"
+
+\end_inset
+
+, the implications for obscurer models were discussed in their Section 5.3.
+ They concluded that an Eddington-limited blow-out of the obscurer could
+ explain the luminosity dependence.
+ As the luminosity dependence is observed to evolve, a black hole mass dependenc
+e needed to be invoked.
+ If the average, currently accreting black hole is more massive at high
+ redshift than at low redshift, the turn-over luminosity decreases over
+ cosmic time.
+ Such black hole mass downsizing has evidence from optical observations
+ of the black hole mass function evolution 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Schulze2010,Kelly2013a,Schulze2015"
+
+\end_inset
+
+ and semi-analytic models which reproduce the evolution of the AGN luminosity
+ function 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Fanidakis2012,Enoki2014,Hirschmann2014"
+
+\end_inset
+
+.
+ Recently, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Oh2015"
+
+\end_inset
+
+ found evidence that the type-1 fraction in a SDSS selected sample is both
+ luminosity and black hole mass dependent.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /mnt/data/daten/PostDoc/research/agn/sim/compiled/bh/gasobscfracLsingle.pdf
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:L-dep-sketch"
+
+\end_inset
+
+The observed luminosity-dependence of the obscured fraction.
+ With the galaxy-scale gas obscuration constrained and luminosity-independent
+ (red, Section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Results"
+
+\end_inset
+
+), we separate out the nuclear, variable obscurer (cyan) and create a luminosity
+-dependent model (Section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:PuffedTorus"
+
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+PuffedTorus - a unified obscurer model
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:PuffedTorus"
+
+\end_inset
+
+Because neither semi-analytic nor hydro-dynamic cosmological simulations
+ resolve the nuclear obscurer of AGN, we present a sub-grid model for post-proce
+ssing.
+ The PuffedTorus model has few parameters and is constructed so that it
+ reproduces the fraction of obscured AGN as a function of redshift and luminosit
+y as discussed above.
+ It can also serve as a summary of observational constraints when exploring
+ physical models for the obscurer.
+\end_layout
+
+\begin_layout Standard
+We assume that a nuclear Compton-thick obscurer covers a fraction of the
+ SMBH, 
+\begin_inset Formula $f_{\text{CT}}\sim35\%$
+\end_inset
+
+.
+ Evidence for this number comes directly from AGN surveys 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Buchner2015"
+
+\end_inset
+
+, matching the soft and hard X-ray luminosity function 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Aird2015"
+
+\end_inset
+
+ and matching the Compton-thin X-ray luminosity function to the spectrum
+ of the Cosmic X-ray background 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ueda2014"
+
+\end_inset
+
+.
+ Similar fractions are now also found in local surveys, e.g.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Ricci2016"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Parameters"
+
+\end_inset
+
+Parameters of the PuffedTorus model.
+ The recommended values are constrained by local observations as described
+ in Section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:PuffedTorus"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="7cm">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Symbol
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Observed Range
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Recommended Value
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Compton-thick fraction
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f_{\text{CT}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20% - 40%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35% (fixed)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Host galaxy obscuration
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f_{\text{gal}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0% - 60%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+galaxy-dependent, but 40% on average
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Compton-thin stirred obscuration
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f_{\text{nuc}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30% - 50%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Luminosity-dependence width
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0 - 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reference mass
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $M_{L43}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{7}$
+\end_inset
+
+- 
+\begin_inset Formula $10^{8}$
+\end_inset
+
+
+\begin_inset Formula $M_{\odot}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{7.87}M_{\odot}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mass-dependence
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\AP$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0 - 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2/3 (consider also 0, 1, 4/3)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Intrinsic luminosity (
+\begin_inset Formula $2-10\,{\rm keV}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $L$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(dynamic)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Determined from accretion rate using bolometric corrections of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Marconi2004"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /mnt/data/daten/PostDoc/research/agn/lf/torus/mockmodel6_ML_plane.pdf
+	width 99col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Covering-fraction"
+
+\end_inset
+
+Covering fractions as a function of accretion luminosity and mass of the
+ proposed PuffedTorus model.
+ Dashed lines indicate constant Eddington accretion rates.
+ At intermediate accretion rates, the torus is puffed up and covers large
+ fractions of the black hole.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename agnpaper-figure0.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Cartoon"
+
+\end_inset
+
+Cartoon of the three known obscurer components: Galaxy-scale obscuration
+ (light blue), luminosity-dependent nuclear obscuration (blue) and Compton-thick
+ nuclear obscuration (red).
+ In this illustration, the disappearing Compton-thin obscurer is provided
+ by a clumpy accretion disk wind, while the Compton-thick obscurer is a
+ clumpy donut-like structure.
+ Both are embedded in the host galaxy under random orientation.
+ This is one scenario appropriate for the proposed PuffedTorus model.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+We propose that the remaining Compton-thin sky is obscured by two components:
+ a galaxy-scale gas and a nuclear Compton-thin obscurer.
+ We adopt the formula for the covering fraction:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+f_{\text{cov}} & = & f_{\text{gal}}+f_{\text{nuc}}\cdot\exp\left\{ -\frac{1}{2\sigma^{2}}\left(\log\frac{L}{L_{\text{peak}}}\right)^{2}\right\} \label{eq:lumdep}
+\end{eqnarray}
+
+\end_inset
+
+The luminosity-independent obscuration, 
+\begin_inset Formula $f_{\text{gal}}$
+\end_inset
+
+ is on average 
+\begin_inset Formula $\sim40\%$
+\end_inset
+
+.
+ In hydro-dynamic simulations it can be derived for individual galaxies
+ through ray-tracing (see Section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Cosmological-simulations"
+
+\end_inset
+
+), or otherwise calculated from Equation
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:NHM-rel"
+
+\end_inset
+
+.
+ The obscuration of Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lumdep"
+
+\end_inset
+
+ reaches a average maximum of 
+\begin_inset Formula $75\%$
+\end_inset
+
+ at luminosity 
+\begin_inset Formula $L_{\text{peak}}$
+\end_inset
+
+ (see Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:L-dep-sketch"
+
+\end_inset
+
+), and we therefore suggest 
+\begin_inset Formula $f_{\text{nuc}}=35\%$
+\end_inset
+
+.
+ We chose a Gaussian form which requires fewer parameters than a linear
+ decline 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "e.g."
+key "Ueda2014"
+
+\end_inset
+
+.
+ The obscured fraction declines towards both bright and faint ends to 
+\begin_inset Formula $f_{\text{gal}}$
+\end_inset
+
+ with characteristic width of the transition defined by 
+\begin_inset Formula $\sigma$
+\end_inset
+
+.
+ Evidence for the low-luminosity decline was found in surveys of the local
+ Universe 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Burlon2011,Brightman2011b"
+
+\end_inset
+
+ and at high redshifts 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Buchner2015"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The peak luminosity 
+\begin_inset Formula $L_{\text{peak}}$
+\end_inset
+
+ is in turn a function of mass (see Section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Galaxy-scale-obscuration-for"
+
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\frac{L_{\text{peak}}}{10^{43}\text{erg/s}} & =\left(\frac{M_{\text{BH}}}{M_{L43}}\right)^{\AP}
+\end{align*}
+
+\end_inset
+
+Here, at 
+\begin_inset Formula $M_{L43}$
+\end_inset
+
+ the distribution peaks at 
+\begin_inset Formula $L(2-10\,{\rm keV})=10^{43}\text{erg/s}$
+\end_inset
+
+, which is 
+\begin_inset Formula $L_{\text{bol}}=10^{10.7}L_{\bigodot}$
+\end_inset
+
+ using the conversion of 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Marconi2004"
+
+\end_inset
+
+.
+ The mass-dependence is defined by the 
+\begin_inset Formula $\AP$
+\end_inset
+
+ parameter: at 
+\begin_inset Formula $\AP=0$
+\end_inset
+
+, the PuffedTorus is mass-independent, corresponding to a strict luminosity-depe
+ndent unified model, while at 
+\begin_inset Formula $\AP=1$
+\end_inset
+
+ it is only Eddington-rate dependent.
+ The parameters 
+\begin_inset Formula $\AP$
+\end_inset
+
+, 
+\begin_inset Formula $M_{L43}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ are not known apriori.
+ For mass-scaling, 
+\begin_inset Formula $\AP=2/3$
+\end_inset
+
+ is suggested from the theoretical works on the obscurer by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Elitzur2016"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Wada2015"
+
+\end_inset
+
+, however a wide range (e.g.
+ 
+\begin_inset Formula $\AP=0-2$
+\end_inset
+
+) may be considered 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "see also"
+key "Hoenig2007"
+
+\end_inset
+
+.
+ We derive fiducial values for the other two parameters using the Swift/BAT
+ survey of local AGN.
+ That survey reported a mean mass of 
+\begin_inset Formula $\log M_{\text{BH}}/M_{\odot}=7.87$
+\end_inset
+
+ with a standard deviation of 
+\begin_inset Formula $0.66\,{\rm dex}$
+\end_inset
+
+ and a skew towards low masses 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "WinterBAT2009"
+
+\end_inset
+
+.
+ Adopting an appropriate skewed normal distribution with skew parameter
+ 
+\begin_inset Formula $-10$
+\end_inset
+
+ (tail to low masses) around 
+\begin_inset Formula $M_{L43}=10^{7.87}M_{\odot}$
+\end_inset
+
+, we find that 
+\begin_inset Formula $\sigma\approx0.5$
+\end_inset
+
+ approximately reproduces the width of the obscured fraction function reported
+ in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Burlon2011"
+
+\end_inset
+
+, and peaks at 
+\begin_inset Formula $\LX=10^{43}\text{erg/s}$
+\end_inset
+
+.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Parameters"
+
+\end_inset
+
+ lists the parameters of the PuffedTorus model, with recommended typical
+ values.
+ We emphasise that the observations pertaining the redshift evolution have
+ not been used when constructing our model.
+ Cosmological simulations using the PuffedTorus model can thus compare against
+ those 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "e.g."
+key "Buchner2015"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The ratio of dust re-radiated, infrared luminosity to bolometric, illuminating
+ luminosity has been used to measure the irradiated area (obscurer covering
+ factor) of individual AGN.
+ Surveys employing this method 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "e.g."
+key "Maiolino2007,Lusso2013"
+
+\end_inset
+
+ typically find fractions between 
+\begin_inset Formula $40\%$
+\end_inset
+
+ and 
+\begin_inset Formula $75\%$
+\end_inset
+
+ (luminosity-dependent).
+ These fractions were corrected for anisotropic illumination and emission
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+after "see their Figure 13"
+before "from"
+key "Stalevski2016"
+
+\end_inset
+
+.
+ These measurements would include emission from the Compton-thick obscurer
+ and the nuclear, Compton-thin obscurer.
+ With our assumed fiducial values we obtain 
+\begin_inset Formula $35\%$
+\end_inset
+
+ (
+\begin_inset Formula $f_{\text{CT}}$
+\end_inset
+
+) to 
+\begin_inset Formula $75\%$
+\end_inset
+
+ (
+\begin_inset Formula $f_{\text{CT}}+f_{\text{nuc}}$
+\end_inset
+
+) and are therefore also agrees with those observations.
+ Infrared studies remain however difficult to use as a constraint as the
+ entire infrared SED has to be constrained for each object 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Netzer2016"
+
+\end_inset
+
+ and covering factors have to be corrected based on uncertain model geometries
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Stalevski2016"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Covering-fraction"
+
+\end_inset
+
+ illustrates the behaviour of the PuffedTorus model.
+ The obscured fraction undergoes a luminosity and mass-dependent peak, where
+ the Compton-thin medium is extended and occupies a substantial fraction
+ of the sky.
+ Due to the host galaxy, a constant fraction is present at all luminosities
+ and masses.
+ The Compton-thick fraction here has been assumed to be constant, although
+ we note that 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Ricci2016"
+
+\end_inset
+
+ claims a luminosity-dependence of the Compton-thick fraction.
+\end_layout
+
+\begin_layout Subsection
+Physical obscurer processes
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Physical-effects"
+
+\end_inset
+
+Physical processes giving rise to the luminosity and mass-dependent behaviour
+ cannot be discussed rigorously within the scope of this paper.
+ However, we point out a few key results of recent theoretical works.
+ Otherwise we refer to the review of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Hoenig2013"
+
+\end_inset
+
+ which discusses current torus modelling approaches.
+ 
+\end_layout
+
+\begin_layout Standard
+We take note of the analytic wind model formalism described in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Elitzur2016"
+
+\end_inset
+
+ and of the radiation-driven fountain model by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Wada2015"
+
+\end_inset
+
+.
+ Both models produce a vertically extended obscurer structure as a function
+ of luminosity and mass.
+ At low luminosities, radiation is not sufficient to puff up the obscurer.
+ In the hydro-dynamical simulations of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Wada2012"
+
+\end_inset
+
+ very high accretion luminosities are associated with strong outflows, which
+ suppress the vertical extent of the obscuring structure as they occupy
+ larger angles.
+ The cartoon of Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Cartoon"
+
+\end_inset
+
+ illustrates such a possible wind scenario for the three, distinct obscuring
+ components, with approximately the correct opening angles.
+ For visualisation we have smooth gas distributions, while in reality the
+ obscurer is thought to be clumpy 
+\begin_inset CommandInset citation
+LatexCommand citep
+after "and references therein"
+before "see e.g.,"
+key "Markowitz2014"
+
+\end_inset
+
+.
+ To date, models of the nuclear obscurer largely lack observational constraints.
+ Our PuffedTorus model summarises observational boundary constraints of
+ covering fractions and column densities for how a physical 
+\begin_inset Quotes eld
+\end_inset
+
+torus
+\begin_inset Quotes erd
+\end_inset
+
+ model should behave.
+\end_layout
+
+\begin_layout Standard
+A further, commonly overlooked aspect is the evolution of AGN.
+ Faint AGN are much more common than luminous AGN 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "e.g."
+key "Barger2005,Ueda2003,Aird2010"
+
+\end_inset
+
+, a fact that has to be explained with the triggering and light-curve of
+ accretion events.
+ Galaxy-galaxy mergers are today thought to be the main trigger of luminous
+ AGN activity, because SMBH need to accrete substantial fractions of their
+ host galaxy gas (as shown by scaling relations), within durations comparable
+ to dynamical timescales of galaxy centres 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Somerville2008"
+
+\end_inset
+
+.
+ In the timeline proposed by Hopkins et al, the luminous phase occurs in
+ relatively late merger phases.
+ Luminous AGN stop further infall by radiation pressure and quickly reduce
+ their column densities 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Hopkins2006OriginModel"
+
+\end_inset
+
+.
+ In contrast, the faint AGN population is suggested to be dominated by periods
+ before and after peak accretion 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Hopkins2005LFinterpretation"
+
+\end_inset
+
+.
+ Early merger phases may have enhanced obscuration, both galaxy-scale (Compton-t
+hin) and nuclear (Compton-thin and Compton-thick) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Hopkins2005,Hopkins2006OriginModel"
+
+\end_inset
+
+.
+ Additionally, a substantial part of the faint AGN population is probably
+ associated with secular triggering mechanisms 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "e.g."
+key "Treister2012"
+
+\end_inset
+
+.
+ One may therefore argue for a evolutionary AGN life [illustrative time
+ share in brackets] consisting of 
+\end_layout
+
+\begin_layout Itemize
+no accretion, and therefore no AGN detection [89%],
+\end_layout
+
+\begin_layout Itemize
+nearby gas leading to obscuration and triggering of a faint AGN [10%], either
+ in the onset of a merger or due to secular events,
+\end_layout
+
+\begin_layout Itemize
+major merger triggering a bright AGN, which immediately clears the vertically
+ extended obscurer but shines for a period of time [1%] before fading.
+\end_layout
+
+\begin_layout Standard
+Such a duty cycle would give rise to the observed obscured fractions (Figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:L-dep-sketch"
+
+\end_inset
+
+) while also respecting the luminosity function of AGN.
+ To summarise, luminous AGN and faint AGN may live in different environments
+ with different gas reservoirs feeding them; therefore unifying the obscuration
+ properties of a luminosity-dependent torus may not be appropriate.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Cosmological hydro-dynamic simulations
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Cosmological-simulations"
+
+\end_inset
+
+We now assess the gas content in simulated galaxies.
+ Modern cosmological hydro-dynamic simulations self-consistently evolve
+ galaxies and their processes (star formation, gas accretion, supernova
+ and AGN feedback, etc.) in the context of well-constrained 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+CDM cosmologies.
+ These simulations are constrained in their initial conditions to the baryon
+ density available in the early Universe and are tuned to reproduce the
+ local stellar mass functions.
+ We consider two state-of-the-art cosmological hydro-dynamic simulations
+ which also produce realistic galaxy morphologies.
+ These simulations allow us to look at the spatial distribution of gas inside
+ galaxies.
+\end_layout
+
+\begin_layout Subsection
+Simulation sets
+\end_layout
+
+\begin_layout Standard
+The Evolution and Assembly of Galaxies and their Environment (EAGLE) simulation
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Schaye2015,Crain2015"
+
+\end_inset
+
+ reproduces many observed quantities; it reproduces very well the stellar
+ mass function 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Furlong2015a"
+
+\end_inset
+
+ and size distribution 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Furlong2015"
+
+\end_inset
+
+ of galaxies as a function of cosmic time, being tuned to reproduce these
+ at 
+\begin_inset Formula $z=0$
+\end_inset
+
+.
+ Further relevant for this work it also produces galaxies with realistic
+ galaxy morphologies 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Schaye2015"
+
+\end_inset
+
+ and gas contents consistent with observations of CO and HI 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Bahe2015"
+
+\end_inset
+
+ as well as H
+\begin_inset Formula $_{2}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Lagos2015"
+
+\end_inset
+
+.
+ This encourages us to look inside simulated galaxies and assess the obscuration
+ provided by them.
+ EAGLE includes black hole particles, which are seeded into dark matter
+ halos exceeding masses of 
+\begin_inset Formula $10^{10}M_{\odot}$
+\end_inset
+
+.
+ These black holes are kept near the galaxy centre and may accrete when
+ gas is nearby, in turn activating a feedback mechanism by heating 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Schaye2015"
+
+\end_inset
+
+.
+ The strength of EAGLE lies in its minimalistic subgrid recipes and the
+ systematic exploration of alterations: Besides the reference model (
+\family typewriter
+L0100N1504_REFERENCE
+\family default
+), a series of simulations with parameter variations have been run to explore
+ the impact of various choices in the subgrid implementations, including
+ the style and strength of supernova feedback, AGN heating and criteria
+ for when stars are formed 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Crain2015"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+We also consider Illustris 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Vogelsberger2014,Vogelsberger2014a"
+
+\end_inset
+
+, another hydro-dynamic cosmological simulation.
+ This simulation also reproduces many observed quantities; most relevant
+ for this work is that it reproduces the morphology of galaxies, the gas
+ content from CO observations 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Vogelsberger2014,Genel2014"
+
+\end_inset
+
+.
+ The Illustris sub-grid models were chosen in consideration of the stellar
+ mass function, star formation history and mass-metallicity relation.
+ However, the weak tuning gave mediocre agreement with regards to the galaxy
+ stellar mass function 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Schaye2015"
+
+\end_inset
+
+ and size distribution 
+\begin_inset CommandInset citation
+LatexCommand Citep
+key "Furlong2015"
+
+\end_inset
+
+.
+ On the positive side, the Illustris simulation is based on the AREPO hydrodynam
+ics code which has been shown to reproduce galaxy features well 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "e.g."
+key "Vogelsberger2012,Nelson2013"
+
+\end_inset
+
+.
+ The gas particle resolution in 
+\emph on
+Illustris
+\emph default
+ is adaptive, with some cells being as small as 
+\begin_inset Formula $48\,{\rm pc}$
+\end_inset
+
+ in the highest resolution simulation (
+\emph on
+Illustris-1
+\emph default
+) used here, indicating that modern cosmological simulation indeed resolve
+ galaxies into small sub-structures.
+ Illustris also includes black holes, which are created and kept in the
+ gravitational potential minimum of galaxies inside halos of mass 
+\begin_inset Formula $M_{\text{DM}}>7.1\times10^{10}M_{\odot}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Sijacki2015"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Methodology
+\end_layout
+
+\begin_layout Standard
+We first investigate the gas distribution in the reference simulations.
+ We focus on the metal component of gas as O and Fe are, for the relevant
+ obscuring columns and redshifts, the most important elements for photo-electric
+ absorption of X-rays.
+ In galaxy evolution models, the massive end of the existing stellar population
+ expels metals into the galaxy.
+ The metal gas produced per stellar mass is determined by the chosen IMF
+ and the metal yield, with the latter tuned to reproduce the stellar mass
+ function 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "e.g."
+key "Lu2015"
+
+\end_inset
+
+.
+ The total metal gas mass residing in galaxies further depends on the chosen
+ feedback models which can expel gas out of the galaxy.
+ Typically the metal gas mass inside galaxies follows a 
+\begin_inset Formula $M_{Z}:M_{\star}$
+\end_inset
+
+ ratio of 
+\begin_inset Formula $1:30$
+\end_inset
+
+ to 
+\begin_inset Formula $1:100$
+\end_inset
+
+ relation in semi-analytic models at 
+\begin_inset Formula $z=0-3$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "e.g."
+key "Croton2006,Croton2016"
+
+\end_inset
+
+; Plots of these models can be found in Appendix
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:semi-analytic"
+
+\end_inset
+
+.
+ The crucial remaining question surrounds the arrangement of that gas inside
+ galaxies, as the concentration of gas defines its column density.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /mnt/data/daten/PostDoc/research/agn/sim/compiled/bh/gasobscprofilez_sim.pdf
+	width 80page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:gasobscprofilez_sim"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Galaxy-scale obscuration of AGN
+\end_layout
+
+\end_inset
+
+Hydro-dynamic cosmological simulations results for the galaxy-scale gas
+ obscuration of AGN.
+ At various redshift intervals (panels) we show the fraction of AGN (y-axis)
+ that is covered by a given column density 
+\begin_inset Formula $\NH$
+\end_inset
+
+ (x-axis).
+ Curves indicate results from ray-tracing the metal gas.
+ The EAGLE reference simulation (thick line) produces thicker column densities
+ than Illustris (thin line).
+ Data points are the same as in Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:gasobscprofilez_obs"
+
+\end_inset
+
+.
+ These show fractions from surveys of bright/faint AGN in triangle/square
+ symbols respectively.
+ Because AGN also have a nuclear obscurer, these should be interpreted as
+ upper limits for galaxy gas obscuration.
+ The dashed grey curve (same as in Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:gasobscprofilez_obs"
+
+\end_inset
+
+) is kept constant across panels for reference.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We apply ray tracing, starting from the most massive black hole particle
+ of each simulated galaxy (subhalo).
+ From that position, we radiate in random sight-lines all metal gas bound
+ to the subhalo.
+ Along the ray we assign each part the density from the nearest gas particle
+ and finally sum to a total metal column density.
+ This Voronoi tessellation ray tracer can be found at 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://github.com/JohannesBuchner/LightRayRider"
+
+\end_inset
+
+; Catalogues of the obscuration of all considered simulated galaxies are
+ available from the first author on request.
+ We then compute an equivalent hydrogen column density distribution by adopting
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Wilms2000"
+
+\end_inset
+
+ local inter stellar medium (ISM) abundances.
+ This mimics how 
+\begin_inset Formula $\NH$
+\end_inset
+
+ is derived in X-ray observations.
+ For completeness, Appendix
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Metallicity-sim"
+
+\end_inset
+
+ investigates the hydrogen gas and the metallicity of LOS in the simulation.
+ We adopt 
+\begin_inset Formula $h=0.7$
+\end_inset
+
+ and work in physical units at redshift slices 
+\begin_inset Formula $z=0,\,1,\,2$
+\end_inset
+
+ and 
+\begin_inset Formula $3$
+\end_inset
+
+.
+ We investigate all galaxy subhaloes with black holes.
+ For each we randomly assign a luminosity according to the SARD of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Aird2012"
+
+\end_inset
+
+ and use only those with 
+\begin_inset Formula $L(2-10\,{\rm keV})>10^{42}\text{erg/s}$
+\end_inset
+
+.
+ The last step is repeated 400 times to increase the sample size.
+ We therefore do not rely on the instantaneous accretion rates provided
+ by the simulations 
+\begin_inset CommandInset citation
+LatexCommand citep
+after " for Illustris and EAGLE respectively"
+before "see"
+key "Sijacki2015,Rosas-Guevara2016"
+
+\end_inset
+
+.
+ The effect of adopting these as the selection criterion is discussed later.
+ With the column density distribution for each AGN available, we compute
+ the obscured fraction as a function of column density 
+\begin_inset Formula $\NH$
+\end_inset
+
+ of the simulated population.
+\end_layout
+
+\begin_layout Subsection
+Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Results"
+
+\end_inset
+
+We present the fraction of AGN showing column densities larger than a given
+ 
+\begin_inset Formula $\NH$
+\end_inset
+
+ value in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:gasobscprofilez_sim"
+
+\end_inset
+
+.
+ The plot is made in the same fashion as the previous observational Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:gasobscprofilez_obs"
+
+\end_inset
+
+ and compares against the same observations.
+ In the upper right, 
+\begin_inset Formula $z=1$
+\end_inset
+
+ panel of Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:gasobscprofilez_sim"
+
+\end_inset
+
+, we find that both the EAGLE reference and Illustris simulations produce
+ a negligible number of Compton-thick AGN.
+ This is consistent with the assumption that Compton-thick obscuration is
+ associated with a nuclear obscuration in the vicinity of the accretion
+ disk.
+ We then compare with observations.
+ Downwards-pointing triangles indicate constraints for the obscured fraction
+ of luminous, Compton-thin AGN.
+ Arbitrary additional nuclear obscuration may be included in them, therefore
+ they should be interpreted as upper limits to the galaxy-scale obscuration.
+ We find that the Illustris simulation fulfils these constraints, as it
+ produces very low covering fractions at all obscuring columns.
+ In contrast, the EAGLE reference simulation produces an excess of obscured
+ AGN at 
+\begin_inset Formula $\NH=10^{22}\text{cm}^{-2}$
+\end_inset
+
+.
+ This is in violation of observations even when the higher data point from
+ low-luminosity AGN is considered.
+ At higher column densities, the large-scale galaxy gas of the EAGLE reference
+ simulation produces covering fractions consistent with the observations,
+ with no need for a nuclear obscurer up to 
+\begin_inset Formula $\NH=10^{23.5}\text{cm}^{-2}$
+\end_inset
+
+.
+ In contrast, Illustris galaxies do not provide column densities of 
+\begin_inset Formula $\NH>10^{23}\text{cm}^{-2}$
+\end_inset
+
+ and thus require a nuclear obscurer to explain the observations.
+ The same trends are seen at higher redshifts in the panels of Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:gasobscprofilez_sim"
+
+\end_inset
+
+.
+ At redshift 
+\begin_inset Formula $z=0$
+\end_inset
+
+, both EAGLE and Illustris are consistent with the data points.
+\end_layout
+
+\begin_layout Subsection
+Discussion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /mnt/data/daten/PostDoc/research/agn/sim/compiled/bh/gasobscprofilesingle.pdf
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:gasobscprofile-many"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Obscured fractions of various simulations
+\end_layout
+
+\end_inset
+
+Obscured fractions from various simulations.
+ We compare the fraction of obscured, Compton-thin AGN at 
+\begin_inset Formula $z=1$
+\end_inset
+
+ from observations (first two data points) to our observational model (Section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Methodology"
+
+\end_inset
+
+) and various cosmological simulations.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We discuss three aspects which affect the results: (1) different sub-grid
+ physics, most notably stronger feedback mechanisms, (2) differences between
+ active and passive galaxies, (3) unresolved substructure of the gas.
+\end_layout
+
+\begin_layout Standard
+The strength of EAGLE is that we can explore how variations of the physics
+ affect the results.
+ The diversity of those predictions is bounded by dotted lines in Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:gasobscprofilez_sim"
+
+\end_inset
+
+.
+ This indicates that at least some models reproduce fractions in agreement
+ with observation.
+ However it also shows that the simulations are limited in their predictive
+ power, as arbitrary fractions can be produced depending on the input physics.
+ However, we can use observed obscured AGN fractions to exclude simulations
+ which overproduce them, as these observations are apparently sensitive
+ to the assumed physics.
+ We focus on the fraction of AGN with 
+\begin_inset Formula $\NH>10^{22}\text{cm}^{-2}$
+\end_inset
+
+ at redshift 
+\begin_inset Formula $z=1$
+\end_inset
+
+, and compare with EAGLE physics variations in Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:gasobscprofile-many"
+
+\end_inset
+
+.
+ Observations find a fraction around 
+\begin_inset Formula $\sim30-50\%$
+\end_inset
+
+.
+ We consider any simulation with fractions above 
+\begin_inset Formula $2/3$
+\end_inset
+
+ (right dotted line) as ruled out by observations.
+ This nicely separates the EAGLE physics variations into two groups, one
+ close to the observational constraints, and one significantly over-predicting
+ the fraction of obscured AGN.
+ The EAGLE reference simulation in a large cosmological volume (
+\family typewriter
+L0100N1504_REFERENCE
+\family default
+) belongs to the latter group, as do the simulation runs in medium-size
+ volumes (
+\family typewriter
+L0025N0752_REFERENCE
+\family default
+, 
+\family typewriter
+L0025N0752_RECALIBRATED
+\family default
+).
+ We now investigate which changes make the simulation agree better.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Crain2015"
+
+\end_inset
+
+ presents these variations in detail.
+\end_layout
+
+\begin_layout Standard
+Star formation-related feedback (supernovae, stellar winds, radiation pressure,
+ cosmic rays) was altered in the WeakFB and StrongFB models.
+ The efficiency threshold was modified by factors of 
+\begin_inset Formula $0.5$
+\end_inset
+
+ and 
+\begin_inset Formula $2$
+\end_inset
+
+ respectively, relative to the reference model.
+ Here we find, surprisingly, that both models produce lower obscured fractions
+ than the reference model.
+ Strong feedback leads to underproduction of massive galaxies at 
+\begin_inset Formula $M_{\star}>10^{10.5}M_{\odot}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+after "their Figure 10"
+key "Crain2015"
+
+\end_inset
+
+, thereby biasing the galaxy population to small gas masses.
+ It is less clear why the WeakFB produces a small obscured fraction.
+ Presumably the feedback is not sufficient to vertically puff up galaxies,
+ thereby reducing covering fractions.
+ However, these variations can be excluded based on their mismatch with
+ other observations, e.g.
+ the SMF 
+\begin_inset CommandInset citation
+LatexCommand citep
+after "their Figure 10"
+key "Crain2015"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Next we discuss the effects of feedback from accreting SMBHs.
+ In the EAGLE simulation, three parameters affect the triggering, efficiency
+ and impact of AGN feedback respectively.
+ The equation of state of the ISM can be modified from its reference value
+ (4/3) to 
+\begin_inset Formula $1$
+\end_inset
+
+ (
+\family typewriter
+eos1
+\family default
+).
+ The increased sound speed then increases the accretion onto black holes
+ in the simulation, which increases AGN feedback.
+ Once near the black hole, matter is placed into the black hole with a Bondi
+ accretion formula modified by a viscosity parameter.
+ Increasing the viscosity (
+\family typewriter
+ViscHi
+\family default
+) allows gas to loose angular momentum and accrete more efficiently.
+ Once accreted, the temperature of particles near AGN is increased by 
+\begin_inset Formula $\Delta T=10^{8.5}{\rm K}$
+\end_inset
+
+, stochastically, bringing the gas into the metal cooling regime.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schaye2015"
+
+\end_inset
+
+ test the impact of increasing this temperature to 
+\begin_inset Formula $\Delta T=10^{9}{\rm K}$
+\end_inset
+
+ (
+\family typewriter
+AGNdT9
+\family default
+).
+ Each of these three modification (
+\family typewriter
+eos1
+\family default
+, 
+\family typewriter
+ViscHi
+\family default
+, 
+\family typewriter
+AGNdT9
+\family default
+) leads to a reduction of the obscured fraction of AGN (see Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:gasobscprofile-many"
+
+\end_inset
+
+), while contrary modifications (
+\family typewriter
+eos5/3
+\family default
+, 
+\family typewriter
+ViscLo
+\family default
+, 
+\family typewriter
+AGNdT8
+\family default
+) do the opposite.
+ It is worth noting that 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Schaye2015"
+
+\end_inset
+
+ preferred the 
+\family typewriter
+AGNdT9
+\family default
+ variation over the reference simulation because it better fits soft X-ray
+ observations of cluster gas.
+ We also point out that Illustris uses relative strong feedback, as it implement
+s three different AGN feedback schemes (thermal, kinetic and radiation),
+ whereas EAGLE uses only stochastic heating.
+ 
+\end_layout
+
+\begin_layout Standard
+AGN outflows or radiation pressure may decrease the covering fractions momentari
+ly.
+ We have so far considered 
+\emph on
+all
+\emph default
+ simulated galaxies and found that they produce high covering fractions.
+ Arguably these fractions are consistent with the covering fraction of low-lumin
+osity AGN.
+ Therefore, one could propose that AGN feedback at high luminosities modifies
+ the galaxy in such way that covering fractions are reduced.
+ Apriori this proposal appears unlikely, because nuclear gas should be affected
+ first.
+ Additionally, studies comparing the morphology of active and passive galaxies
+ have found little evidence that these are different, by comparing appearances
+ with asymmetry and concentration measures 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Grogin2003,Grogin2005,Pierce2007,Gabor2009,Kocevski2012"
+
+\end_inset
+
+ or visual classification 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Kocevski2012"
+
+\end_inset
+
+.
+ Indeed, our results remain unchanged if in the EAGLE reference simulation
+ we only consider simulated galaxies with instantaneous black hole accretion
+ rates corresponding to 
+\begin_inset Formula $L(2-10\,{\rm keV})>10^{42}{\rm erg/s}$
+\end_inset
+
+, assuming a radiative efficiency of 10% and bolometric corrections of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Marconi2004"
+
+\end_inset
+
+.
+ In fact, because active galaxies are preferentially gas-rich, star-forming
+ galaxies in that simulation, the average column density is higher by a
+ factor of 2, which increases the discrepancy.
+\end_layout
+
+\begin_layout Standard
+Clumpy ISM may decrease the covering fractions.
+ For instance the galactic ISM is structured into parsec-size clumps with
+ filling factors of 
+\begin_inset Formula $1\%$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Cox2005"
+
+\end_inset
+
+.
+ Such clumps could not be resolved by simulations.
+ However, as a LOS passes through large distances of the ISM (
+\begin_inset Formula $1-\text{few}$
+\end_inset
+
+ kiloparsecs), this clumpiness averages out.
+ Additionally, clumpiness would effectively only redistribute the obscured
+ fraction to both lower and higher column densities, potentially violating
+ the constraints of higher column densities.
+ There are also differences in the hydrodynamics code schemes and their
+ accuracy.
+ However, these are less important than the chosen sub-grid models 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "J. Shaye, priv. comm., see"
+key "Scannapieco2012,Schaller2015,Cui2016,Sembolini2016"
+
+\end_inset
+
+ in the present non-classical SPH simulations.
+\end_layout
+
+\begin_layout Standard
+To summarise, our obscured fraction diagnostic is a highly sensitive test
+ of feedback recipes.
+ It can easily rule out feedback models already at early times (e.g.
+ 
+\begin_inset Formula $z=3$
+\end_inset
+
+) in the simulations, if they produce very high fractions of obscured AGN.
+\end_layout
+
+\begin_layout Section
+Conclusions
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Summary"
+
+\end_inset
+
+Using only observational relations, we predict the covering fractions of
+ galaxy-scale gas as relevant for the AGN population.
+ Our findings can be summarised as follows:
+\end_layout
+
+\begin_layout Enumerate
+Galaxy-scale gas does not provide Compton-thick lines of sight.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Galaxy-scale gas covers substantial fractions of the SMBH population at
+ 
+\begin_inset Formula $\NH\approx10^{22-23.5}{\rm cm}^{-2}$
+\end_inset
+
+, sufficient to explain the observed luminosity-independent baseline obscuration.
+ 
+\end_layout
+
+\begin_layout Standard
+We therefore conclude that heavily obscured AGN are associated with nuclear
+ obscuration, and propose the value 
+\begin_inset Formula $\NH=10^{23.5}{\rm cm}^{-2}$
+\end_inset
+
+ as a demarcation line singling out the nuclear obscurer.
+ 
+\end_layout
+
+\begin_layout Standard
+We subtracted the galaxy-scale obscuration and concluded regarding the remaining
+ nuclear obscurer, that
+\end_layout
+
+\begin_layout Enumerate
+a nuclear Compton-thick obscurer with 
+\begin_inset Formula $\sim35\%$
+\end_inset
+
+ covering is necessary.
+\end_layout
+
+\begin_layout Enumerate
+a nuclear Compton-thin obscurer is necessary for some combinations of luminosity
+/black hole mass.
+ 
+\end_layout
+
+\begin_layout Standard
+The result is formalised into a semi-analytic model for cosmological simulations
+, called PuffedTorus (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:PuffedTorus"
+
+\end_inset
+
+).
+ The cartoon of Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Cartoon"
+
+\end_inset
+
+ illustrates a possible physical scenario for these three, distinct obscuring
+ components.
+\end_layout
+
+\begin_layout Standard
+We also investigated the inside of simulated galaxies from state-of-the-art
+ hydro-dynamic, cosmological simulations and apply ray-tracing from their
+ black holes.
+ Some of these simulations produce obscured fractions from their metal gas
+ which is consistent with observed populations.
+ However, the results are highly sensitive to the adopted feedback models
+ and therefore lack predictive power.
+ We therefore suggest the Compton-thin obscured AGN fraction as a diagnostic
+ to rule out feedback models.
+ This diagnostic which can be applied already at early cosmic times (
+\begin_inset Formula $z=2-3$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Section*
+Acknowledgements
+\end_layout
+
+\begin_layout Standard
+JB thanks Antonis Georgakakis and Dave Alexander for insightful conversations.
+ JB thanks Joop Schaye for detailed comments pertaining the hydrodynamic
+ simulations work.
+ JB thanks Klaus Dolag, Sergio Contreras and Torsten Naab for conversations
+ about hydro-dynamic simulations.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/mnt/data/daten/PostDoc/literature/agn,/mnt/data/daten/PostDoc/literature/grb,/mnt/data/daten/PostDoc/literature/sim"
+options "mnras"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+appendix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../agn/sim/tao/stellar/sage.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:MZ-sam"
+
+\end_inset
+
+The metal gas mass in galaxies according to the SAGE semi-analytic model.
+ Red indicates the median, while dashed lines are the 
+\begin_inset Formula $1\sigma$
+\end_inset
+
+-equivalent quantiles.
+ The ratio of metal gas to stellar mass lies between 
+\begin_inset Formula $1:30$
+\end_inset
+
+ and 
+\begin_inset Formula $1:100$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The gas mass inside galaxy
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:semi-analytic"
+
+\end_inset
+
+Important constraints on how much gas resides in galaxies can be drawn from
+ cosmological simulations.
+ Such simulations evolve the matter density available at the Big Bang into
+ collapsing bound structures.
+ Semi-analytic models, relying on dark matter haloes from dark matter N-body
+ simulations have been highly successful in reproducing many features of
+ galaxies, including the stellar mass function of galaxies and their colour
+ distribution 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Croton2006,Somerville2008,Hirschmann2012,Fanidakis2012"
+
+\end_inset
+
+.
+ As an illustrative case, we consider the model of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Croton2016"
+
+\end_inset
+
+.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MZ-sam"
+
+\end_inset
+
+ plots the metal gas mass (the X-ray obscurer) present as a function of
+ galaxy stellar mass.
+ The median (red curve) falls consistently in the 1:30 to 1:100 range for
+ the ratio of metal gas mass to stellar mass.
+ With AGN host galaxies primarily drawn around the 
+\begin_inset Formula $M_{\star}=10^{10-11}M_{\odot}$
+\end_inset
+
+ regime, the total gas available to obscure a central point source is about
+ 
+\begin_inset Formula $M_{\text{Z}}\sim10^{9}M_{\odot}$
+\end_inset
+
+.
+ The Illustris simulation shows very similar results at 
+\begin_inset Formula $z=1-3$
+\end_inset
+
+ obeying the same gas ratios.
+ However at 
+\begin_inset Formula $z=0$
+\end_inset
+
+, the high-mass end is lacks gas due to the strong feedback implemented
+ in that simulation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /mnt/data/daten/PostDoc/research/agn/sim/sphere/sphere.pdf
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:sim-MZ-obsc"
+
+\end_inset
+
+X-ray obscuration a given metal gas mass can reach.
+ A obscurer of column density 
+\begin_inset Formula $N_{H}$
+\end_inset
+
+ outside a radius 
+\begin_inset Formula $R$
+\end_inset
+
+ has a minimum metal gas mass limit 
+\begin_inset Formula $M_{Z}$
+\end_inset
+
+ (lines).
+ For example, a 
+\begin_inset Formula $M_{Z}=10^{9}M_{\odot}$
+\end_inset
+
+ gas mass has to be brought withing 100pc to completely enshroud a region
+ with Compton-thick column densities.
+ Keep in mind that such masses are only found in very massive galaxies (
+\begin_inset Formula $M_{\star}>3\cdot10^{10}M_{\odot}$
+\end_inset
+
+, see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MZ-sam"
+
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+We present a simple calculation to show that Compton-thick column densities,
+ i.e.
+ 
+\begin_inset Formula $\NH>1.5\times10^{24}\text{cm}^{-2}$
+\end_inset
+
+) cannot be achieved by accumulating the galaxy gas over several kpc.
+ In X-ray spectral analysis, the equivalent hydrogen column density 
+\begin_inset Formula $\NH$
+\end_inset
+
+ is usually computed assuming solar abundances.
+ To mimic this, we convert the metal mass in particles to the number of
+ hydrogen atoms assuming solar mass fractions of the nearby ISM from 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Wilms2000"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+n_{\text{H}} & = & \left.\frac{f_{\text{X}}}{f_{\text{Z}}}\right|_{\text{solar}}\times\frac{\rho_{\text{Z}}}{m_{\text{H}}}
+\end{eqnarray*}
+
+\end_inset
+
+Inserting numbers including the hydrogen mass 
+\begin_inset Formula $m_{\text{H}}$
+\end_inset
+
+ we find 
+\begin_inset Formula 
+\begin{eqnarray*}
+n_{\text{H}} & = & 0.737\times10^{22}\text{cm}^{-2}\frac{1}{1\text{kpc}}\times\frac{\rho_{\text{Z}}}{10^{6}M_{\odot}\text{kpc}^{-3}}.
+\end{eqnarray*}
+
+\end_inset
+
+For example, a 1kpc ray in a region of metal gas density 
+\begin_inset Formula $10^{6}M_{\odot}/\text{kpc}^{3}$
+\end_inset
+
+ results in a measured column density of 
+\begin_inset Formula $\NH\approx10^{22}\text{cm}^{-2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The gas inside a galaxy may be arranged in a multitude of ways to achieve
+ a covering with column density 
+\begin_inset Formula $\NH$
+\end_inset
+
+.
+ If we consider only gas 
+\emph on
+outside
+\emph default
+ a certain radius 
+\begin_inset Formula $R$
+\end_inset
+
+, the most effective obscurer, i.e.
+ the one with the least mass but complete covering, is an infinitely thin
+ shell at that radius 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Its mass is easily computed as 
+\begin_inset Formula 
+\[
+M_{\text{H}}(\NH,>R)=4\pi\cdot R^{2}\times\NH\times m_{\text{H}}.
+\]
+
+\end_inset
+
+Converting to metals using the factor 
+\begin_inset Formula $\left.\frac{f_{\text{Z}}}{f_{\text{X}}}\right|_{\text{solar}}$
+\end_inset
+
+and expressing in conventional units, this limit is
+\begin_inset Formula 
+\[
+M_{\text{Z}}(\NH,>R)=2.6\times10^{9}M_{\odot}\cdot\frac{\NH}{1.5\times10^{24}\text{cm}^{-2}}\cdot\left(\frac{R}{1\text{kpc}}\right)^{2}.
+\]
+
+\end_inset
+
+Therefore, a metal mass larger than 
+\begin_inset Formula $2.6\times10^{9}M_{\odot}$
+\end_inset
+
+ is required to create a Compton-thick obscurer outside the central 
+\begin_inset Formula $1\text{kpc}$
+\end_inset
+
+.
+ Or equivalently, a metal mass of 
+\begin_inset Formula $2.6\times10^{9}M_{\odot}$
+\end_inset
+
+ has to be brought to the central 
+\begin_inset Formula $\text{kpc}$
+\end_inset
+
+ to act as a Compton-thick obscurer.
+ Note that this mass limit scales with the covering factor; for example
+ obscuration of 
+\begin_inset Formula $10\%$
+\end_inset
+
+ of the sky requires 
+\begin_inset Formula $10\%$
+\end_inset
+
+ of the mass.
+ This simple limit is shown for several levels of obscuration in Figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:sim-MZ-obsc"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Risaliti1999"
+
+\end_inset
+
+ already noted that such large masses at radii further than a few 10 pc
+ are ruled out in NGC1068 and Circinus because they would gravitationally
+ dominate the central region.
+\end_layout
+
+\begin_layout Standard
+Combining this simple limit with the masses of Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MZ-sam"
+
+\end_inset
+
+, we can now conclude that galaxies lack the gas required for Compton-thick
+ obscuration with substantial covering factors outside the central 
+\begin_inset Formula $1\text{kpc}$
+\end_inset
+
+.
+ Admittedly, this is a weak constraint.
+ However the result holds independently of the geometry of the gas, the
+ galaxy type and is also applicable to mergers.
+ As an example, lets consider that a 
+\begin_inset Formula $M_{\star}=10^{9}M_{\odot}$
+\end_inset
+
+ merges into a 
+\begin_inset Formula $M_{\star}=10^{10}M_{\odot}$
+\end_inset
+
+ galaxy (minor merger), and lets assume that all of its gas (
+\begin_inset Formula $M_{Z}\approx10^{7}M_{\odot}$
+\end_inset
+
+) is made available.
+ That entire amount of gas must land within 
+\begin_inset Formula $100{\rm pc}$
+\end_inset
+
+ of the AGN in order to completely enshroud in Compton-thick columns.
+ More quantitative conclusions depend on the geometrical distribution of
+ the gas in the galaxy.
+ We analyse the galaxies produced by hydrodynamic simulations in Section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Cosmological-simulations"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Metallicity of sightlines to AGN and GRB
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /mnt/data/daten/PostDoc/research/agn/sim/compiled/bh/gascolumnabundance_0.pdf
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Z-sim-1"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+AGN LOS column abundances
+\end_layout
+
+\end_inset
+
+LOS column abundances to AGN.
+ In the EAGLE reference simulation, hydrogen and metal gas densities were
+ integrated along random sightlines from the central black hole to the edge
+ of the host galaxy; the ratio is presented.
+ Curves present the median, while the shaded regions represent the 
+\begin_inset Formula $1\sigma$
+\end_inset
+
+ scatter in the population.
+ LOS metallicities are in general elevated compared to n the local ISM and
+ show a stellar-mass dependence.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /mnt/data/daten/PostDoc/research/agn/sim/compiled/grb/gascolumnabundance_0.pdf
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Z-sim-2"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+AGN LOS column abundances
+\end_layout
+
+\end_inset
+
+LOS column abundances to GRBs.
+ Same as in Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Z-sim-1"
+
+\end_inset
+
+, but sightlines started from the from the densest regions.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Metallicity-sim"
+
+\end_inset
+
+This paper focused on metal column densities, not hydrogen column densities.
+ We now consider the hydrogen column densities in the reference EAGLE simulation.
+ Our goal is to investigate whether and how they are different from the
+ usually assumed local ISM metallicities in X-ray observation of high-redshift
+ sources.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Bahe2015"
+
+\end_inset
+
+ investigated already the hydrogen masses and surface densities of EAGLE
+ galaxies and found good agreement with observations.
+ Here we investigate the abundance in random sightlines for AGN.
+ The top panel of Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Z-sim-2"
+
+\end_inset
+
+ presents the metal abundance 
+\begin_inset Formula $N_{\text{Z}}/\NH$
+\end_inset
+
+ relative to local ISM abundances of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Wilms2000"
+
+\end_inset
+
+ as a function of galaxy mass for AGN.
+ In general, approximately solar abundances are predicted as the LOS crosses
+ the host galaxy.
+ The abundance increases over cosmic time as metals build up.
+ Also, the metallicity increases with stellar mass.
+ This effect is less prominent in AGN sightlines (Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Z-sim-1"
+
+\end_inset
+
+) which always end in the metal-rich centre of galaxies.
+ 
+\end_layout
+
+\begin_layout Standard
+For completeness we also present the expected metallicities for GRB sightlines
+ in Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Z-sim-2"
+
+\end_inset
+
+.
+ For low stellar mass hosts at high redshift, they are expected to be sub-solar.
+ These hosts dominate the observed host distribution 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "see e.g.,"
+key "Perley2015b"
+
+\end_inset
+
+, and therefore sub-solar metallicities are to be expected in LGRB afterglow
+ spectroscopy.
+ For research on the optical absorption of GRBs by HI we refer to the simulation
+s of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pontzen2010"
+
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
