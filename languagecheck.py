@@ -560,7 +560,7 @@ with codecs.open(filename + '_index.html', 'w', 'latin1') as f:
 	<li>%(checkbox)s <a href="%(prefix)s_topic.html">Each paragraph should open informatively.</a>
 	<li>%(checkbox)s <a href="%(prefix)s_tricky.html">Tricky words, Prepositions & Wordiness</a>
 	<li>%(checkbox)s <a href="%(prefix)s_wordiness.html">Wordiness & long sentences</a>
-	<li>%(checkbox)s <a href="%(prefix)s_readability.html">Reading ease</a>
+	<li>%(checkbox)s <a href="%(prefix)s_readability.html">Reading ease (beta)</a>
 	<li>%(checkbox)s <a href="%(prefix)s_tense.html">Consistent use of tenses</a>
 	<li>%(checkbox)s <a href="%(prefix)s_para.html">Paragraph consistency</a>
 	<li>%(checkbox)s <a href="%(prefix)s_vis.html">Check the visual appeal</a>
