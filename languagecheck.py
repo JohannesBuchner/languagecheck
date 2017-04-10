@@ -547,6 +547,75 @@ def tricky_words(paragraphs):
 		f.write("<p>Only %d/%d rules have applied to this text</p>\n" % (nused, nrules))
 		f.close()
 
+
+def a_or_an_words(paragraphs):
+	with codecs.open(filename + '_a.html', 'w', 'latin1') as f:
+		f.write(header % dict(title='a or an'))
+		f.write("""<h1>a or an?</h1>
+		The rule is that <em>a</em> is used before a word starting with a 
+		consonant (a house, a unicorn), and <em>an</em> before a vowel 
+		(an ox, an hour). Here we check whether the following word is a vowel or consonant.
+		<hr/>
+		<style type="text/css">
+		.evaluation{font-family: monospace; color: gray;}
+		</style>
+		""")
+		from collections import defaultdict
+		firstsyll = defaultdict(list)
+		for word, syl in nltk.corpus.cmudict.entries():
+			firstsyll[word].append(syl[0])
+		
+		nfound = 0
+		nwrong = 0
+		f.write("<ul>\n")
+		for para in paragraphs:
+			for txt, tags, entities in para:
+				hits = [word.lower() in ('a', 'an') for word, _wordtype in tags]
+				for i, (word, _wordtype) in enumerate(tags):
+					if word.lower() not in ('a', 'an'):
+						continue
+					expect_vowel = word.lower() == 'an'
+					if i + 1 == len(tags):
+						# no word after a/an.
+						continue
+					nextword, _wordtype2 = tags[i+1]
+					nfound += 1
+					nextsylls = firstsyll.get(nextword, [])
+					guess = False
+					is_potentially_vowel = False
+					is_potentially_consonant = False
+					for nextsyll in nextsylls:
+						if nextsyll[0] in 'AEIOUJ':
+							is_potentially_vowel = True
+						else:
+							is_potentially_consonant = True
+					if len(nextsylls) == 0:
+						# we do not know how to pronounce this word
+						# try to use simple rule of consonants and vowels
+						guess = True
+						if nextword[0].upper() in 'AEIOU':
+							is_potentially_vowel = True
+						else:
+							is_potentially_consonant = True
+					if expect_vowel and is_potentially_vowel:
+						continue # ok
+						ncorrect += 1
+					elif not expect_vowel and is_potentially_consonant:
+						continue # ok
+						ncorrect += 1
+					else:
+						guesstext = ' (word unknown, simple guess)' if guess else ''
+						nwrong += 1
+						if is_potentially_vowel:
+							f.write("<li>%s %s -&gt; *AN* %s%s\n" % (word, nextword, nextword, guesstext))
+						elif is_potentially_consonant:
+							f.write("<li>%s %s -&gt; *A* %s%s\n" % (word, nextword, nextword, guesstext))
+						else:
+							print 'unexpected:', word, nextword, nextsylls, expect_vowel, is_potentially_vowel, is_potentially_consonant
+		f.write("</ul>\n")
+		f.write("<p>%d of %d usages correct.</p>\n" % (nfound - nwrong, nfound))
+		f.close()
+
 with codecs.open(filename + '_index.html', 'w', 'latin1') as f:
 	f.write(header % dict(title='Language analysis'))
 	f.write("""<h1>Language analysis</h1>
@@ -559,6 +628,7 @@ with codecs.open(filename + '_index.html', 'w', 'latin1') as f:
 	<li>%(checkbox)s Do grammar-checking (in LanguageTool)
 	<li>%(checkbox)s <a href="%(prefix)s_topic.html">Each paragraph should open informatively.</a>
 	<li>%(checkbox)s <a href="%(prefix)s_tricky.html">Tricky words, Prepositions & Wordiness</a>
+	<li>%(checkbox)s <a href="%(prefix)s_a.html">a vs an</a>
 	<li>%(checkbox)s <a href="%(prefix)s_wordiness.html">Wordiness & long sentences</a>
 	<li>%(checkbox)s <a href="%(prefix)s_readability.html">Reading ease (beta)</a>
 	<li>%(checkbox)s <a href="%(prefix)s_tense.html">Consistent use of tenses</a>
@@ -664,6 +734,8 @@ for i, chunk in enumerate(chunks):
 		paragraphs.append(para)
 
 print
+print 'analysis: a vs an'
+a_or_an_words(paragraphs)
 print 'analysis: tricky words'
 tricky_words(paragraphs)
 print 'analysis: wordiness'

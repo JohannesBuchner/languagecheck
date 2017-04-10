@@ -12,6 +12,7 @@ Features
 * find tense inconsistencies
 * check visual impression of paper
 * check topic sentences
+* check a vs an before a consonant/vowel
 
 
 
