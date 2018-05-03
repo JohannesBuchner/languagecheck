@@ -41,7 +41,7 @@ These commands should not give you an error::
 	$ which hunspell
 	$ ls /usr/share/hunspell/{en_US,en_UK}.{dic,aff}
 
-Then install the python packages and data:
+Then install the python packages and data::
 
 	$ pip install pyhunspell  --user
 	$ pip install nltk  --user
