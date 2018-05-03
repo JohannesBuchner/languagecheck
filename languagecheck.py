@@ -583,39 +583,41 @@ def tricky_words(paragraphs):
 		.evaluation{font-family: monospace; color: gray;}
 		</style>
 		""")
-		nrules = 0
-		nused = 0
-		rules = open(os.path.join(os.path.dirname(__file__), 'tricky.txt')).readlines()
-		rules += open(os.path.join(os.path.dirname(__file__), 'tricky_%s.txt' % lang)).readlines()
-		rules += open(os.path.join(os.path.dirname(__file__), 'tricky_extra.txt')).readlines()
-		for rule in rules:
-			rule = rule.rstrip()
-			if rule.startswith('###'):
-				f.write("<h2>%s</h2>\n" % rule.lstrip('# '))
-				continue
-			if rule.startswith('#') or len(rule) == 0:
-				continue
-			if ' -> ' not in rule:
-				print('bad rule in tricky.txt:', rule)
-			a, b = rule.split('->')
-			a = a
-			b = b
-			used = False
-			for para in paragraphs:
-				for txt, tags, entities in para:
-					if a in txt:
-						if not used:
-							f.write("<h5>%s</h5>\n" % rule)
-							f.write("<ul>\n")
-							used = True
-						f.write("<li>%s\n" % (txt.replace(a, '<b>' + a + '</b>' + ' -> <em>'+b+'</em> ')))
-			if used:
-				nused += 1
-				f.write("</ul>\n")
-			nrules += 1
+		for rule_filename in 'tricky.txt', 'tricky_%s.txt' % lang, 'tricky_extra.txt':
+			f.write("<h2>Rules from %s</h2>\n" % rule_filename)
+			if 'extra' in rule_filename:
+				f.write("<p>Beware that the number of false positive is likely higher in these rules")
+			nused = 0
+			nrules = 0
+			rules = open(os.path.join(os.path.dirname(__file__), rule_filename)).readlines()
+			for rule in rules:
+				rule = rule.rstrip()
+				if rule.startswith('###'):
+					f.write("<h3>%s</h3>\n" % rule.lstrip('# '))
+					continue
+				if rule.startswith('#') or len(rule) == 0:
+					continue
+				if ' -> ' not in rule:
+					print('bad rule in tricky.txt:', rule)
+				a, b = rule.split('->')
+				a = a
+				b = b
+				used = False
+				for para in paragraphs:
+					for txt, tags, entities in para:
+						if a in txt:
+							if not used:
+								f.write("<h5>%s</h5>\n" % rule)
+								f.write("<ul>\n")
+								used = True
+							f.write("<li>%s\n" % (txt.replace(a, '<b>' + a + '</b>' + ' -> <em>'+b+'</em> ')))
+				if used:
+					nused += 1
+					f.write("</ul>\n")
+				nrules += 1
 		
-		nrules 
-		f.write("<p>Only %d/%d rules have applied to this text</p>\n" % (nused, nrules))
+			f.write("<p>Only %d/%d rules have applied to this text</p>\n" % (nused, nrules))
+			f.write("<hr>")
 		f.close()
 
 
@@ -688,32 +690,39 @@ def a_or_an_words(paragraphs):
 		f.close()
 
 with codecs.open(filename + '_index.html', 'w', 'latin1') as f:
-	f.write(header % dict(title='Language analysis'))
-	f.write("""<h1>Language analysis</h1>
+	f.write(header % dict(title='Language check'))
+	f.write("""<h1>Report for "%(prefix)s"</h1>
 	<a href="https://github.com/JohannesBuchner/languagecheck">This program</a> attempts to assist you in improving your paper.
 	Language is ambiguous and subjective, a computer can not understand it.
 	All results should be seen as suggestions; think about the highlighted sentences.
 	
+	<h3>Available reports</h3>
 	<ul>
+	<li><em>Before using this tool</em>:
 	<li>%(checkbox)s Do spell-checking (in your LaTeX editor, e.g. lyx)
 	<li>%(checkbox)s Do grammar-checking (in LanguageTool)
-	<li>%(checkbox)s <a href="%(prefix)s_topic.html">Each paragraph should open informatively.</a>
+	<li><em>Word-level analysis</em>:
 	<li>%(checkbox)s <a href="%(prefix)s_tricky.html">Tricky words, Prepositions & Wordiness</a>
 	<li>%(checkbox)s <a href="%(prefix)s_a.html">a vs an</a>
-	<li>%(checkbox)s <a href="%(prefix)s_wordiness.html">Wordiness & long sentences</a>
-	<li>%(checkbox)s <a href="%(prefix)s_readability.html">Reading ease (beta)</a>
-	<li>%(checkbox)s <a href="%(prefix)s_tense.html">Consistent use of tenses</a>
 	<li>%(checkbox)s <a href="%(prefix)s_spelling.html">Spelling mistakes</a>
+	<li><em>Sentence-level analysis</em>:
+	<li>%(checkbox)s <a href="%(prefix)s_topic.html">Each paragraph should open informatively.</a>
+	<li>%(checkbox)s <a href="%(prefix)s_wordiness.html">Wordiness & long sentences</a>
+	<!--<li>%(checkbox)s <a href="%(prefix)s_readability.html">Reading ease (beta)</a>-->
+	<li><em>Paragraph-level analysis</em>:
+	<li>%(checkbox)s <a href="%(prefix)s_tense.html">Consistent use of tenses</a>
 	<li>%(checkbox)s <a href="%(prefix)s_para.html">Paragraph consistency</a>
+	<li><em>Paper-level analysis</em>:
 	<li>%(checkbox)s <a href="%(prefix)s_vis.html">Check the visual appeal</a>
 	</ul>
 
 	<p>
-	This program may help you catch some classes of common mistakes,
+	Caveat emptor: The generated reports linked above may help you catch some classes of common mistakes,
 	but does not replace careful reading and self-editing.
-	Here are some steps:
+	<hr/>
+	Here are some systematic steps to consider when improving a paper:
 	</p>
-
+	
 	<h3>Context-level</h3>
 	<ul>
 	<li>%(checkbox)s Is the text placed well in context (in relation to wider debate)?

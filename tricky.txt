@@ -1,3 +1,29 @@
+### Contractions
+can not -> cannot
+can't -> cannot
+didn't -> did not
+shouldn't -> should not
+n't -> contractions should be avoided (did not for didn't, cannot for can't)
+
+### Repetitions and Repetitions
+and and -> and
+the the -> the
+from the from the -> from the
+of of -> of
+did did -> did
+
+### double negatives
+not un -> use the positive expression (tricky for arabian first-language speakers)
+not different -> similar
+not many -> few
+not have -> lack
+not include -> omit
+not consider -> ignore
+not the same -> different
+not often -> rarely
+not admit -> deny
+not accept -> reject
+
 ### wordiness
 despite the fact that -> although, even though
 regardless of the fact that -> although, even though
@@ -71,32 +97,6 @@ there is -> rephrase; make the following active, use a stronger verb
 there are -> rephrase; make the following active, use a stronger verb
 respectively -> double-check that you are pairing lists here
 ? -> question marks should rarely be used
-
-### double negatives
-not un -> use the positive expression (tricky for arabian first-language speakers)
-not different -> similar
-not many -> few
-not have -> lack
-not include -> omit
-not consider -> ignore
-not the same -> different
-not often -> rarely
-not admit -> deny
-not accept -> reject
-
-### Contractions
-can not -> cannot
-can't -> cannot
-didn't -> did not
-shouldn't -> should not
-n't -> contractions should be avoided (did not for didn't, cannot for can't)
-
-### Repetitions and Repetitions
-and and -> and
-the the -> the
-from the from the -> from the
-of of -> of
-did did -> did
 
 ### Wrong comparisons
 high speed -> fast
@@ -334,7 +334,7 @@ partly true -> vague, ambiguous
 somewhat consistent -> vague, ambiguous
 the fact that -> check that what follows is a fact, otherwise simplify
 in any case -> in all cases, in either case
-/ -> ambiguous. use either and, or (or formula for ratio)
+/ -> slash (/) is ambiguous. use either "and", "or" (or a formula if ratio)
 
 ### Ambiguous
 #Due to -> Don't start like that
@@ -642,13 +642,13 @@ was effected -> was affected
 irregardless -> regardless, irrespective
 Irregardless -> Regardless, Irrespective
 
-### a->an
-
-a a -> an a
-a e -> an e
-a i -> an i
-a o -> an o
-a u -> an u
+# there is a separate report for these, which is more likely to be correct than these simple rules
+# a vs. an
+#a a -> an a
+#a e -> an e
+#a i -> an i
+#a o -> an o
+#a u -> an u
 
 ### Commas
 e.g.  -> e.g., (comma after e.g. is recommended)
@@ -657,7 +657,7 @@ i.e.  -> i.e., (comma after i.e. is recommended)
  i.e. -> ,i.e. (comma before i.e. needed)
  respectively -> , respectively (comma before)
 
-### Start of sentences with And/Or
+### Sentences starting with And/Or
 And -> Sentences cannot start with and. Join with previous sentence, or use additionally, furthermore, ...
 Or -> Sentences cannot start with or. Join with previous sentence, or use alternatively, however, ...
 
