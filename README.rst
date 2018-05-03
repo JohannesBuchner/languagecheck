@@ -7,6 +7,7 @@ Features
 ---------
 
 * Makes reports that help you:
+
   * find common grammar mistakes (e.g. prepositions)
   * find wordy phrases and suggest replacements
   * find long, wordy sentences
