@@ -23,11 +23,11 @@ txtfile: Use detex to remove tex from a latex file.
 pdffile: PDF of your paper
 
 Environment variables:
-LANG: [en_UK|en_US]
+LANG: [en_GB|en_US]
 	Choose language.
 
 Usage example:
-	LANG=UK %(cmd)s mn.txt mn.pdf
+	LANG=en_GB %(cmd)s mn.txt mn.pdf
 
 Johannes Buchner (C) 2016
 http://github.com/JohannesBuchner/languagecheck/
@@ -35,14 +35,14 @@ http://github.com/JohannesBuchner/languagecheck/
 	sys.exit(1)
 filename = sys.argv[1]
 pdf = sys.argv[2]
-lang = os.environ.get('LANG', 'en_UK')
+lang = os.environ.get('LANG', 'en_GB')
 if 'US' in lang:
 	lang = 'en_US'
-elif 'UK' in lang:
-	lang = 'en_UK'
+elif 'GB' in lang:
+	lang = 'en_GB'
 else:
-	lang = 'en_UK'
-print('Using language "%s". You can set LANG=en_UK or LANG=en_US.' % lang)
+	lang = 'en_GB'
+print('Using language "%s". You can set LANG=en_GB or LANG=en_US.' % lang)
 	     
 prefix = filename + '_vis-'
 def list_img():
@@ -204,9 +204,17 @@ def tenses(paragraphs):
 
 
 def spelling(paragraphs):
-	import hunspell # if import fails: pip install pyhunspell https://github.com/blatinier/pyhunspell
-	hlang = lang.replace('en_UK', 'en_GB')
-	h = hunspell.HunSpell('/usr/share/hunspell/%s.dic' % hlang, '/usr/share/hunspell/%s.aff' % hlang) # if this fails, you dont have that language installed or are not on Unix
+	hlang = lang
+	try:
+		import hunspell # if import fails: pip install pyhunspell https://github.com/blatinier/pyhunspell
+	except ImportError:
+		print("  install hunspell package to use spell checker - https://github.com/blatinier/pyhunspell")
+		return
+	try:
+		h = hunspell.HunSpell('/usr/share/hunspell/%s.dic' % hlang, '/usr/share/hunspell/%s.aff' % hlang) # if this fails, you dont have that language installed or are not on Unix
+	except Exception:
+		print("   could not load dictionaries (", '/usr/share/hunspell/%s.dic' % hlang, '/usr/share/hunspell/%s.aff' % hlang, "Is hunspell installed?")
+		return
 	# add custom words:
 	for line in open(os.path.join(os.path.dirname(__file__), 'sciencywords.txt')):
 		if line.startswith('#'): continue

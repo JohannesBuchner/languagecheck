@@ -657,4 +657,8 @@ i.e.  -> i.e., (comma after i.e. is recommended)
  i.e. -> ,i.e. (comma before i.e. needed)
  respectively -> , respectively (comma before)
 
+### Start of sentences with And/Or
+And -> Sentences cannot start with and. Join with previous sentence, or use additionally, furthermore, ...
+Or -> Sentences cannot start with or. Join with previous sentence, or use alternatively, however, ...
+
 

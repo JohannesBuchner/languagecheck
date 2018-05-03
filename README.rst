@@ -24,6 +24,7 @@ Requirements
 * nltk: Install with pip
 * nltk data: Install with python -m nltk.downloader all
 * detex command (usually comes with LaTeX)
+* pyhunspell (optional): Install with pip
 
 How to use
 --------------
