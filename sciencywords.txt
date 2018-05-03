@@ -1,0 +1,16 @@
+# words that are used in the scientific literature but are not in common dictionaries
+redshift
+redshifts
+degeneracy
+degeneracies
+outlier
+outliers
+photometric
+photometry
+quantile
+quantiles
+metallicity
+metallicities
+arcmin
+arcsec
+priors

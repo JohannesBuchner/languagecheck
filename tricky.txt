@@ -49,7 +49,6 @@ in spite of the fact that -> although; even though
 due to the fact that -> because
 in the case of -> for X; about X
 perform an identification -> to identify
-#Concerning the explosion, its effect is -> The effect of the explosion is…
 The intersection of -> X intersects Y
 We aim at estimating -> We estimate
 make a comparison with -> to compare
@@ -481,7 +480,7 @@ latter two -> the last two
 this latter -> the latter
 in the last years -> in recent years, in past years, in the last decade of the Xth century.
 for instance -> such as, similar to, the same as
-like -> such as, similar to, the same as
+ like -> such as, similar to, the same as
 is likely -> is very likely X, is very likely to be X, probably X, most likely X
 made up from -> made up of
 regions are marked -> regions are labeled
@@ -630,6 +629,9 @@ starts at -> starts from
 start at -> start from
 started at -> started from
 in the onset -> at the onset
+in the center -> at the center
+in the centre -> at the centre
+surpress -> suppress
 
 ### Very bad ones
 should of -> should have
@@ -647,4 +649,12 @@ a e -> an e
 a i -> an i
 a o -> an o
 a u -> an u
+
+### Commas
+e.g.  -> e.g., (comma after e.g. is recommended)
+i.e.  -> i.e., (comma after i.e. is recommended)
+ e.g. -> ,e.g. (comma before e.g. needed)
+ i.e. -> ,i.e. (comma before i.e. needed)
+ respectively -> , respectively (comma before)
+
 

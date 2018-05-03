@@ -1,9 +1,11 @@
 #!/usr/bin/env python
+from __future__ import print_function
 import sys, os
 import random
 import codecs
 import subprocess
 import glob
+from collections import Counter
 import nltk # Install nltk: $ pip install nltk --user
 
 header = """<html>
@@ -40,7 +42,7 @@ elif 'UK' in lang:
 	lang = 'en_UK'
 else:
 	lang = 'en_UK'
-print 'Using language "%s". You can set LANG=en_UK or LANG=en_US.' % lang
+print('Using language "%s". You can set LANG=en_UK or LANG=en_US.' % lang)
 	     
 prefix = filename + '_vis-'
 def list_img():
@@ -50,7 +52,7 @@ for i in list_img():
 	#print 'deleting old image %s' % i
 	os.remove(i)
 
-print 'creating visualisation ...'
+print('creating visualisation ...')
 process = subprocess.Popen(['convert', '-density', '40', '-blur', '5x3', pdf, prefix + "%02d.png"])
 
 verb_classes = ['VB', 'VBD', 'VBN', 'VBP', 'VBZ']
@@ -165,7 +167,7 @@ def guess_tense_tree(tags, entities, last_tense):
 			return 'mixed'
 	return tense_full
 		
-	
+
 def tenses(paragraphs):
 	with codecs.open(filename + '_tense.html', 'w', 'latin1') as f:
 		f.write(header % dict(title='Tenses'))
@@ -199,6 +201,66 @@ def tenses(paragraphs):
 					f.write('\n')
 			f.write("\n</p>")
 		f.close()
+
+
+def spelling(paragraphs):
+	import hunspell # if import fails: pip install pyhunspell https://github.com/blatinier/pyhunspell
+	hlang = lang.replace('en_UK', 'en_GB')
+	h = hunspell.HunSpell('/usr/share/hunspell/%s.dic' % hlang, '/usr/share/hunspell/%s.aff' % hlang) # if this fails, you dont have that language installed or are not on Unix
+	# add custom words:
+	for line in open(os.path.join(os.path.dirname(__file__), 'sciencywords.txt')):
+		if line.startswith('#'): continue
+		h.add(line.strip())
+	
+	with codecs.open(filename + '_spelling.html', 'w', 'latin1') as f:
+		f.write(header % dict(title='Spelling'))
+		f.write("""<h1>Spelling</h1>
+		""")
+		handled = set()
+		counter = Counter()
+		items_uppercase = []
+		items_nonupper = []
+		badchars_for_word = [":", "/", "+", '.'] + ["%d" % i for i in range(10)]
+		n = 0
+		nupper = 0
+		paragraphs = list(paragraphs)
+		for k, para in enumerate(paragraphs):
+			last_tense = None
+			for txt, tags, entities in para:
+				if not is_full_sentence(txt, tags, entities):
+					continue
+				for word, wt in tags:
+					word = word.strip("'")
+					if len(word) < 3: continue # not a word
+					if any(n in word for n in badchars_for_word): continue
+					if word not in handled and not h.spell(word):
+						#outstring = "<li>%s -> %s" % (word, ', '.join(h.suggest(word)))
+						outstring = h.suggest(word)
+						if any(letter.isupper() for letter in word):
+							items_uppercase.append((word, outstring))
+							nupper += 1
+						else:
+							n += 1
+							items_nonupper.append((word, outstring))
+					counter.update([word])
+					handled.add(word)
+					sys.stdout.write('    %.2f%% -- %d words checked, %d potential issues \r' % (k*100. / len(paragraphs), len(handled), n))
+					sys.stdout.flush()
+				
+		sys.stdout.write('    %.2f%% -- %d words checked, %d potential issues \n' % (100., len(handled), n))
+		f.write("<ul>\n")
+		for n, word, s in sorted([(counter[word], word, s) for word, s in items_nonupper], reverse=True):
+			noccur = "" if n <= 1 else " <em>(%d times)</em>" % n
+			f.write("<li>%s -> %s%s\n" % (word, ', '.join(s), noccur))
+		f.write("\n</ul>")
+		f.write("<h3>Words with upper case letters</h3>\n")
+		f.write("These may be acronyms and thus OK.\n")
+		f.write("<ul>\n")
+		for n, word, s in sorted([(counter[word], word, s) for word, s in items_uppercase], reverse=True):
+			noccur = "" if n <= 1 else "(%d times)" % n
+			f.write("<li>%s -> %s%s\n" % (word, ', '.join(s), noccur))
+		f.write("\n</ul>")
+		
 
 stopwords = nltk.corpus.stopwords.words('english')
 def wordiness(paragraphs):
@@ -240,7 +302,7 @@ def wordiness(paragraphs):
 def not_punctuation(w):
 	return not (len(w)==1 and (not w.isalpha()))
 def get_word_count(text): 
-	return len(filter(not_punctuation, word_tokenize(text)))
+	return len(list(filter(not_punctuation, word_tokenize(text))))
 def get_sent_count(text):
 	return len(sent_tokenize(text))
 # from https://github.com/mmautner/readability/blob/master/utils.py, Apache2 licensed
@@ -517,15 +579,16 @@ def tricky_words(paragraphs):
 		nused = 0
 		rules = open(os.path.join(os.path.dirname(__file__), 'tricky.txt')).readlines()
 		rules += open(os.path.join(os.path.dirname(__file__), 'tricky_%s.txt' % lang)).readlines()
+		rules += open(os.path.join(os.path.dirname(__file__), 'tricky_extra.txt')).readlines()
 		for rule in rules:
-			rule = rule.strip()
+			rule = rule.rstrip()
 			if rule.startswith('###'):
 				f.write("<h2>%s</h2>\n" % rule.lstrip('# '))
 				continue
 			if rule.startswith('#') or len(rule) == 0:
 				continue
 			if ' -> ' not in rule:
-				print 'bad rule in tricky.txt:', rule
+				print('bad rule in tricky.txt:', rule)
 			a, b = rule.split('->')
 			a = a
 			b = b
@@ -611,7 +674,7 @@ def a_or_an_words(paragraphs):
 						elif is_potentially_consonant:
 							f.write("<li>%s %s -&gt; *A* %s%s\n" % (word, nextword, nextword, guesstext))
 						else:
-							print 'unexpected:', word, nextword, nextsylls, expect_vowel, is_potentially_vowel, is_potentially_consonant
+							print('unexpected:', word, nextword, nextsylls, expect_vowel, is_potentially_vowel, is_potentially_consonant)
 		f.write("</ul>\n")
 		f.write("<p>%d of %d usages correct.</p>\n" % (nfound - nwrong, nfound))
 		f.close()
@@ -632,6 +695,7 @@ with codecs.open(filename + '_index.html', 'w', 'latin1') as f:
 	<li>%(checkbox)s <a href="%(prefix)s_wordiness.html">Wordiness & long sentences</a>
 	<li>%(checkbox)s <a href="%(prefix)s_readability.html">Reading ease (beta)</a>
 	<li>%(checkbox)s <a href="%(prefix)s_tense.html">Consistent use of tenses</a>
+	<li>%(checkbox)s <a href="%(prefix)s_spelling.html">Spelling mistakes</a>
 	<li>%(checkbox)s <a href="%(prefix)s_para.html">Paragraph consistency</a>
 	<li>%(checkbox)s <a href="%(prefix)s_vis.html">Check the visual appeal</a>
 	</ul>
@@ -729,31 +793,33 @@ for i, chunk in enumerate(chunks):
 	tags = tagger(tokens)
 	#entities = nltk.chunk.ne_chunk_sents(tags)
 	entities = [[] for tag in tags]
-	para = zip(sentences, tags, entities)
+	para = list(zip(sentences, tags, entities))
 	if para:
 		paragraphs.append(para)
 
-print
-print 'analysis: a vs an'
+print()
+print('analysis: a vs an')
 a_or_an_words(paragraphs)
-print 'analysis: tricky words'
+print('analysis: tricky words')
 tricky_words(paragraphs)
-print 'analysis: wordiness'
+print('analysis: wordiness')
 wordiness(paragraphs)
-print 'analysis: reading ease'
+print('analysis: reading ease')
 readability(paragraphs)
-print 'analysis: tenses'
+print('analysis: tenses')
 tenses(paragraphs)
-print 'analysis: topic sentences'
+print('analysis: topic sentences')
 topic_sentences(paragraphs)
-print 'analysis: paragraph consistency'
+print('analysis: paragraph consistency')
 consistent_paragraph(paragraphs)
+print('analysis: spelling mistakes')
+spelling(paragraphs)
 
 
-print 'analysis: visualisation'
+print('analysis: visualisation')
 r = process.wait()
 if r != 0:
-	print 'visualisation returned with', r
+	print('visualisation returned with', r)
 with codecs.open(filename + '_vis.html', 'w', 'latin1') as f:
 	f.write(header % dict(title='Appearance'))
 	f.write("""<h1>Appearance</h1>
@@ -773,10 +839,10 @@ with codecs.open(filename + '_vis.html', 'w', 'latin1') as f:
 			if j % 2 == 0:
 				f.write("<br/>\n")
 	if j == 0:
-		print 'WARNING: converting pdf to images seems to have failed.'
+		print('WARNING: converting pdf to images seems to have failed.')
 
 
-print 'done'
+print('done')
 
-print
-print 'open %s in a web browser' % (filename + '_index.html')
+print()
+print('open %s in a web browser' % (filename + '_index.html'))
