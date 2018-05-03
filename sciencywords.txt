@@ -14,3 +14,18 @@ metallicities
 arcmin
 arcsec
 priors
+# latex words that are false positives
+.pdf
+https
+graphicx
+lcc
+ccc
+cccc
+ccccc
+cccccc
+ccccccc
+cccccccc
+ccccccccc
+
+
+

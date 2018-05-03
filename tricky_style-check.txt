@@ -1,0 +1,352 @@
+### Bad words
+fashion -> !
+behavioral -> !
+impact -> "consequences", "effect", "result", though NSF likes "research impact"
+tackle -> "tackle" (a problem) is wimpy for "solve" or a tired metaphor for "address a challenge".
+thusly -> "thus" or "this way" or "like this" http://www.bartleby.com/64/C003/0282.html
+transpire -> "happen" 
+so-called -> can be abused; it's negative.
+necessitate -> require.
+necessitated -> required.
+necessitates -> requires.
+loosing -> you almost certainly mean "losing".  use "loosening" otherwise.
+aforementioned -> too pretentious.
+#important to -> "valued by"?
+notion -> avoid this weak phrase.
+
+### Cliche
+dig deeper -> cliche
+attack these problems -> reword
+crack these problems -> reword
+attack this problem -> reword
+crack this problem -> reword
+
+
+### spelling
+asess -> spelling
+elimintate -> spelling
+enginner -> spelling
+experiements -> spelling
+measurment -> spelling
+pathlogies -> spelling
+secrurity -> spelling
+taht -> spelling
+teh -> spelling
+thrid -> spelling
+accrurate -> spelling
+prevalance -> prevalence
+upto -> not a word, should be "up to"
+ til -> not a word, should be "until"
+thes -> indecisive these/the
+accurarte -> spelling
+suppots -> spelling
+privledge -> "privilege" I misspell it every way possible.
+privlege -> "privilege" I misspell it every way possible.
+priviledge -> "privilege" I misspell it every way possible.
+infomation -> spelling
+queueing -> I'd love to spell it this way, but spellchecker whines.
+vatnage -> argh.
+hte -> spelling
+acknowledgement -> acknowledgment, though what you have is technically legal, despite ispell.
+acknowlegement -> needs a d.
+acknowlegment -> needs a d.
+acknowledgements -> acknowledgment , though what you have is technically legal, despite ispell.
+acknowlegements -> needs a d.
+acknowlegments -> needs a d.
+targetted -> "targeted"
+desireable -> "desirable"
+fullproof -> found this in savage et al. traceback
+
+### Passive voice
+it is possible to -> passive voice, try: "can"
+can be evaluated -> avoid passive: We evaluated
+it is possible that -> "may"
+as can be seen in -> X shows that Y
+there needs to be -> passive voice in a bad way
+was designed -> try active voice
+it may be -> passive "it"
+it is important that -> try active: X is important because Y
+
+### Barass
+absolutely essential -> essential
+an actual investigation -> an investigation
+almost unique -> rare
+completely surrounded -> surrounded
+conclusive proof -> proof
+an essential condition -> a condition
+hard evidence -> evidence
+they are in fact -> they are
+few in number -> few
+a positive identification -> an identification
+quite obvious -> obvious
+real problems -> problems
+streamlined in appearance -> streamlined
+quite unique -> unique
+every individual one -> every one
+the reason for this is because -> because
+reason why -> reason -awu
+reverted back -> reverted
+related to each other -> related
+each individual person -> each person
+in actual fact -> in fact
+a specific example -> an example
+an integral part -> a part
+different varieties -> varieties
+grouped together -> grouped
+percolate down -> percolate
+eradicate completely -> eradicate
+give positive encouragement -> encourage
+
+
+a the -> double article
+Figure Figure -> repeated
+from to -> !
+help help -> help
+of of -> of
+the the -> the
+we we -> we
+the affect -> should probably be 'the effect'
+there too few -> there are too few?
+was not was -> !
+with on -> !
+with with -> with
+my my -> my
+such as like -> !
+further more -> furthermore
+safe guard -> safeguard
+that be -> !
+can not -> cannot
+only only -> only
+ is is -> is
+ on on -> on
+has is -> has or is
+they shows -> !
+less that than -> less than that
+from from -> double word
+in in -> in
+not not -> not
+it it -> it
+to illicit -> to elicit
+illicits -> elicits
+this lead to -> "led to" if past tense, "leads to" if present.
+description their -> !
+including: -> including
+without and without -> !
+can be result -> !
+
+### day-gastel
+a considerable amount of -> "much"
+a considerable number of -> "many"
+a decreased amount of -> "less"
+a decreased number of -> "fewer"
+a great deal of -> "much"
+a majority of -> "most", though 'a majority of' implies more than 50, while most implies significantly more.
+a number of -> "many" or "some"
+a situation in which -> "when"
+a small number of -> "a few" 
+absolutely essential -> "essential"
+accounted for by the fact -> "because"
+adjacent to -> "near" or "next to"
+along the lines of -> "like"
+an adequate amount of -> "enough"
+an example of this is the fact that -> "for example"
+an order of magnitude faster -> "10 times as fast"
+apprise -> "inform"
+are of the same opinion -> "agree"
+as a consequence of -> "because"
+as a matter of fact -> "in fact" or leave out
+as a result of -> "because"
+as is the case -> "as happens"
+as of this date -> "today"
+as to -> "about" or leave out
+at a rapid rate -> "rapidly" or "fast"
+at an earlier date -> "soon"
+at no time -> "never"
+at present -> "now"
+at some future time -> "later" or "sometime"
+at the conclusion of -> "after"
+at the present time -> "now"
+at this point in time -> "now"
+based on the fact that -> "because"
+because of the fact that -> "because"
+by means of -> "by" or "with
+causal factor -> "cause"
+cognizant of -> "aware of"
+completely full -> "full"
+consensus of opinion -> "consensus"
+considerable amount of -> "much"
+contingent upon -> "dependent on"
+count the number of -> "count"
+definitely proved -> "proved"
+despite the fact that -> "although"
+due to the fact that -> "because"
+during the course of -> "during" or "while"
+during the time that -> "while"
+effectuate -> "cause"
+elucidate -> "explain"
+employ -> "use"
+enclosed herewith -> "enclosed"
+end result -> "result"
+endeavor -> "try"
+entirely eliminate -> "eliminate"
+eventuate -> "happen"
+fabricate -> "make"
+facilitate -> "help"
+fatal outcome -> "death"
+fellow colleague -> "colleague"
+fewer in number -> "fewer"
+finalize -> "end"
+first of all -> "first"
+for the purpose of -> "for"
+for the reason that -> "because"
+from the point of view of -> "for"
+future plans -> "plans"
+give an account of -> "describe"
+give rise to -> "cause"
+has been engaged in a study of -> "has studied"
+has the capability of -> "can"
+has the potential to -> "can" or "may"
+have the appearance of -> "look like" or "resemble"
+having regard to -> "about"
+immune serum -> "antiserum"
+important essentials -> "essentials"
+in a number of cases -> "sometimes"
+in a position to -> "able to"
+in a satisfactory manner -> "satisfactorily"
+in a situation in which -> "when"
+in a very real sense -> "in a sense" or leave out
+in almost all instances -> "nearly always"
+in case -> "if"
+in close proximity to -> "close" or "near"
+in connection with -> "about" or "concerning"
+in light of the fact that -> "because"
+in many cases -> "often"
+in most cases -> "usually"
+in my opinion it is not an unjustifiable assumption that -> "I think"
+in only a small number of cases -> "rarely"
+in order to -> "to"
+in relation to -> "toward" or "to"
+in respect to -> "about"
+in some cases -> "sometimes"
+in terms of -> "about"
+in the absence of -> "without"
+in the event that -> "if"
+in the most effective manner -> "most effectively"
+in the not too distant future -> "soon"
+in the not-too-distant future -> "soon"
+in the possession of -> "has" or "have"
+in this day and age -> "today"
+in view of the fact that -> "because"
+inasmuch as -> "for" or "as"
+in as much as -> "for" or "as"
+incline to the view -> "think"
+inclined to the view -> "thought"
+initiate -> "begin" or "start"
+is defined as -> "is"
+is desirous of -> "wants"
+is detrimental to -> "harms"
+is similar to -> "resembles"
+it has been reported by -> "___ reported"
+it has long been known that -> "I haven't looked up the reference"
+it is apparent that -> "apparently" or "clearly"
+it is believed that -> "I think" (or say who thinks)
+it is clear that -> "clearly"
+it is clear that much additional work will be required -> "I don't understand it"
+it is evident that -> probably not needed just say what happened
+it is generally believed -> "many think"
+it is my understanding that -> "I understand that"
+it is of interest to note that -> leave out
+it is often the case that -> "often"
+it is suggested that -> "I think"
+it is worth pointing out in this context -> omit
+it may be that -> "I think" or "perhaps"
+it may, however, be noted that -> "but"
+it should be noted that -> omit
+it was observed in the course of the experiments that -> "we observed"
+join together -> "join"
+lacked the ability to -> "could not"
+large in size -> "large"
+let me make one thing perfectly clear -> A snow job is coming...
+majority of -> "most"
+make reference to -> "refer to"
+militate against -> "prohibit"
+more often than not -> "usually"
+needless to say -> (leave out, and consider leaving out what follows it)
+new initiatives -> "initiatives"
+no later than -> "by"
+of an efficient nature -> "efficient"
+of great theoretical and practical importance -> "useful"
+of long standing -> "old"
+of the opinion that -> "think that"
+on a daily basis -> "daily"
+on account of -> "because"
+on behalf of -> "for"
+on no occasion -> "never"
+on the basis of -> "by"
+on the grounds that -> "because"
+on the part of -> "by" or "among" or "for"
+on those occasions in which -> "when"
+our attention has been called to the fact that -> "we belatedly discovered"
+owing to the fact that -> "because"
+perform -> "do"
+place a major emphasis on -> "stress" or "emphasize"
+pooled together -> "pooled"
+presents a picture similar to -> "resembles"
+previous to -> "before"
+prior to -> "before"
+determinations were performed -> "were determined"
+quantify -> "measure"
+quite a large quantity of -> "much"
+quite unique -> "unique"
+rather interesting -> "interesting'
+red in color -> "red"
+referred to as -> "called"
+regardless of the fact that -> "even though"
+relative to -> "about"
+resultant effect -> "result"
+root cause -> "cause"
+serious crisis -> "crisis"
+should prove the case that -> "if"
+smaller in size -> "smaller"
+so as to -> "to"
+subject matter -> "subject"
+subsequent to -> "after"
+ sufficient -> "enough"
+take into consideration -> "consider"
+terminate -> "end"
+the fact of the matter is that -> (leave out)
+the field of -> just say the field name "chemistry"
+the great majority of -> "most" or "almost all"
+the opinion is advanced that -> "I think"
+the predominate number of -> "most"
+the question as to whether -> "whether"
+the reason is because -> "because"
+the vast majority of -> "most" or "almost all"
+there is a reason to believe -> "I think"
+they are the investigators -> "they"
+this result would seem to indicate -> "the result indicates"
+results seem to indicate -> "the results indicate"
+result seems to indicate -> "the result indicates"
+through the use of -> "by" or "with"
+to the fullest possible extent -> "fully"
+transpire -> "happen"
+ultimate -> "last"
+unanimity of opinion -> "agreement"
+until such time -> "until"
+utilization -> "use"
+utilize -> "use"
+very unique -> "unique"
+was of the opinion -> "believed"
+ways and means -> "ways" or "means" but not both
+we have insufficient knowledge -> "we do not know"
+we wish to thank -> "we thank"
+what is the explanation of -> "why"
+whether or not to -> "whether to"
+with a view to -> "to"
+with reference to -> "about" (or leave out)
+with regard to -> "concerning" or "about" (or leave out)
+with respect to -> "about
+with the exception of -> "except"
+with the result that -> "so that"
+within the realm of possibility -> "possible"
+

@@ -1,8 +1,12 @@
 ### Contractions
 can not -> cannot
 can't -> cannot
+don't -> do not
+won't -> will not
 didn't -> did not
 shouldn't -> should not
+we'll -> we will
+we've -> we have
 n't -> contractions should be avoided (did not for didn't, cannot for can't)
 
 ### Repetitions and Repetitions
@@ -28,7 +32,7 @@ not accept -> reject
 despite the fact that -> although, even though
 regardless of the fact that -> although, even though
 in the event that -> if
-under circumstances in which -> if
+under circumstances in which -> if, when
 the reason for -> because, since, why
 for the reason that -> because, since, why
 owing/due to the fact that -> because, since, why
@@ -38,7 +42,6 @@ on the grounds that -> because, since, why
 this is why -> because, since, why
 on the occasion of -> when
 in a situation in which -> when
-under circumstances in which -> when
 as regards -> about
 in reference to -> about
 with regard to -> about
@@ -121,9 +124,9 @@ small background -> low background
 large brightness -> high brightness
 big brightness -> high brightness
 small brightness -> low brightness
-large contrast -> high contrast
-big contrast -> high contrast
-small contrast -> low contrast
+large contrast -> strong contrast
+big contrast -> strong contrast
+small contrast -> weak contrast
 large degree -> high degree
 big degree -> high degree
 small degree -> low degree
@@ -190,9 +193,6 @@ small redshift -> low redshift
 large resolution -> high resolution
 big resolution -> high resolution
 small resolution -> low resolution
-large shear -> high shear
-big shear -> high shear
-small shear -> low shear
 large speed -> high speed
 big speed -> high speed
 small speed -> low speed
@@ -249,10 +249,7 @@ big constraint -> strong constraint
 high constraint -> strong constraint
 small constraint -> weak constraint
 low constraint -> weak constraint
-large contrast -> strong contrast
-big contrast -> strong contrast
 high contrast -> strong contrast
-small contrast -> weak contrast
 low contrast -> weak contrast
 large current -> strong current
 big current -> strong current
@@ -319,16 +316,6 @@ big turbulence -> strong turbulence
 high turbulence -> strong turbulence
 small turbulence -> weak turbulence
 low turbulence -> weak turbulence
-large velocity -> strong velocity
-big velocity -> strong velocity
-high velocity -> strong velocity
-small velocity -> weak velocity
-low velocity -> weak velocity
-large field -> strong field
-big field -> strong field
-high field -> strong field
-small field -> weak field
-low field -> weak field
 
 partly true -> vague, ambiguous
 somewhat consistent -> vague, ambiguous
@@ -367,7 +354,6 @@ generally -> rephrase, colloquial
 kind of -> rephrase, colloquial
 sort of -> rephrase, colloquial
 type of -> rephrase, colloquial
-really -> rephrase, colloquial
 for all intents and purposes -> rephrase, colloquial
 definitely -> rephrase, colloquial
 #individual -> rephrase, colloquial
@@ -406,7 +392,6 @@ compare to -> compare with (unless plural follows / no differentiation)
 compared to -> compared with (unless plural follows / no differentiation)
 comparable with -> comparable to; similar to; compared with
 combined together -> combine
-combine together -> combine
 combine together -> combine
 combined together -> combine
 composed by -> composed of
@@ -660,5 +645,4 @@ i.e.  -> i.e., (comma after i.e. is recommended)
 ### Sentences starting with And/Or
 And -> Sentences cannot start with and. Join with previous sentence, or use additionally, furthermore, ...
 Or -> Sentences cannot start with or. Join with previous sentence, or use alternatively, however, ...
-
 

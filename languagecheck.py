@@ -219,16 +219,15 @@ def spelling(paragraphs):
 	for line in open(os.path.join(os.path.dirname(__file__), 'sciencywords.txt')):
 		if line.startswith('#'): continue
 		h.add(line.strip())
+	badchars_for_word = list(':/+.=*~\\') + ["%d" % i for i in range(10)]
 	
 	with codecs.open(filename + '_spelling.html', 'w', 'latin1') as f:
 		f.write(header % dict(title='Spelling'))
-		f.write("""<h1>Spelling</h1>
-		""")
+		f.write("""<h1>Spelling</h1>\n""")
 		handled = set()
 		counter = Counter()
 		items_uppercase = []
 		items_nonupper = []
-		badchars_for_word = [":", "/", "+", '.'] + ["%d" % i for i in range(10)]
 		n = 0
 		nupper = 0
 		paragraphs = list(paragraphs)
@@ -240,9 +239,8 @@ def spelling(paragraphs):
 				for word, wt in tags:
 					word = word.strip("'")
 					if len(word) < 3: continue # not a word
-					if any(n in word for n in badchars_for_word): continue
+					if any((char in word for char in badchars_for_word)): continue
 					if word not in handled and not h.spell(word):
-						#outstring = "<li>%s -> %s" % (word, ', '.join(h.suggest(word)))
 						outstring = h.suggest(word)
 						if any(letter.isupper() for letter in word):
 							items_uppercase.append((word, outstring))
@@ -583,25 +581,33 @@ def tricky_words(paragraphs):
 		.evaluation{font-family: monospace; color: gray;}
 		</style>
 		""")
-		for rule_filename in 'tricky.txt', 'tricky_%s.txt' % lang, 'tricky_extra.txt':
+		all_rules = []
+		matchers = set()
+		for rule_filename in 'tricky.txt', 'tricky_%s.txt' % lang, 'tricky_style-check.txt', 'tricky_extra.txt':
 			f.write("<h2>Rules from %s</h2>\n" % rule_filename)
-			if 'extra' in rule_filename:
+			is_noisy = 'extra' in rule_filename
+			if is_noisy:
 				f.write("<p>Beware that the number of false positive is likely higher in these rules")
 			nused = 0
 			nrules = 0
+			rule_header = '%s' % rule_filename
 			rules = open(os.path.join(os.path.dirname(__file__), rule_filename)).readlines()
 			for rule in rules:
 				rule = rule.rstrip()
 				if rule.startswith('###'):
 					f.write("<h3>%s</h3>\n" % rule.lstrip('# '))
+					rule_header = '%s from %s' % (rule.lstrip('# '), rule_filename)
 					continue
 				if rule.startswith('#') or len(rule) == 0:
 					continue
 				if ' -> ' not in rule:
-					print('bad rule in tricky.txt:', rule)
+					print('bad rule in %s:' % rule_filename, rule)
+				
 				a, b = rule.split('->')
-				a = a
-				b = b
+				all_rules.append((a, b, rule_header, is_noisy))
+				#if a in matchers:
+				#	print('duplicate/previously known rule in %s:' % rule_filename, rule)
+				matchers.add(a)
 				used = False
 				for para in paragraphs:
 					for txt, tags, entities in para:
@@ -618,7 +624,33 @@ def tricky_words(paragraphs):
 		
 			f.write("<p>Only %d/%d rules have applied to this text</p>\n" % (nused, nrules))
 			f.write("<hr>")
-		f.close()
+	
+	with codecs.open(filename + '_tricky_inline.html', 'w', 'latin1') as f:
+		f.write(header % dict(title='Tricky words'))
+		f.write("""<h1>Tricky words, Prepositions & Wordiness</h1>
+		The marked phrases are misused often, colloquial or just wordy.
+		Think about replacing them or rewriting the sentence; some suggestions are given.
+		<hr/>
+		<style type="text/css">
+		.noisy{color: #888;}
+		</style>
+		""")
+		
+		for para in paragraphs:
+			for txt, tags, entities in para:
+				matches = [(a, b, rule_header, is_noisy) for a, b, rule_header, is_noisy in all_rules if not is_noisy and a in txt]
+				if len(matches) > 0:
+					f.write("<li>%s\n" % txt)
+					replacedtxt = txt
+					already_marked = set()
+					f.write('<ul>\n')
+					for a, b, rule_header, is_noisy in matches:
+						if a in already_marked:
+							continue
+						f.write('<li class="%s">%s\n' % ('noisy' if is_noisy else '', txt.replace(a, '<b>%s</b> -&gt; <em><abbr title="Rule:%s">%s </abbr></em>' % (a, rule_header, b))))
+						already_marked.add(a)
+					f.write('</ul>\n')
+		
 
 
 def a_or_an_words(paragraphs):
@@ -697,12 +729,12 @@ with codecs.open(filename + '_index.html', 'w', 'latin1') as f:
 	All results should be seen as suggestions; think about the highlighted sentences.
 	
 	<h3>Available reports</h3>
-	<ul>
+	<ul style="list-style-type: none">
 	<li><em>Before using this tool</em>:
 	<li>%(checkbox)s Do spell-checking (in your LaTeX editor, e.g. lyx)
 	<li>%(checkbox)s Do grammar-checking (in LanguageTool)
 	<li><em>Word-level analysis</em>:
-	<li>%(checkbox)s <a href="%(prefix)s_tricky.html">Tricky words, Prepositions & Wordiness</a>
+	<li>%(checkbox)s <a href="%(prefix)s_tricky.html">Oft-misused words, incorrect prepositions & wordiness</a> (by appearance, or <a href="%(prefix)s_tricky.html">by rule</a>)
 	<li>%(checkbox)s <a href="%(prefix)s_a.html">a vs an</a>
 	<li>%(checkbox)s <a href="%(prefix)s_spelling.html">Spelling mistakes</a>
 	<li><em>Sentence-level analysis</em>:
@@ -802,7 +834,7 @@ paragraphs = []
 for i, chunk in enumerate(chunks):
 	sys.stdout.write('Analysing paragraph %d/%d  \r' % (i+1, len(chunks)))
 	sys.stdout.flush()
-	chunk = chunk.replace(' .', ' X.').replace('\n', ' ')
+	chunk = chunk.replace(' .', ' X.').replace(r'\textem', '').replace(r'\textbf', '').replace(r'\texttt', '').replace(r'\em', '').replace(r'\textit', '').replace(r'\it', '').replace('~', ' ').replace('\n', ' ')
 	chunk = chunk.replace('[', ' ').replace(']', ' ').replace('  ', ' ').replace('  ', ' ')
 	# try to pass this on to ntkl
 	sentences = nltk.sent_tokenize(chunk)
