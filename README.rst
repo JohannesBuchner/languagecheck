@@ -48,23 +48,23 @@ Then install the python packages and data:
 	$ python -m nltk.downloader punkt cmudict stopwords
 
 
-Usage:
+Usage
 --------------
 
-Using directly:
+*Using directly*::
 
 * create PDF from your latex file -> mypaper.pdf
 * use detex to create pure text file -> mypaper.txt
 * run $ python languagecheck.py mydir/mypaper.txt mydir/mypaper.pdf
 * open with a web browser mypaper_index.html to see all reports
 
-Using with Overleaf:
+*Using with Overleaf*::
 
-$ bash languagecheck_overleaf.sh <overleaf_url> <name of tex file>
+	$ bash languagecheck_overleaf.sh <overleaf_url> <name of tex file>
 
-For example:
+For example::
 
-$ bash languagecheck_overleaf.sh https://www.overleaf.com/123456789 mypaper.tex
+	$ bash languagecheck_overleaf.sh https://www.overleaf.com/123456789 mypaper.tex
 
 Demo output
 -------------
