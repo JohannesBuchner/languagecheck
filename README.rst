@@ -6,14 +6,17 @@ This program attempts to assist you in improving your paper before submission.
 Features
 ---------
 
-* find common grammar mistakes (e.g. prepositions)
-* find wordy phrases and suggest replacements
-* find long, wordy sentences
-* find tense inconsistencies
-* check visual impression of paper
-* check topic sentences
-* check a vs an before a consonant/vowel
+* Makes reports that help you:
+  * find common grammar mistakes (e.g. prepositions)
+  * find wordy phrases and suggest replacements
+  * find long, wordy sentences
+  * find tense inconsistencies
+  * check visual impression of paper
+  * check topic sentences
+  * check a vs an before a consonant/vowel
+  * spell-check
 
+* Can analyse any LaTeX papers, and Overleaf projects.
 
 
 Requirements
@@ -26,14 +29,41 @@ Requirements
 * detex command (usually comes with LaTeX)
 * pyhunspell (optional): Install with pip
 
-How to use
+Installation
 --------------
+
+These commands should not give you an error::
+
+	$ which convert
+	$ which python
+	$ which detex
+	$ which hunspell
+	$ ls /usr/share/hunspell/{en_US,en_UK}.{dic,aff}
+
+Then install the python packages and data:
+
+	$ pip install pyhunspell  --user
+	$ pip install nltk  --user
+	$ python -m nltk.downloader punkt cmudict stopwords
+
+
+Usage:
+--------------
+
+Using directly:
 
 * create PDF from your latex file -> mypaper.pdf
 * use detex to create pure text file -> mypaper.txt
 * run $ python languagecheck.py mydir/mypaper.txt mydir/mypaper.pdf
 * open with a web browser mypaper_index.html to see all reports
 
+Using with Overleaf:
+
+$ bash languagecheck_overleaf.sh <overleaf_url> <name of tex file>
+
+For example:
+
+$ bash languagecheck_overleaf.sh https://www.overleaf.com/123456789 mypaper.tex
 
 Demo output
 -------------
