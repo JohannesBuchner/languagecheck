@@ -19,6 +19,8 @@ priors
 https
 graphicx
 lcc
+lccc
+lcccc
 ccc
 cccc
 ccccc

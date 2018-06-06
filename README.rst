@@ -10,16 +10,23 @@ Features
 * Makes automated reports to point you to improvements:
 
   * Word level:
+
     * find common grammar mistakes, like wrong prepositions
     * find wordy phrases and suggest replacements
     * a vs an
     * spell-check (using hunspell)
+
   * Sentence level:
+
     * find long, wordy sentences
     * check topic sentences
+
   * Paragraph level:
+
     * find tense inconsistencies
+
   * Paper level:
+
     * check visual impression of paper
 
 * All analysis is done offline -- your text does not leave your computer.

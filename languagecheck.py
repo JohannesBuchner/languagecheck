@@ -219,7 +219,8 @@ def spelling(paragraphs):
 	for line in open(os.path.join(os.path.dirname(__file__), 'sciencywords.txt')):
 		if line.startswith('#'): continue
 		h.add(line.strip())
-	badchars_for_word = list(':/+.=*~\\') + ["%d" % i for i in range(10)]
+	
+	badchars_for_word = list(':/+.=*~\\') + ["%d" % i for i in range(10)] + ["cccc"]
 	
 	with codecs.open(filename + '_spelling.html', 'w', 'latin1') as f:
 		f.write(header % dict(title='Spelling'))
