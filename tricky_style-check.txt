@@ -37,7 +37,7 @@ accrurate -> spelling
 prevalance -> prevalence
 upto -> not a word, should be "up to"
  til -> not a word, should be "until"
-thes -> indecisive these/the
+thes -> these/the
 accurarte -> spelling
 suppots -> spelling
 privledge -> "privilege" I misspell it every way possible.
@@ -55,7 +55,7 @@ acknowlegements -> needs a d.
 acknowlegments -> needs a d.
 targetted -> "targeted"
 desireable -> "desirable"
-fullproof -> found this in savage et al. traceback
+fullproof -> fool-proof
 
 ### Passive voice
 it is possible to -> passive voice, try: "can"
@@ -98,12 +98,12 @@ eradicate completely -> eradicate
 give positive encouragement -> encourage
 
 
-a the -> double article
+ a the -> double article
 Figure Figure -> repeated
 from to -> !
 help help -> help
-of of -> of
-the the -> the
+ of of -> of
+#the the -> the
 we we -> we
 the affect -> should probably be 'the effect'
 there too few -> there are too few?
@@ -122,10 +122,10 @@ only only -> only
 has is -> has or is
 they shows -> !
 less that than -> less than that
-from from -> double word
-in in -> in
+ from from -> double word
+ in in -> in
 not not -> not
-it it -> it
+ it it -> it
 to illicit -> to elicit
 illicits -> elicits
 this lead to -> "led to" if past tense, "leads to" if present.
