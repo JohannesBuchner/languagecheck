@@ -30,23 +30,23 @@ experiements -> spelling
 measurment -> spelling
 pathlogies -> spelling
 secrurity -> spelling
-taht -> spelling
-teh -> spelling
-thrid -> spelling
+ taht -> spelling
+ teh -> spelling
+ thrid -> spelling
 accrurate -> spelling
 prevalance -> prevalence
-upto -> not a word, should be "up to"
+ upto -> not a word, should be "up to"
  til -> not a word, should be "until"
-thes -> these/the
+ thes -> these/the
 accurarte -> spelling
-suppots -> spelling
+ suppots -> spelling
 privledge -> "privilege" I misspell it every way possible.
 privlege -> "privilege" I misspell it every way possible.
 priviledge -> "privilege" I misspell it every way possible.
 infomation -> spelling
 queueing -> I'd love to spell it this way, but spellchecker whines.
 vatnage -> argh.
-hte -> spelling
+ hte -> spelling
 acknowledgement -> acknowledgment, though what you have is technically legal, despite ispell.
 acknowlegement -> needs a d.
 acknowlegment -> needs a d.
@@ -104,27 +104,27 @@ from to -> !
 help help -> help
  of of -> of
 #the the -> the
-we we -> we
+ we we -> we
 the affect -> should probably be 'the effect'
 there too few -> there are too few?
 was not was -> !
-with on -> !
+ with on -> !
 with with -> with
-my my -> my
+ my my -> my
 such as like -> !
 further more -> furthermore
 safe guard -> safeguard
-that be -> !
-can not -> cannot
+ that be -> !
+ can not -> cannot
 only only -> only
  is is -> is
  on on -> on
-has is -> has or is
+ has is -> has or is
 they shows -> !
 less that than -> less than that
  from from -> double word
  in in -> in
-not not -> not
+ not not -> not
  it it -> it
 to illicit -> to elicit
 illicits -> elicits
@@ -159,7 +159,7 @@ as a matter of fact -> "in fact" or leave out
 as a result of -> "because"
 as is the case -> "as happens"
 as of this date -> "today"
-as to -> "about" or leave out
+ as to -> "about" or leave out
 at a rapid rate -> "rapidly" or "fast"
 at an earlier date -> "soon"
 at no time -> "never"
@@ -217,7 +217,7 @@ in a satisfactory manner -> "satisfactorily"
 in a situation in which -> "when"
 in a very real sense -> "in a sense" or leave out
 in almost all instances -> "nearly always"
-in case -> "if"
+ in case -> "if"
 in close proximity to -> "close" or "near"
 in connection with -> "about" or "concerning"
 in light of the fact that -> "because"
