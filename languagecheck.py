@@ -676,22 +676,25 @@ def a_or_an_words(paragraphs):
 		f.write("<ul>\n")
 		for para in paragraphs:
 			for txt, tags, entities in para:
-				hits = [word.lower() in ('a', 'an') for word, _wordtype in tags]
 				for i, (word, _wordtype) in enumerate(tags):
-					if word.lower() not in ('a', 'an'):
+					if word not in ('a', 'an'):
 						continue
-					expect_vowel = word.lower() == 'an'
+					expect_vowel = word == 'an'
 					if i + 1 == len(tags):
 						# no word after a/an.
 						continue
 					nextword, _wordtype2 = tags[i+1]
+					if nextword.isupper():
+						# need to spell word
+						# just use first letter
+						nextword = nextword[0].lower()
 					nfound += 1
 					nextsylls = firstsyll.get(nextword, [])
 					guess = False
 					is_potentially_vowel = False
 					is_potentially_consonant = False
 					for nextsyll in nextsylls:
-						if nextsyll[0] in 'AEIOUJ':
+						if nextsyll[0] in 'AEIOU':
 							is_potentially_vowel = True
 						else:
 							is_potentially_consonant = True
