@@ -79,7 +79,10 @@ Usage
 *Using directly*:
 
 * create PDF from your latex file -> mypaper.pdf
+  * For example, run "pdflatex mypaper.tex"
 * use detex to create pure text file -> mypaper.txt
+  * For example, run "detex mypaper.tex > mypaper.txt". You need detex installed.
+  * This does not capture figure captions. The detex.sh script can help you include those texts, "bash detex.sh mypaper.tex". You still need detex installed
 * run $ python languagecheck.py mydir/mypaper.txt mydir/mypaper.pdf
 * open with a web browser mypaper_index.html to see all reports
 

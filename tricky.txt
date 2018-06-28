@@ -353,7 +353,7 @@ actually -> rephrase, colloquial
 generally -> rephrase, colloquial
 kind of -> rephrase, colloquial
 sort of -> rephrase, colloquial
-type of -> rephrase, colloquial
+ type of -> rephrase, colloquial
 for all intents and purposes -> rephrase, colloquial
 definitely -> rephrase, colloquial
 #individual -> rephrase, colloquial

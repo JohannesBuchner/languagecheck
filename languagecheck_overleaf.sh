@@ -34,7 +34,7 @@ else
 	texname=${texname/.tex/}
 fi
 echo "Extracting text from "$texname.tex" file (with detex)..."
-detex $texname.tex > $texname.txt || exit 1
+bash $0/detex.sh $texname.tex || exit 1
 echo "Running pdflatex on $texname"
 pdflatex -interaction batchmode $texname 2>/dev/null
 echo "Running bibtex on $texname"

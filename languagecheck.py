@@ -738,7 +738,7 @@ with codecs.open(filename + '_index.html', 'w', 'latin1') as f:
 	<li>%(checkbox)s Do spell-checking (in your LaTeX editor, e.g. lyx)
 	<li>%(checkbox)s Do grammar-checking (in LanguageTool)
 	<li><em>Word-level analysis</em>:
-	<li>%(checkbox)s <a href="%(prefix)s_tricky.html">Oft-misused words, incorrect prepositions & wordiness</a> (by appearance, or <a href="%(prefix)s_tricky.html">by rule</a>)
+	<li>%(checkbox)s <a href="%(prefix)s_tricky_inline.html">Oft-misused words, incorrect prepositions & wordiness</a> (by appearance, or <a href="%(prefix)s_tricky.html">by rule</a>)
 	<li>%(checkbox)s <a href="%(prefix)s_a.html">a vs an</a>
 	<li>%(checkbox)s <a href="%(prefix)s_spelling.html">Spelling mistakes</a>
 	<li><em>Sentence-level analysis</em>:
