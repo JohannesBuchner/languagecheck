@@ -22,7 +22,7 @@ fi
 
 echo "detexing main text ..."
 
-detex $input > $output
+detex $input > $output || exit 1
 
 echo "extracting figure captions ..."
 
@@ -34,7 +34,7 @@ tr '\n' ' ' |
 sed 's,\\caption{,\n,g' |
 sed 's, *\\end{.*,,g'|
 sed 's,$,\n,g' | 
-detex >> $output
+detex >> $output || exit 2
 
 echo "$output created."
 

@@ -33,8 +33,10 @@ else
 	texname=$2
 	texname=${texname/.tex/}
 fi
+popd
 echo "Extracting text from "$texname.tex" file (with detex)..."
-bash $0/detex.sh $texname.tex || exit 1
+bash $D/detex.sh overleaf_repo/$texname.tex || exit 1
+pushd overleaf_repo
 echo "Running pdflatex on $texname"
 pdflatex -interaction batchmode $texname 2>/dev/null
 echo "Running bibtex on $texname"
