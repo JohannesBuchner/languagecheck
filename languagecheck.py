@@ -212,10 +212,13 @@ def spelling(paragraphs):
 		print("  install hunspell package to use spell checker - https://github.com/blatinier/pyhunspell")
 		return
 	try:
-		h = hunspell.HunSpell('/usr/share/hunspell/%s.dic' % hlang, '/usr/share/hunspell/%s.aff' % hlang) # if this fails, you dont have that language installed or are not on Unix
+		h = hunspell.HunSpell('/usr/share/myspell/%s.dic' % hlang, '/usr/share/myspell/%s.aff' % hlang) # if this fails, you dont have that language installed or are not on Unix
 	except Exception:
-		print("   could not load dictionaries (", '/usr/share/hunspell/%s.dic' % hlang, '/usr/share/hunspell/%s.aff' % hlang, "Is hunspell installed?")
-		return
+		try:
+			h = hunspell.HunSpell('/usr/share/hunspell/%s.dic' % hlang, '/usr/share/hunspell/%s.aff' % hlang) # if this fails, you dont have that language installed or are not on Unix
+		except Exception:
+			print("   could not load dictionaries (", '/usr/share/{hunspell,myspell}/%s.dic' % hlang, '/usr/share/{hunspell,myspell}/%s.aff' % hlang, "Is hunspell installed?")
+			return
 	# add custom words:
 	for line in open(os.path.join(os.path.dirname(__file__), 'sciencywords.txt')):
 		if line.startswith('#'): continue
