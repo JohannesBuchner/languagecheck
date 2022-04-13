@@ -158,6 +158,7 @@ def guess_tense_tree(tags, entities, last_tense):
 		else:
 			part.append((w, wt))
 	parts.append(part)
+	del part
 	parts = [part for part in parts if len(part) > 0]
 	# if all put together:
 	tense_full = guess_tense(tags, entities, last_tense)
@@ -233,7 +234,6 @@ def spelling(paragraphs):
 		nupper = 0
 		paragraphs = list(paragraphs)
 		for k, para in enumerate(paragraphs):
-			last_tense = None
 			for txt, tags, entities in para:
 				if not is_full_sentence(txt, tags, entities):
 					continue
@@ -308,21 +308,20 @@ def wordiness(paragraphs):
 
 def not_punctuation(w):
 	return not (len(w)==1 and (not w.isalpha()))
-def get_word_count(text): 
-	return len(list(filter(not_punctuation, word_tokenize(text))))
-def get_sent_count(text):
-	return len(sent_tokenize(text))
+#def get_word_count(text): 
+#	return len(list(filter(not_punctuation, word_tokenize(text))))
+#def get_sent_count(text):
+#	return len(sent_tokenize(text))
 # from https://github.com/mmautner/readability/blob/master/utils.py, Apache2 licensed
 import syllables_en
-def count_syllables(words):
-	syllableCount = 0
-	for word in words:
-		syllableCount += syllables_en.count(word)
-	return syllableCount
+#def count_syllables(words):
+#	syllableCount = 0
+#	for word in words:
+#		syllableCount += syllables_en.count(word)
+#	return syllableCount
 
 # from textstat/textstat.py, MIT licensed
 import string
-import re
 exclude = list(string.punctuation)
 easy_word_set = set([line.strip() for line in open(os.path.join(os.path.dirname(__file__), 'easy_words.txt')) 
 	if not line.startswith('#')])
@@ -584,7 +583,7 @@ def tricky_words(paragraphs):
 		""")
 		all_rules = []
 		matchers = set()
-		for rule_filename in 'tricky.txt', 'tricky_%s.txt' % lang, 'tricky_style-check.txt', 'tricky_extra.txt':
+		for rule_filename in 'tricky.txt', 'tricky_%s.txt' % lang, 'tricky_style-check.txt', 'tricky_violence.txt', 'tricky_extra.txt':
 			f.write("<h2>Rules from %s</h2>\n" % rule_filename)
 			is_noisy = 'extra' in rule_filename
 			if is_noisy:
@@ -642,7 +641,6 @@ def tricky_words(paragraphs):
 				matches = [(a, b, rule_header, is_noisy) for a, b, rule_header, is_noisy in all_rules if not is_noisy and a in txt]
 				if len(matches) > 0:
 					f.write("<li>%s\n" % txt)
-					replacedtxt = txt
 					already_marked = set()
 					f.write('<ul>\n')
 					for a, b, rule_header, is_noisy in matches:
@@ -673,6 +671,7 @@ def a_or_an_words(paragraphs):
 		
 		nfound = 0
 		nwrong = 0
+		ncorrect = 0
 		f.write("<ul>\n")
 		for para in paragraphs:
 			for txt, tags, entities in para:
