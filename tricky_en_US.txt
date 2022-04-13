@@ -1,6 +1,5 @@
 ### North Americal English
 of the order -> on the order of
 in the order of -> on the order of
-e.g.  -> e.g.,
-i.e.  -> e.g.,
-
+e.g. -> e.g., (comma after in AE)
+i.e. -> e.g., (comma after in AE)

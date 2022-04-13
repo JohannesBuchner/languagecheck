@@ -617,6 +617,10 @@ in the onset -> at the onset
 in the center -> at the center
 in the centre -> at the centre
 surpress -> suppress
+that is considered -> that is being considered
+diseased -> deceased
+consider we -> consider that we
+
 
 ### Very bad ones
 should of -> should have
@@ -645,4 +649,3 @@ i.e.  -> i.e., (comma after i.e. is recommended)
 ### Sentences starting with And/Or
 And -> Sentences cannot start with and. Join with previous sentence, or use additionally, furthermore, ...
 Or -> Sentences cannot start with or. Join with previous sentence, or use alternatively, however, ...
-

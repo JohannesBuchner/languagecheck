@@ -1,5 +1,5 @@
 ### British english
 on the order of -> of the order 
 on the order of -> in the order of
-
-
+e.g., -> e.g. (no comma in BE)
+i.e., -> e.g. (no comma in BE)
