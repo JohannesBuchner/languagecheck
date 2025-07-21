@@ -70,8 +70,7 @@ Then install the python packages and data::
 
 	$ pip install pyhunspell  --user
 	$ pip install nltk  --user
-	$ python -m nltk.downloader cmudict stopwords punkt averaged_perceptron_tagger
-
+	$ python -m nltk.downloader cmudict stopwords punkt_tab averaged_perceptron_tagger_eng
 
 Usage
 --------------
